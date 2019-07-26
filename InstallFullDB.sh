@@ -184,6 +184,32 @@ fi
 echo
 echo
 
+## Rochenoire
+echo "> Processing rochenoire files ..."
+COUNT=0
+for ROCHENOIRE in "${ADDITIONAL_PATH}Updates/Rochenoire/"[0-9]*.sql
+do
+  if [ -e "$ROCHENOIRE" ]
+  then
+    echo "    Appending $ROCHENOIRE"
+    $MYSQL_COMMAND < "$ROCHENOIRE"
+    if [[ $? != 0 ]]
+    then
+      echo "ERROR: cannot apply $ROCHENOIRE"
+      exit 1
+    fi
+    ((COUNT++))
+  fi
+done
+if [ "$COUNT" != 0 ]
+then
+  echo "  $COUNT rochenoire files applied successfully"
+else
+  echo "  Did not find any rochenoire file to apply"
+fi
+echo
+echo
+
 #
 #               Core updates
 #
