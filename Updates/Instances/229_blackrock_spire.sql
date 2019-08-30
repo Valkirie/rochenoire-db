@@ -3,7 +3,6 @@ DBName: Blackrock Spire
 DBScriptName: instance_blackrock_spire
 DB%Complete: 75
 DBComment:
-* @CGUID+165 (old 40154) seems to be leftover of older revision
 EndDBScriptData */
 
 SET @CGUID := 2290000; -- creatures
@@ -930,7 +929,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+162, 9239, 229, -108.768, -475.778, 24.2549, 1.60891, 7200, 7200, 0, 0, 0, 0), -- Smolderthorn Mystic
 (@CGUID+163, 9239, 229, -39.0271, -547.342, 16.1255, 4.97512, 7200, 7200, 0, 0, 0, 2), -- Smolderthorn Mystic
 (@CGUID+164, 9239, 229, -38.25, -514.12, -18.63, 4.72, 10800, 10800, 5, 0, 0, 1), -- Smolderthorn Mystic
-(@CGUID+165, 9240, 229, -47.73, -460.24, 16.58, 6, 10800, 10800, 0, 0, 0, 2), -- Smolderthorn Shadow Priest
+-- (@CGUID+165
 (@CGUID+166, 9240, 229, 0.02, -461.27, 16.28, 3.03, 10800, 10800, 0, 0, 0, 2), -- Smolderthorn Shadow Priest
 (@CGUID+167, 9240, 229, -33.19, -450.39, 16.67, 3.75, 10800, 10800, 0, 0, 0, 0), -- Smolderthorn Shadow Priest
 (@CGUID+168, 9240, 229, -53.5, -454.29, 16.54, 2.25, 10800, 10800, 0, 0, 0, 0), -- Smolderthorn Shadow Priest
@@ -1978,7 +1977,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (973601, 1, 1, 1, 0, 0, 0, 0, 0, 273, 5, 274, 1, 0, 0, 0, 0, ''),
 (973601, 7, 1, 1, 0, 0, 0, 0, 0, 273, 5, 274, 1, 0, 0, 0, 0, ''),
 (973601, 16, 1, 1, 0, 0, 0, 0, 0, 273, 5, 274, 1, 0, 0, 0, 0, ''),
-(1031705, 0, 0, 0, 0, 0, 0, 0, 0, 2000000060, 0, 0, 0, 0, 0, 0, 0, 'Blackhand Elite yell'),
+(1031705, 0, 0, 0, 0, 0, 0, 0, 0, 2000010060, 0, 0, 0, 0, 0, 0, 0, 'Blackhand Elite yell'),
 (1031706, 0, 15, 8329, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Blackhand Elite - suicide'),
 (1043001, 0, 20, 1, 20, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Switch to random movement around the current position');
 
@@ -2013,9 +2012,9 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
-DELETE FROM dbscript_string WHERE entry=2000000060;
+DELETE FROM `dbscript_string` WHERE entry=2000010060;
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-('2000000060', 'We''re doomed!', '0', '1', '0', '0', NULL);
+('2000010060', 'We''re doomed!', '0', '1', '0', '0', NULL); -- classic-db 2000000060
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

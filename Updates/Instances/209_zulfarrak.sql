@@ -688,6 +688,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (15578, 0, 0, 1, 16, 0, 0, '25824'); -- Elder Wildmane
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
+(@CGUID+275, @CGUID+154, 515), -- Sandfury Blood Drinker -> Sandfury Witch Doctor
 (@CGUID+131, @CGUID+130, 515), -- Sandfury Shadowhunter -> Sandfury Shadowhunter
 (@CGUID+162, @CGUID+161, 3), -- Sandfury Guardian -> Sandfury Guardian
 (@CGUID+163, @CGUID+161, 3), -- Sandfury Guardian -> Sandfury Guardian
@@ -933,8 +934,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+230, 7269, 209, 1581.4, 1018.43, 8.96011, 5.89921, 18000, 18000, 5, 0, 0, 1), -- Scarab
 (@CGUID+231, 7269, 209, 1521.26, 981.956, 8.98845, 3.57792, 18000, 18000, 5, 0, 0, 1), -- Scarab
 (@CGUID+232, 7269, 209, 1487.51, 962.706, 14.4566, 0.890118, 18000, 18000, 5, 0, 0, 1), -- Scarab
-(@CGUID+233, 7269, 209, 1546.25, 1017.14, 8.87683, 0.0109968, 60, 60, 5, 0, 0, 1), -- Scarab
-(@CGUID+234, 7269, 209, 1627.47, 1186.85, 8.87693, 0.647954, 60, 60, 5, 0, 0, 1), -- Scarab
+(@CGUID+233, 7269, 209, 1546.25, 1017.14, 8.87683, 0.0109968, 7200, 7200, 5, 0, 0, 1), -- Scarab
+(@CGUID+234, 7269, 209, 1627.47, 1186.85, 8.87693, 0.647954, 7200, 7200, 5, 0, 0, 1), -- Scarab
 (@CGUID+235, 7271, 209, 1912.17, 1016.11, 11.5988, 3.10669, 86400, 86400, 0, 0, 0, 0), -- Witch Doctor Zum'rah
 (@CGUID+236, 7272, 209, 1778.01, 859.671, 8.87682, 4.39971, 86400, 86400, 5, 1, 0, 2), -- Theka the Martyr
 (@CGUID+237, 7274, 209, 1886.8, 1289.89, 45.9625, 3.38594, 86400, 86400, 0, 0, 0, 0), -- Sandfury Executioner
@@ -974,7 +975,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+271, 10081, 209, 1627.47, 1186.85, 8.87693, 0.647954, 43200, 86400, 15, 0, 0, 1), -- Dustwraith
 (@CGUID+272, 10082, 209, 1707.91, 881.421, 11.9567, 1.64026, 43200, 86400, 0, 0, 0, 2), -- Zerillis
 (@CGUID+273, 15578, 209, 1689.15, 1147.89, 8.87702, 2.41196, 25, 25, 0, 0, 0, 0), -- Elder Wildmane
-(@CGUID+274, 10080, 209, 1661.51, 900.463, 8.91101, 3.54889, 43200, 86400, 0, 0, 0, 0); -- Sandarr Dunereaver
+(@CGUID+274, 10080, 209, 1661.51, 900.463, 8.91101, 3.54889, 43200, 86400, 0, 0, 0, 0), -- Sandarr Dunereaver
+(@CGUID+275, 5649, 209, 1775.91, 858.567, 8.87745, 3.8720, 7200, 7200, 0, 0, 0, 0); -- Sandfury Blood Drinker
 
 -- ===========
 -- GAMEOBJECTS
@@ -1104,7 +1106,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (760713, 0, 15, 10772, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Cast Create Weegli''s Barrel'),
 (760713, 2, 13, 0, 0, 0, 141612, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Use Weegli''s Barrel'),
 (760713, 3, 40, 0, 0, 0, 141612, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Despawn Weegli''s Barrel'),
-(760713, 5, 0, 0, 0, 0, 7267, @CGUID+160, 16, 2000005566, 0, 0, 0, 0, 0, 0, 0, 'Ukorz Sandscalp - Yell Intro'),
+(760713, 5, 0, 0, 0, 0, 7267, @CGUID+160, 16, 2000005552, 0, 0, 0, 0, 0, 0, 0, 'Ukorz Sandscalp - Yell Intro'),
 (760801, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Murta Grimgut - Stop Movement'),
 (760802, 0, 1, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Murta Grimgut - Emote Cheer'),
 (760809, 0, 15, 11365, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Raven - Cast Bly''s Band''s Escape'),
@@ -1118,7 +1120,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 DELETE FROM dbscripts_on_relay WHERE id=3;
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (3, 0, 25, 1, 0, 0, 7607, @CGUID+241, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Set Run On'),
-(3, 6, 0, 0, 0, 0, 7607, @CGUID+241, 16, 2000005565, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Say Start Door Bombing'),
+(3, 6, 0, 0, 0, 0, 7607, @CGUID+241, 16, 2000005551, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Say Start Door Bombing'),
 (3, 6, 29, 1, 2, 0, 7607, @CGUID+241, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Remove Gossip Flag'),
 (3, 6, 22, 0, 0, 0, 7607, @CGUID+241, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Update Faction to Default'),
 (3, 6, 32, 0, 0, 0, 7607, @CGUID+241, 16, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Start WP Movement');
@@ -1221,7 +1223,7 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 (2609, 250, 10, 8877, 9000000, 0, 0, 0, 0, 0, 0, 0, 0, 1878.94, 1200.57, 8.96, 2.6, 'Spawn Sandfury Zealot'),
 (2609, 250, 25, 0, 0, 0, 7607, 150, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Set Run Off'),
 (2609, 250, 32, 0, 0, 0, 7604, 150, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Start WP Movement'),
-(2609, 250, 0, 0, 0, 0, 7604, 150, 4, 2000005567, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Yell At Movement Start'),
+(2609, 250, 0, 0, 0, 0, 7604, 150, 4, 2000005553, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Yell At Movement Start'),
 (2609, 250, 32, 0, 0, 0, 7605, 150, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Raven - Start WP Movement'),
 (2609, 250, 32, 0, 0, 0, 7606, 150, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Oro Eyegouge - Start WP Movement'),
 (2609, 250, 32, 0, 0, 0, 7607, 150, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - Start WP Movement'),
@@ -1249,7 +1251,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 (94101, 0, 0, 0, 0, 0, 0, 0, 0, 2000005549, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Say Start Combat 1'),
 (94101, 0, 29, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Remove Gossip Flag'),
 (94101, 0, 45, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Weegli Blastfuse - start bombing script'),
-(94101, 3, 0, 0, 0, 0, 0, 0, 0, 2000005564, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Say Start Combat 2'),
+(94101, 3, 0, 0, 0, 0, 0, 0, 0, 2000005550, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Bly - Say Start Combat 2'),
 (94101, 6, 22, 14, 0, 0, 7605, 30, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Raven - Update Faction'),
 (94101, 6, 22, 14, 0, 0, 7606, 30, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Oro Eyegouge - Update Faction'),
 (94101, 6, 22, 14, 0, 0, 7608, 30, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'Murta Grimgut - Update Faction'),
@@ -1258,15 +1260,15 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
-DELETE FROM dbscript_string WHERE entry IN (2000005549,2000005564,2000005565,2000005547,2000005566,2000005567,2000005548);
+DELETE FROM `dbscript_string` WHERE `entry` IN (2000005547,2000005548,2000005549,2000005550,2000005551,2000005552,2000005553);
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000005548, 'Ok, here I go!', 0, 0, 0, 0, 'Weegli Blastfuse - Say Blow Door Normal'),
-(2000005567, 'Let''s move forward!', 0, 0, 0, 0, 'Sergeant Bly - Move Downstairs'),
 (2000005547, 'Oh no! Here they come!', 0, 0, 0, 0, 'Weegli Blastfuse - Say Event Start'),
-(2000005566, 'Who dares step into my domain! Come! Come, and be consumed!', 0, 6, 0, 0, 'Ukorz Sandscalp - Say After Door Blown'),
+(2000005548, 'Ok, here I go!', 0, 0, 0, 0, 'Weegli Blastfuse - Say Blow Door Normal'),
 (2000005549, 'What? How dare you say that to me?!?', 0, 0, 0, 6, 'Sergeant Bly - Say Faction Change 1'),
-(2000005564, 'After all we''ve been through? Well, I didn''t like you anyway!!', 0, 0, 0, 5, 'Sergeant Bly - Say Faction Change 2'),
-(2000005565, 'I''m out of here!', 0, 0, 0, 0, 'Weegli Blastfuse - Say Blow Door Forced');
+(2000005550, 'After all we''ve been through? Well, I didn''t like you anyway!!', 0, 0, 0, 5, 'Sergeant Bly - Say Faction Change 2'),
+(2000005551, 'I''m out of here!', 0, 0, 0, 0, 'Weegli Blastfuse - Say Blow Door Forced'),
+(2000005552, 'Who dares step into my domain! Come! Come, and be consumed!', 0, 6, 0, 0, 'Ukorz Sandscalp - Say After Door Blown'),
+(2000005553, 'Let''s move forward!', 0, 0, 0, 0, 'Sergeant Bly - Move Downstairs');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

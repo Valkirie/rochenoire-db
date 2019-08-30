@@ -1979,6 +1979,7 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 (@PGUID+93, @PGUID+91, 0, 'DM East - Large Solid Chest / Large Mithril Bound Chest - #2'),
 (@PGUID+95, @PGUID+94, 0, 'DM West - Large Solid Chest / Large Mithril Bound Chest - #1'),
 (@PGUID+96, @PGUID+94, 0, 'DM West - Large Solid Chest / Large Mithril Bound Chest - #2'),
+(@PGUID+90, @PGUID+94, 0, 'DM West - Large Solid Chest / Large Mithril Bound Chest - #3'),
 (@PGUID+98, @PGUID+97, 0, 'DM North - Large Solid Chest / Large Mithril Bound Chest - #1'),
 (@PGUID+99, @PGUID+97, 0, 'DM North - Large Solid Chest / Large Mithril Bound Chest - #2');
 
@@ -2069,6 +2070,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+84, 20, 'Dire Maul pods MASTER'),
 (@PGUID+85, 2, 'DM East - Master Ghost Mushroom (142144) Pool'),
 -- 86 - 90
+(@PGUID+90, 1, 'DM West - Large Solid Chest (153464) / Large Mithril Bound Chest (153469) - #3'),
 (@PGUID+91, 1, 'DM East - Master Chest Pool'),
 (@PGUID+92, 1, 'DM East - Large Solid Chest (153464) / Large Mithril Bound Chest (153469) - #1'),
 (@PGUID+93, 1, 'DM East - Large Solid Chest (153464) / Large Mithril Bound Chest (153469) - #2'),
@@ -2400,7 +2402,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+379, @PGUID+98, 0, 'DM North - Large Solid Chest (153464)'),
 (@OGUID+380, @PGUID+98, 0, 'DM North - Large Mithril Bound Chest (153469)'),
 (@OGUID+381, @PGUID+99, 0, 'DM North - Large Solid Chest (153464)'),
-(@OGUID+382, @PGUID+99, 0, 'DM North - Large Mithril Bound Chest (153469)');
+(@OGUID+382, @PGUID+99, 0, 'DM North - Large Mithril Bound Chest (153469)'),
+(@OGUID+383, @PGUID+90, 0, 'DM North - Large Solid Chest (153464)'),
+(@OGUID+384, @PGUID+90, 0, 'DM North - Large Mithril Bound Chest (153469)');
 
 INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 (179548, @PGUID+82, 0, 'DM - Dusty Tome (179548)');
@@ -2786,7 +2790,9 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+379, 153464, 429, 582.9288, 608.0823, -25.40273, -2.565632, 0, 0, -0.9588194, 0.2840165, 86400, 86400, 255, 1), -- Large Solid Chest
 (@OGUID+380, 153469, 429, 582.9288, 608.0823, -25.40273, -2.565632, 0, 0, -0.9588194, 0.2840165, 86400, 86400, 255, 1), -- Large Mithril Bound Chest
 (@OGUID+381, 153464, 429, 335.605, 366.155, 2.85293, -2.61799, 0, 0, -0.965925, 0.258821, 86400, 86400, 255, 1), -- Large Solid Chest
-(@OGUID+382, 153469, 429, 335.605, 366.155, 2.85293, -2.61799, 0, 0, -0.965925, 0.258821, 86400, 86400, 255, 1); -- Large Mithril Bound Chest
+(@OGUID+382, 153469, 429, 335.605, 366.155, 2.85293, -2.61799, 0, 0, -0.965925, 0.258821, 86400, 86400, 255, 1), -- Large Mithril Bound Chest
+(@OGUID+383, 153464, 429, 122.562, 392.1, 28.601, 3.07177, 0, 0, 0.999391, 0.0349043, 86400, 86400, 255, 1), -- Large Solid Chest
+(@OGUID+384, 153469, 429, 122.562, 392.1, 28.601, 3.07177, 0, 0, 0.999391, 0.0349043, 86400, 86400, 255, 1); -- Large Mithril Bound Chest
 
 -- ======
 -- EVENTS
@@ -2857,7 +2863,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (1149202, 75, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Switch back to waypoint movement'),
 
 (1432501, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - stop WP movement'),
-(1432501, 0, 2, 59, 32768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Remove Unselectable UnitFlags'),
+(1432501, 0, 2, 46, 32768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Remove Unselectable UnitFlags'),
 (1432501, 0, 29, 3, 0x01, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - npcFlags added'),
 (1432501, 0, 22, 45, 0x01, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Change faction to Ogre'),
 (1432501, 0, 0, 0, 0, 0, 0, 0, 0, 2000000269, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 2st yell'),
@@ -2940,10 +2946,10 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 
 (570904, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
 (570904, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'UNPAUSE'),
-(570904, 1, 0, 0, 0, 0, 0, 0, 0, 2000005562, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 4'),
+(570904, 1, 0, 0, 0, 0, 0, 0, 0, 2000005463, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 4'),
 
 (570905, 0, 29, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'npc_flag removed'),
-(570905, 1, 0, 0, 0, 0, 0, 0, 0, 2000005563, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 5'),
+(570905, 1, 0, 0, 0, 0, 0, 0, 0, 2000005464, 0, 0, 0, 0, 0, 0, 0, 'Pusilin 5'),
 (570905, 4, 15, 22735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'TRANSFORM'),
 (570905, 3, 10, 13276, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 14.7965, -696.322, -12.6426, 4.4823, 'summon - Wildspawn Imp'),
 (570905, 3, 10, 13276, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 18.8891, -697.389, -12.6426, 4.35271, 'summon - Wildspawn Imp'),
@@ -2953,7 +2959,7 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 
 (573801, 0, 15, 8599, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - cast Enrage'),
 (573801, 0, 0, 0, 0, 0, 0, 0, 0, 2000000268, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - 1st yell'),
-(573801, 0, 2, 59, 32768+33554432, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Set UnitFlags to Unselectable'),
+(573801, 0, 2, 46, 32768+33554432, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Set UnitFlags to Unselectable'),
 (573801, 1, 21, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - set active'),
 (573801, 1, 29, 3, 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - npcFlags removed'),
 (573801, 1, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Captain Kromcrush - Start WP movement'),
@@ -2992,8 +2998,7 @@ INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `dat
 (5525, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500.42, 540.966, -25.3846, 2.72271, 'WP movement'),
 (5525, 15, 18, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 'despawn');
 
-DELETE FROM dbscript_string WHERE entry IN (2000000268,2000000269,2000000455,2000000456,2000000457,2000000543,2000007708,2000007709,2000007710,2000007711,2000007712,2000005822,2000005823);
-DELETE FROM dbscript_string WHERE entry IN (2000005460,2000005461,2000005462,2000005562,2000005563);
+DELETE FROM `dbscript_string` WHERE `entry` IN (2000000268,2000000269,2000000455,2000000456,2000000457,2000000543,2000007708,2000007709,2000007710,2000007711,2000007712,2000005822,2000005823,2000005460,2000005461,2000005462,2000005463,2000005464);
 INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 (2000000268, 'Hey, who Fengus callin\' a gnoll lover?!  Take da prisoners to da king; you smart to bring them with their weapons and show da king that they a threat.  I\'ll go see if Fengus talk smack when I give him da beatdown!  HAR!', 0, 6, 0, 0, 'Captain Kromcrush - Yell Fengus 1'),
 (2000000269, 'OK Fengus, where you at?!  You come call me a gnoll lover while I give you da hammer upside da head!', 0, 6, 0, 0, 'Captain Kromcrush - Yell Fengus 2'),
@@ -3015,8 +3020,8 @@ INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `lan
 (2000005460, 'If you want the key, you''ll have to catch me!', 0, 0, 0, 0, 'Pusilin 1'),
 (2000005461, 'Chase me if you dare! I run without a care!', 0, 0, 0, 0, 'Pusilin 2'),
 (2000005462, 'Why would you ever want to harm me!? Come. Friends we can be!', 0, 0, 0, 0, 'Pusilin 3'),
-(2000005562, 'DIE?! You make Pusillin cry!', 0, 0, 0, 0, 'Pusilin 4'),
-(2000005563, 'Say hello to my little friends!', 0, 0, 0, 0, 'Pusilin 5');
+(2000005463, 'DIE?! You make Pusillin cry!', 0, 0, 0, 0, 'Pusilin 4'),
+(2000005464, 'Say hello to my little friends!', 0, 0, 0, 0, 'Pusilin 5');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

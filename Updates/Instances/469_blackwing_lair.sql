@@ -484,8 +484,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+32, 12459, 469, -7453.46, -867.442, 464.983, 3.94111, 14400, 14400, 2, 0, 0, 1), -- Blackwing Warlock
 (@CGUID+33, 12459, 469, -7419.66, -900.648, 464.983, 3.17421, 14400, 14400, 2, 0, 0, 1), -- Blackwing Warlock
 (@CGUID+34, 12459, 469, -7399.84, -935.079, 464.983, 5.60629, 14400, 14400, 2, 0, 0, 1), -- Blackwing Warlock
-(@CGUID+35, 12459, 469, -7458.91, -926.418, 464.983, 2.81263, 14400, 14400, 1, 0, 0, 2), -- Blackwing Warlock
-(@CGUID+36, 12459, 469, -7435.58, -959.662, 465.011, 0.042043, 14400, 14400, 1, 0, 0, 2), -- Blackwing Warlock
+(@CGUID+35, 12459, 469, -7458.91, -926.418, 464.983, 2.81263, 14400, 14400, 2, 0, 0, 1), -- Blackwing Warlock
+(@CGUID+36, 12459, 469, -7435.58, -959.662, 465.011, 0.042043, 14400, 14400, 2, 0, 0, 1), -- Blackwing Warlock
 (@CGUID+37, 12460, 469, -7388.2, -955.983, 465.047, 2.33874, 14400, 14400, 0, 0, 0, 0), -- Death Talon Wyrmguard
 (@CGUID+38, 12460, 469, -7396.24, -961.435, 465.044, 2.25148, 14400, 14400, 0, 0, 0, 0), -- Death Talon Wyrmguard
 (@CGUID+39, 12460, 469, -7405.67, -964.438, 465.031, 2.00713, 14400, 14400, 0, 0, 0, 0), -- Death Talon Wyrmguard
@@ -941,13 +941,14 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (1460101, 300, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ebonroc - waypoint movement');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+-- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
-INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(@OGUID+60, 1, 11, @OGUID+53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Chromaggus side door'),
-(@OGUID+60, 2, 25, 1, 0, 0, 14020, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Chromaggus run = true'),
-(@OGUID+60, 3, 3, 0, 0, 0, 14020, 70, 0, 0, 0, 0, 0, -7484.91, -1072.98, 476.55, 2.18, 'Move Chromaggus in the center of the room');
+DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 179148;
+INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(179148, 1, 11, 0, 0, 0, 179116, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Chromaggus side door'),
+(179148, 2, 25, 1, 0, 0, 14020, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Chromaggus run = true'),
+(179148, 3, 3, 0, 0, 0, 14020, 70, 0, 0, 0, 0, 0, -7484.91, -1072.98, 476.55, 2.18, 'Move Chromaggus in the center of the room');
 
--- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

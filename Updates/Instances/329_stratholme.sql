@@ -575,7 +575,30 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+466, 9, 3437.46, -3075.46, 136.539, 100, 0, 0),
 (@CGUID+466, 10, 3433.51, -3070.11, 136.533, 100, 0, 0);
 
--- INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+DELETE FROM `creature_movement_template` WHERE `entry` IN (10808);
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+-- Timmy the Cruel 10808
+(10808, 0, 1, 3622.562, -3187.691, 130.639, 100, 0, 0),
+(10808, 0, 2, 3637.907, -3196.123, 128.7287, 100, 0, 0),
+(10808, 0, 3, 3653.786, -3202.95, 127.5057, 100, 0, 0),
+(10808, 0, 4, 3674.535, -3204.597, 126.5483, 100, 0, 0),
+(10808, 0, 5, 3689.455, -3191.138, 127.1003, 100, 0, 0),
+(10808, 0, 6, 3657.534, -3188.617, 126.6715, 100, 0, 0),
+(10808, 0, 7, 3655.75, -3177.174, 126.7521, 100, 0, 0),
+(10808, 0, 8, 3672.97, -3171.484, 126.4423, 100, 0, 0),
+(10808, 0, 9, 3680.462, -3162.152, 126.6528, 100, 0, 0),
+(10808, 0, 10, 3689.455, -3191.138, 127.1003, 100, 0, 0),
+(10808, 0, 11, 3674.535, -3204.597, 126.5483, 100, 0, 0),
+(10808, 0, 12, 3673.839, -3194.009, 126.247, 100, 0, 0),
+(10808, 0, 13, 3668.109, -3185.754, 126.2237, 100, 0, 0),
+(10808, 0, 14, 3651.175, -3196.815, 127.2799, 100, 0, 0),
+(10808, 0, 15, 3658.591, -3188.917, 126.64, 100, 0, 0),
+(10808, 0, 16, 3668.109, -3185.754, 126.2237, 100, 0, 0),
+(10808, 0, 17, 3678.239, -3171.009, 126.4606, 100, 0, 0),
+(10808, 0, 18, 3653.57, -3174.702, 127.1246, 100, 0, 0),
+(10808, 0, 19, 3645.68, -3185.681, 127.5613, 100, 0, 0),
+(10808, 0, 20, 3634.091, -3178.539, 128.8624, 100, 0, 0),
+(10808, 0, 21, 3623.951, -3180.231, 130.4562, 100, 0, 0);
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
 (@CGUID+96, 0, 0, 1, 16, 0, 0, '13787'), -- Skeletal Guardian
@@ -648,7 +671,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (10398, 0, 8, 1, 16, 0, 0, NULL), -- Thuzadin Shadowcaster
 (10399, 0, 0, 1, 16, 0, 0, NULL), -- Thuzadin Acolyte
 (10400, 0, 8, 1, 16, 0, 0, '12380'), -- Thuzadin Necromancer
-(10405, 0, 0, 1, 16, 0, 0, '18950'), -- Plague Ghoul
+(10405, 0, 0, 1, 16, 0, 0, '15088 15097 18950'), -- Plague Ghoul
 (10406, 0, 0, 1, 16, 0, 0, '18950'), -- Ghoul Ravener
 (10407, 0, 0, 1, 16, 0, 0, '8876 18950'), -- Fleshflayer Ghoul
 (10408, 0, 0, 1, 16, 0, 0, NULL), -- Rockwing Gargoyle
@@ -2151,9 +2174,9 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 DELETE FROM `dbscripts_on_event` WHERE `id` IN (5300, 5301, 5258, 11206);
 INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- q.5305 Sweet Serenity
-(5300, 5, 10, 11120, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 3584.41, -2998.57, 125, 1.892, 'Summon Crimson Hammersmith'),
+(5300, 0, 10, 11120, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 3571.19, -3003.701, 125.0014, 0.4708226, 'Summon Crimson Hammersmith'),
 -- q.5307 Corruption
-(5301, 5, 10, 11121, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 3820.95, -3695.15, 143.87, 1.825, 'Summon Black Guard Swordsmith'),
+(5301, 0, 10, 11121, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 3820.68, -3706.187, 143.5117, 1.523680, 'Summon Black Guard Swordsmith'), -- position guessed
 
 (5258, 1, 9, @OGUID+397, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
 
