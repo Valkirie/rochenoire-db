@@ -17,7 +17,6 @@ CREATE TABLE `creature_template_scaling` (
   `ratio_hrht` float unsigned NOT NULL DEFAULT '0' COMMENT 'ratio HR_HT',
   `ratio_c1` float unsigned NOT NULL DEFAULT '0.85' COMMENT 'ratio Boss C1',
   `ratio_c2` float unsigned NOT NULL DEFAULT '0.85' COMMENT 'ratio Boss C2',
-  `is_flex` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'pack has to be resized',
   `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`c_entry`,`m_entry`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -30,5 +29,11 @@ CREATE TABLE `spell_scaling` (
   PRIMARY KEY (`s_entry`,`m_entry`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `creature_template_addon` ADD COLUMN `lvar` MEDIUMINT(8) NOT NULL AFTER `entry`;
-ALTER TABLE `creature_addon` ADD COLUMN `lvar` MEDIUMINT(8) NOT NULL AFTER `guid`; 
+ALTER TABLE `creature_template_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `entry`;
+ALTER TABLE `creature_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `guid`;
+ALTER TABLE `creature_addon` ADD COLUMN `pack` TINYINT(3) UNSIGNED DEFAULT 0 NOT NULL AFTER `auras`;
+ALTER TABLE `creature_template_addon` ADD COLUMN `pack` TINYINT(3) UNSIGNED DEFAULT 0 NOT NULL AFTER `auras`;
+
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11036', 'A player joined %s. Creatures grow stronger.', 'Un joueur a rejoint %s. Les créatures se renforcent.');
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11037', 'A player left %s. Creatures weaken.', 'Un joueur a quitté %s. Les créatures s\'affaiblissent.');
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11038', '%s has been rescaled to %u players.', '%s a été rescalé pour %u joueurs.');
