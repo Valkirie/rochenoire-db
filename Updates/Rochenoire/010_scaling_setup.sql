@@ -33,7 +33,3 @@ ALTER TABLE `creature_template_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 N
 ALTER TABLE `creature_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `guid`;
 ALTER TABLE `creature_addon` ADD COLUMN `pack` TINYINT(3) UNSIGNED DEFAULT 0 NOT NULL AFTER `auras`;
 ALTER TABLE `creature_template_addon` ADD COLUMN `pack` TINYINT(3) UNSIGNED DEFAULT 0 NOT NULL AFTER `auras`;
-
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11036', 'A player joined %s. Creatures grow stronger.', 'Un joueur a rejoint %s. Les créatures se renforcent.');
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11037', 'A player left %s. Creatures weaken.', 'Un joueur a quitté %s. Les créatures s\'affaiblissent.');
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11038', '%s has been rescaled to %u players.', '%s a été rescalé pour %u joueurs.');
