@@ -13914,7 +13914,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- =======
 -- Tanaris
 -- =======
--- Silithid Swarm (4196) - NSR
 -- Shreev (4708) - NSR
 -- Prospector Gunstan (5389) - NSR
 -- Riding White Stallion (5403) - NSR
@@ -14590,9 +14589,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Silithid Grub
 ('325101','3251','9','0','100','1','35','40','1000','1000','0','0','11','7','0','0','0','0','0','0','0','0','0','0','Silithid Grub - Cast Suicide'),
 ('325102','3251','7','0','100','0','0','0','0','0','0','0','11','7','0','0','0','0','0','0','0','0','0','0','Silithid Grub - Cast Suicide on Evade'),
--- Silithid Swarmer
-('325201','3252','0','0','100','1','7000','15000','8000','16000','0','0','11','6589','0','0','0','0','0','0','0','0','0','0','Silithid Swarmer - Cast Silithid Swarm'),
-('325202','3252','7','0','100','0','0','0','0','0','0','0','56','0','0','0','0','0','0','0','0','0','0','0','Silithid Swarmer - Despawn Guardians on Evade'),
+-- Silithid Swarmer 3252
+('325201','3252','1','0','100','0','1000','1000','0','0','0','0','11','10722','0','0','0','0','0','0','0','0','0','0','Silithid Swarmer - Cast Silithid Swarm OOC'),
+('325202','3252','0','0','100','1025','7000','15000','1100','8500','0','0','11','6589','0','0','0','0','0','0','0','0','0','0','Silithid Swarmer - Cast Silithid Swarm'),
 -- Silithid Harvester
 ('325301','3253','0','0','100','1','12000','18000','25000','35000','0','0','11','7278','0','0','0','0','0','0','0','0','0','0','Silithid Harvester - Cast Summon Harvester Swarm'),
 -- Sunscale Lashtail
@@ -29219,8 +29218,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1563001','15630','0','0','100','0','20000','20000','0','0','0','0','11','26662','0','0','1','-106','0','0','0','0','0','0','Spawn of Fankriss - Cast Berserk'),
 -- Glob of Viscidus (15667) - npc_glob_of_viscidus
 -- Dirt Mound
-('1571201','15712','1','0','100','1','1000','1000','1000','1000','0','0','11','26093','0','0','0','0','0','0','0','0','0','0','Dirt Mound - Cast Quake'),
-('1571202','15712','1','0','100','0','30000','30000','0','0','0','0','11','26060','0','0','41','1000','0','0','0','0','0','0','Dirt Mound - Cast Summon Ouro Scarabs and Delayed Despawn'),
 -- Ouro Scarab
 ('1571801','15718','11','0','100','0','0','0','0','0','0','0','38','0','0','0','0','0','0','0','0','0','0','0','Ouro Scarab - Zone Combat Pulse on Spawn'),
 ('1571802','15718','9','0','100','1','60','120','5000','10000','0','0','11','20477','1','1','0','0','0','0','0','0','0','0','Ouro Scarab - Cast Summon Player at 60 Yards'),
@@ -30173,6 +30170,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Stoneclaw Totem II 3911 - TotemAI
 -- Stoneclaw Totem III 3912 - TotemAI
 -- Stoneclaw Totem IV 3913 - TotemAI
+-- Silithid Swarm 4196
+('419601','4196','11','0','100','0','0','0','0','0','0','0','50','1','0','0','0','0','0','0','0','0','0','0','Silithid Swarm - Set ReactState Defensive on Spawn'),
+('419602','4196','7','0','100','0','0','0','0','0','0','0','56','0','0','0','0','0','0','0','0','0','0','0','Silithid Swarm - Forced Despawn on Evade'),
 -- Hammerhead Shark 5185 - NSR
 -- Archery Target 5202
 ('520201','5202','11','0','100','0','0','0','0','0','0','0','21','0','0','0','0','0','0','0','0','0','0','0','Archery Target - Prevent Combat Movement on Spawn'),
