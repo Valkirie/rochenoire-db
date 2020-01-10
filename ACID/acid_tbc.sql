@@ -5989,9 +5989,10 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('72901','729','1','0','100','0','1000','1000','0','0','0','0','11','7095','0','32','0','0','0','0','0','0','0','0','Sin''Dall - Cast Knockdown Proc OOC'),
 -- Tethis 730
 ('73001','730','0','0','100','1','0','5000','11000','14000','0','0','11','3604','1','0','0','0','0','0','0','0','0','0','Tethis - Cast Tendon Rip'),
--- King Bangalsh 731 - CallForHelp on Aggro?
-('73101','731','1','0','100','0','1000','1000','0','0','0','0','56','0','0','0','0','0','0','0','0','0','0','0','King Bangalsh - Despawn Guardians on OOC'),
-('73102','731','2','0','100','0','50','0','0','0','0','0','11','8816','0','1','0','0','0','0','0','0','0','0','King Bangalsh - Cast Summon Panthers at 50% HP'),
+-- King Bangalsh 731
+('73101','731','1','0','100','0','10000','30000','0','0','0','0','56','0','0','0','0','0','0','0','0','0','0','0','King Bangalsh - Despawn Guardians OOC'),
+('73102','731','4','0','100','0','0','0','0','0','0','0','39','20','0','0','0','0','0','0','0','0','0','0','King Bangalsh - Call For Help on Aggro'),
+('73103','731','2','0','100','0','50','0','0','0','0','0','11','8816','0','2','1','-153','0','0','0','0','0','0','King Bangalsh - Cast Summon Panthers, Emote at 50% HP'),
 -- Panther 736 - NSR
 -- Skullsplitter Panther 756 - NSR
 -- Skullsplitter Tiger 758 - NSR
@@ -11539,7 +11540,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Tabetha (6546) - NSR
 -- Demon of the Orb (6549) - NSR
 -- Mana Surge 6550
-('655001','6550','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Mana Surge - Enable Range Mode on Aggro'),
+('655001','6550','11','0','100','0','0','0','0','0','0','0','57','2','15','0','50','0','0','0','0','0','0','0','Mana Surge - Enable Range Mode and Set ReactState Passive on Spawn'),
 ('655002','6550','0','0','100','1025','8000','11000','9000','12000','0','0','11','11824','4','0','0','0','0','0','0','0','0','0','Mana Surge - Cast Shock'),
 ('655003','6550','9','0','100','1025','0','40','3400','4800','0','0','11','9532','1','256','0','0','0','0','0','0','0','0','Mana Surge - Cast Lightning Bolt'),
 -- Ghok'kah (6567) - NSR
@@ -14469,7 +14470,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Innkeeper Keldamyr (6736) - npc_innkeeper
 -- Porthannius 6780
 -- Melarith 6781
--- Sethir the Ancient 6909
+-- Sethir the Ancient 6909 - Find Summoning Spell which randomizes amount of adds spawned
+('690901','6909','4','0','100','0','0','0','0','0','0','0','12','6911','1','10000','12','6911','1','10000','12','6911','1','10000','Sethir the Ancient - Spawn Minion of Sethir on Aggro'),
 -- Minion of Sethir
 ('691101','6911','4','0','50','0','0','0','0','0','0','0','1','-234','0','0','0','0','0','0','0','0','0','0','Minion of Sethir - Say on Aggro'),
 -- Ferocitas the Dream Eater
@@ -18255,7 +18257,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2239401','22394','9','0','100','1','0','5','18000','26000','0','0','11','30639','1','0','0','0','0','0','0','0','0','0','Deathshadow Hound - Cast Carnivorous Bite'),
 -- Wild Sparrowhawk 22979
 ('2297901','22979','8','0','100','1','39810','-1','1','1','0','0','11','39812','6','4','0','0','0','0','0','0','0','0','Wild Sparrowhawk - Cast Captured Sparrowhawk Once Player Affect It With Sparrowhawk Net'),
-('2297902','22979','4','0','100','0','0','0','0','0','0','0','25','0','0','0','1','-11220','0','0','24','0','0','0','Wild Sparrowhawk - Flee and Emote and Evade on Aggro'),
+('2297902','22979','4','0','100','0','0','0','0','0','0','0','25','0','0','0','1','-11220','0','0','0','0','0','0','Wild Sparrowhawk - Flee and Emote on Aggro'),
+('2297903','22979','0','0','100','1024','7000','7000','0','0','0','0','24','0','0','0','0','0','0','0','0','0','0','0','Wild Sparrowhawk - Evade after Flee'),
 -- Deathshadow Agent
 ('2339301','23393','0','0','100','1','3000','7000','8000','14000','0','0','11','36447','1','0','0','0','0','0','0','0','0','0','Deathshadow Agent - Cast Mind Sear'),
 
@@ -27850,12 +27853,12 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1938901','19389','0','0','100','1','5000','10000','8000','12000','0','0','11','39171','1','0','0','0','0','0','0','0','0','0','Lair Brute - Cast Mortal Strike'),
 ('1938902','19389','0','0','100','1','3000','8000','6000','11000','0','0','11','39174','1','0','0','0','0','0','0','0','0','0','Lair Brute - Cast Cleave'),
 ('1938903','19389','32','0','100','1','8','25','15000','15000','0','0','11','24193','12','0','14','-100','0','0','0','0','0','0','Lair Brute - Cast Charge in Range and Reset Threat'),
-('1938904','19389','2','0','100','0','15','0','0','0','0','0','39','50','0','0','1','-10989','0','0','0','0','0','0','Lair Brute - Call For Help, Emote at 15% HP'),
+('1938904','19389','2','0','100','0','15','0','0','0','0','0','39','50','0','0','1','-153','0','0','0','0','0','0','Lair Brute - Call For Help, Emote at 15% HP'),
 -- Gronn-Priest
 ('2135001','21350','9','0','100','1','0','8','12000','19000','0','0','11','22884','0','1','0','0','0','0','0','0','0','0','Gronn-Priest - Cast Psychic Scream'),
 ('2135002','21350','0','0','100','1','7000','16000','21000','27000','0','0','11','36679','0','1','0','0','0','0','0','0','0','0','Gronn-Priest - Cast Renew'),
 ('2135003','21350','14','0','100','1','140000','100','20000','25000','0','0','11','36678','12','1','0','0','0','0','0','0','0','0','Gronn-Priest - Cast Heal on Friendly Missing HP'),
-('2135004','21350','2','0','100','0','15','0','0','0','0','0','39','50','0','0','1','-10989','0','0','0','0','0','0','Gronn-Priest - Call For Help, Emote at 15% HP'),
+('2135004','21350','2','0','100','0','15','0','0','0','0','0','39','50','0','0','1','-153','0','0','0','0','0','0','Gronn-Priest - Call For Help, Emote at 15% HP'),
 -- Dancing Flames (25305) - npc_dancing_flames
 
 
@@ -30733,7 +30736,8 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-144','What? How dare you!','0','0','0','0','0','1754'),
 ('-145','%s flees toward safety or another tiger.','0','2','0','0','0','Zulian Cub fleeing text'),
 ('-146','%s is demoralized and runs!','0','2','0','0','0','Affray Challenger 6240'),
--- Classic PLEASE RE-USE 147 - 153
+-- Classic PLEASE RE-USE 147 - 152
+('-153','%s lets out a massive roar, calling for aid!','0','2','0','15','0','Call For Help'),
 ('-154','%s lets out a shriek, calling for help!','0','2','0','0','0','3255'),
 ('-155','%s grabs for his poisoned dagger!','0','2','0','0','0','3286'),
 ('-156','%s begins to make a copy of itself!','0','2','0','0','0','3638,6557 - s.Clone'),
@@ -32217,7 +32221,7 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-10986','Piece by piece I will tear this challenger apart... PIECE BY PIECE!','0','0','0','0','0','18402'),
 ('-10987','No more nice ogre! You hurt Mogor!!','0','1','0','0','0','18069'),
 ('-10988','Who dares defile the statue of our beloved?','0','1','0','0','0','17715'),
-('-10989','%s lets out a massive roar, calling for aid!','0','2','0','15','0','19389'),
+-- RE-USE 10989
 ('-10990','Petulant children, pray to your gods for you are about to meet them!','0','1','0','0','0','17678'),
 ('-10991','Prepare yourself for eternal torture, mortal!','0','1','0','0','0','19747'),
 ('-10992','WHAT?! Who dares to disturb the Burning Legion?','0','1','0','0','0','19747'),
@@ -32384,8 +32388,8 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-11216','The cold embrace awaits...','0','0','0','0','0','Ancient Orc Ancestor 18688'),
 ('-11217','Thank you...','0','0','0','0','0','Ancient Orc Ancestor 18688'),
 ('-11218','It comes for you...','0','0','0','0','0','Ancient Orc Ancestor 18688'),
-('-11219','%s crushes a vial of green gas.','0','0','0','0','0','Daggerfen Assassin 18116'),
-('-11220','%s senses danger and flees.','0','0','0','0','0','Wild Sparrowhawk 22979'),
+('-11219','%s crushes a vial of green gas.','0','2','0','0','0','Daggerfen Assassin 18116'),
+('-11220','%s senses danger and flees.','0','2','0','0','0','Wild Sparrowhawk 22979'),
 ('-11221','%s looks weak enough to capture.','0','2','0','0','0','4351/4352'),
 ('-19997','May the light bless you.','0','0','0','1','0','25639'),
 ('-19998','Your wounds are severe, but you will live.','0','0','0','1','0','25639'),
