@@ -18298,6 +18298,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Gan'arg Mekgineer
 ('1694901','16949','9','0','100','1','0','5','13000','18000','0','0','11','36208','1','0','0','0','0','0','0','0','0','0','Gan''arg Mekgineer - Cast Steal Weapon'),
 ('1694902','16949','2','0','100','1','80','0','10000','14000','0','0','11','36825','1','1','0','0','0','0','0','0','0','0','Gan''arg Mekgineer - Cast Drain Life at 80% HP'),
+-- Arcane Vortex 17408
+('1740801','17408','11','0','100','0','0','0','0','0','0','0','11','30627','0','0','0','0','0','0','0','0','0','0','Arcane Vortex - Cast Arcane Surge Passive on Spawn'),
 -- Kalynna Lathred (17636) - NSR
 -- Angered Nether-wraith 17870
 ('1787001','17870','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Angered Nether-wraith - Enable Range Mode on Aggro'),
@@ -18572,6 +18574,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Doctor Vomisa, Ph.T. (19832) - NSR
 -- Lariel Sunrunner (19839) - NSR
 -- Caledis Brightdawn (19840) - NSR
+-- Invis KV Defender 19842
+('1984201','19842','1','0','100','1','2000','2000','1000','1000','0','0','11','34627','0','0','0','0','0','0','0','0','0','0','Invis KV Defender - Cast Nuke Mana Creature II OOC'),
 -- Scrap Reaver X6000 (19849) - NSR
 -- Negatron
 ('1985101','19851','11','0','100','0','0','0','0','0','0','0','11','15742','0','0','0','0','0','0','0','0','0','0','Negatron - Cast Ashcrombe''s Teleport (Rank 1) on Spawn'),
