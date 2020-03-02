@@ -66,8 +66,14 @@ UPDATE gameobject_template SET Faction=114, `size`=2 WHERE entry=184661; -- Smok
 -- summoned by spell 36302 Summon Honor Hold Gryphon Brigadier South
 -- summon spells casted by 21173 Zeth'Gor Quest Credit Marker, They Must Burn
 -- cast 36325 They Must Burn Bomb Drop (DND) -> target 21182 Zeth'Gor Quest Credit Marker, They Must Burn, Tower South
--- object 183816 should not have static spawns... It is summoned by spell 36325
-DELETE FROM gameobject WHERE guid IN (24683,24684,24685,24686,32141,32142,32143);
+
+-- object 183816 should possibly not have static spawns... It is summoned by spell 36325 Spread Hellfire Fire
+-- associated with trap object 183929 Hellfire Hot Spot Spreader -> casts spell 34516
+-- DELETE FROM gameobject WHERE guid IN (24683,24684,24685,24686,32141,32142,32143);
+DELETE FROM spell_script_target WHERE entry=34516;
+INSERT INTO spell_script_target (entry, type, targetEntry, inverseEffectMask) VALUES
+(34516, 0, 183816, 0);
+UPDATE gameobject_template SET data8=1 WHERE entry=183929; -- set serverside so that it's not visible to players
 
 UPDATE creature_template SET ExtraFlags=ExtraFlags|4096 WHERE Entry=21173;
 
@@ -260,21 +266,21 @@ INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,
 (22406,2,15,-1003.392,1791.963,211.84,5000,1,100); -- despawn
 
 INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
-(22404,3,0,-726.5537,1916.293,86.13097,0,0,100),
-(22404,3,1,-738.3353,1922.693,100.9578,0,0,100),
-(22404,3,2,-750.1168,1929.094,115.7846,0,0,100),
-(22404,3,3,-780.6038,1912.869,111.4513,0,0,100),
-(22404,3,4,-809.3598,1907.495,119.8957,0,0,100),
-(22404,3,5,-837.6174,1903.5,121.1179,0,0,100),
-(22404,3,6,-866.6458,1898.007,134.0069,0,0,100),
-(22404,3,7,-905.5453,1896.332,139.368,0,0,100),
-(22404,3,8,-928.1199,1891.287,135.5625,0,0,100),
-(22404,3,9,-949.9658,1884.561,129.8402,0,0,100),
-(22404,3,10,-976.4232,1879.735,128.3126,0,0,100),
-(22404,3,11,-999.9407,1891.013,136.0901,0,0,100),
-(22404,3,12,-1023.856,1898.861,153.8956,0,0,100),
-(22404,3,13,-1047.789,1909.254,168.2844,0,0,100),
-(22404,3,14,-1065.531,1914.846,183.0622,0,0,100),
-(22404,3,15,-1065.531,1914.846,183.0622,5000,1,100); -- despawn
+(22406,3,0,-726.5537,1916.293,86.13097,0,0,100),
+(22406,3,1,-738.3353,1922.693,100.9578,0,0,100),
+(22406,3,2,-750.1168,1929.094,115.7846,0,0,100),
+(22406,3,3,-780.6038,1912.869,111.4513,0,0,100),
+(22406,3,4,-809.3598,1907.495,119.8957,0,0,100),
+(22406,3,5,-837.6174,1903.5,121.1179,0,0,100),
+(22406,3,6,-866.6458,1898.007,134.0069,0,0,100),
+(22406,3,7,-905.5453,1896.332,139.368,0,0,100),
+(22406,3,8,-928.1199,1891.287,135.5625,0,0,100),
+(22406,3,9,-949.9658,1884.561,129.8402,0,0,100),
+(22406,3,10,-976.4232,1879.735,128.3126,0,0,100),
+(22406,3,11,-999.9407,1891.013,136.0901,0,0,100),
+(22406,3,12,-1023.856,1898.861,153.8956,0,0,100),
+(22406,3,13,-1047.789,1909.254,168.2844,0,0,100),
+(22406,3,14,-1065.531,1914.846,183.0622,0,0,100),
+(22406,3,15,-1065.531,1914.846,183.0622,5000,1,100); -- despawn
 
 
