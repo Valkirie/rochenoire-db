@@ -1457,7 +1457,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Archmage Alturus (17613) - NSR
 -- Archmage Leryda (18253) - NSR
 -- Apprentice Darius (18255) - NSR
--- Voodoo Servant (24529) - NSR
 -- Dancing Flames (25305) - npc_dancing_flames
 
 
@@ -3551,7 +3550,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Marge (23764) - NSR
 -- Morgom (23766) - NSR
 -- Donna Brascoe (23858) - NSR
--- Voodoo Servant (24529) - NSR
 -- Kiz Coilspanner (24851) - NSR
 -- Budd\'s Bodyguard 25145
 ('2514501','25145','4','0','100','0','0','0','0','0','0','0','57','2','40','0','0','0','0','0','0','0','0','0','Budd''s Bodyguard - Enable Range Mode on Aggro'),
@@ -17305,6 +17303,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1695903','16959','0','0','100','1025','6000','15000','10500','17000','0','0','11','12098','5','0','0','0','0','0','0','0','0','0','Dread Tactician - Cast Sleep'),
 -- Sister of Grief
 ('1696001','16960','33','0','100','1','0','0','4200','13400','0','0','11','21987','1','0','0','0','0','0','0','0','0','0','Sister of Grief - Cast Lash of Pain on Facing Target Back'),
+('1696002','16960','0','0','100','1','5000','15000','30000','35000','0','0','11','30850','5','0','0','0','0','0','0','0','0','0','Sister of Grief - Cast Seduction'),
 -- Warlord Morkh 16964
 ('1696401','16964','6','0','100','0','0','0','0','0','0','0','32','21134','0','26','0','0','0','0','0','0','0','0','Warlord Morkh - Summon Eye of the Citadel on Death'),
 ('1696402','16964','2','0','100','1024','25','0','0','0','0','0','11','8599','0','1','1','-46','0','0','0','0','0','0','Warlord Morkh - Cast Enrage at 25% HP'),
@@ -18706,6 +18705,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2021002','20210','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Shaleskin Flayer - Flee at 15% HP'),
 -- Pentatharon
 ('2021501','20215','0','0','100','1','5000','8500','7400','12500','0','0','11','36039','1','0','0','0','0','0','0','0','0','0','Pentatharon - Cast Carrion Swarm'),
+('2021502','20215','0','0','100','1','5000','10000','25000','30000','0','0','11','20663','5','0','0','0','0','0','0','0','0','0','Pentatharon - Cast Sleep'),
 -- Sunfury Technician (20218) - NSR
 -- Sunfury Flamekeeper
 ('2022101','20221','9','0','100','1','0','5','6000','9000','0','0','11','35857','1','0','0','0','0','0','0','0','0','0','Sunfury Flamekeeper - Cast Torch'),
@@ -18744,6 +18744,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Foreman Sundown 20393
 -- Eye of Culuthas 20394
 ('2039401','20394','0','0','100','1','0','5000','12500','15000','0','0','11','36414','1','0','0','0','0','0','0','0','0','0','Eye of Culuthas - Cast Focused Bursts'),
+('2039402','20394','0','0','100','1','3000','6000','9000','13000','0','0','11','36398','1','0','0','0','0','0','0','0','0','0','Eye of Culuthas - Cast Tongue Lash'),
 -- Overseer Seylanna 20397
 ('2039701','20397','1','0','100','0','1000','1000','0','0','0','0','11','34062','0','0','0','0','0','0','0','0','0','0','Overseer Seylanna - Cast Arcane Repair OOC'),
 ('2039702','20397','4','0','100','0','0','0','0','0','0','0','52','3','0','0','0','0','0','0','0','0','0','0','Overseer Seylanna - Interrupt Channelling on Aggro'),
@@ -19000,6 +19001,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2092901','20929','0','0','100','1','3000','5000','7000','11000','0','0','11','15496','1','0','0','0','0','0','0','0','0','0','Wrath Lord - Cast Cleave'),
 -- Hatecryer
 ('2093001','20930','0','0','100','1','8000','8000','15000','16000','0','0','11','34017','1','0','0','0','0','0','0','0','0','0','Hatecryer - Cast Rain of Chaos'),
+('2093002','20930','0','0','100','1','2000','4000','10000','15000','0','0','11','36541','4','32','0','0','0','0','0','0','0','0','Hatecryer - Cast Curse of Burning Shadows'),
 -- Tyrantus
 ('2093101','20931','0','0','100','1','4000','4500','12000','12000','0','0','11','35321','1','32','0','0','0','0','0','0','0','0','Tyrantus - Cast Gushing Wound'),
 ('2093102','20931','0','0','100','1','7000','8000','20000','35000','0','0','11','36629','0','0','0','0','0','0','0','0','0','0','Tyrantus - Cast Terrifying Roar'),
@@ -26254,6 +26256,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1950703','19507','0','0','100','1','22100','29400','34800','37700','0','0','11','34247','1','1','0','0','0','0','0','0','0','0','Sunseeker Gene-Splicer - Cast Summon Lasher Beast'),
 -- Sunseeker Herbalist (4.3.4 Official Data - Normal/Heroic)
 ('1950801','19508','0','0','100','1','6100','9600','12100','20500','0','0','11','22127','4','1','0','0','0','0','0','0','0','0','Sunseeker Herbalist - Cast Entangling Roots'),
+('1950802','19508','0','0','100','1','1000','4000','5000','8000','0','0','11','34641','4','0','0','0','0','0','0','0','0','0','Sunseeker Herbalist - Cast Spade Toss'),
 -- Sunseeker Harvester (4.3.4 Official Data - Normal/Heroic) - (No Polymorph Data Available)
 ('1950901','19509','0','0','100','1','3100','9700','8400','15700','0','0','11','34640','1','0','0','0','0','0','0','0','0','0','Sunseeker Harvester - Cast Wilting Touch'),
 ('1950902','19509','0','0','100','1','9000','15000','12000','18000','0','0','11','34639','5','1','0','0','0','0','0','0','0','0','Sunseeker Harvester - Cast Polymorph'),
@@ -30556,6 +30559,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Ashtongue Searing Totem 22896 - TotemAI
 -- Summoned Windfury Totem 22897 - TotemAI
 -- Captured Totem 23811 - TotemAI
+-- Voodoo Servant 24529
+('2452901','24529','0','0','100','1','1000','3000','3000','7000','0','0','11','19874','1','0','0','0','0','0','0','0','0','0','Voodoo Servant - Cast Lightning Bolt'),
 -- D.I.S.C.O.
 ('2798901','27989','11','0','100','0','0','0','0','0','0','0','11','50487','0','0','0','0','0','0','0','0','0','0','D.I.S.C.O. - Cast Create Disco Ball Visual Object on Spawn');
 
