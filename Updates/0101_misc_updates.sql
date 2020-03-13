@@ -12,7 +12,18 @@ UPDATE gameobject SET spawntimesecsmin=2700, spawntimesecsmax=4500 WHERE id=1765
 
 -- remove faulty condition on Golnir Bouldertoe and Chepi vendor option
 UPDATE gossip_menu_option SET condition_id=0 WHERE menu_id IN (12851,12856) AND id=0;
+-- additional NPCs with the same problem - this gossip menu option should not have a condition
+UPDATE gossip_menu_option SET condition_id=0 WHERE menu_id IN (12850,12852,12853,12855,12857,12858,12859,12868) AND id=0 AND condition_id=474;
 
 UPDATE creature_template SET ExtraFlags=ExtraFlags|4096 WHERE Entry=21417; -- Invis Infernal Caster
+
+-- classic-db npc_text: On the northern dock, you can board a ship that will carry you to Rut'theran Village and Darnassus. From the southern dock, you can find passage across the Great Sea to Menethil Harbor on Khaz Modan. Safe journeys to you!
+-- broadcast text id 8106 (matches): On the northern dock, you can board a ship that will carry you to Rut'theran Village and Darnassus.  From the southern dock, you can find passage across the Great Sea to Menethil Harbor on Khaz Modan.  Safe journeys to you!
+-- TBC version should probably mention Azuremyst but not Stormwind Harbor?
+-- trinity broadcast text id 8106 (wotlk+ version): On the northern dock, you can board a ship that will carry you to Rut'theran Village and Darnassus.  From the southern dock, you can find passage across the Great Sea to Stormwind Harbor.  The dock to the west, at the end of the pier, leads to Azuremyst Isle, near the Exodar. Safe journeys to you!
+
+-- my hunch here is that broadcast text id 8106 content changed 2 times - once in TBC and once in WotLK, we don't know what the exact text should be for TBC era
+-- purposefully not assigning broadcast text id 8106 and using "custom" guessed text instead
+UPDATE npc_text SET text0_0='On the northern dock, you can board a ship that will carry you to Rut''theran Village and Darnassus.  From the southern dock, you can find passage across the Great Sea to Menethil Harbor on Khaz Modan.  The dock to the west, at the end of the pier, leads to Azuremyst Isle, near the Exodar.  Safe journeys to you!' WHERE id=5480;
 
 
