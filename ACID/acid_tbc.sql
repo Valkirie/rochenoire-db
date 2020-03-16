@@ -9263,8 +9263,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('838603','8386','9','0','100','1025','5','30','2300','3900','0','0','11','6660','1','256','0','0','0','0','0','0','0','0','Horizon Scout Crewman - Cast Shoot'),
 -- Pilot Xiggs Fuselighter (8392) - NSR
 -- Sanath Lim-yo (8395) - NSR
--- Sentinel Keldara Sunblade
-('839701','8397','11','0','100','0','0','0','0','0','0','0','21','0','0','0','20','0','0','0','0','0','0','0','Sentinel Keldara Sunblade - Prevent Combat Movement and Prevent Melee on Spawn'),
+-- Sentinel Keldara Sunblade 8397
+('839701','8397','11','0','100','0','0','0','0','0','0','0','50','1','0','0','17','159','7','0','0','0','0','0','Sentinel Keldara Sunblade - Set ReactState Defensive and UNIT_STAND_STATE_DEAD on Spawn'),
+('839702','8397','4','0','100','0','0','0','0','0','0','0','17','159','0','0','0','0','0','0','0','0','0','0','Sentinel Keldara Sunblade - Remove UNIT_STAND_STATE_DEAD on Aggro'),
 -- Nyrill (8399) - NSR
 -- Ogtinc (8405) - NSR
 -- Makron the Corrupt 8407 - NSR
@@ -22590,20 +22591,20 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1604212','16042','0','7','100','1','7000','14000','4000','6000','0','0','11','27382','0','0','0','0','0','0','0','0','0','0','Lord Valthalak - Cast Shadow Bolt Volley (Phase 3)'),
 ('1604213','16042','2','7','100','1','15','0','2000','5000','0','0','11','8269','0','33','0','0','0','0','0','0','0','0','Lord Valthalak - Cast Frenzy at 15% HP (Phase 3)'),
 -- Mor Grayhoof Trigger
-('1604401','16044','8','0','100','0','27184','-1','0','0','0','0','32','16080','0','29','41','0','0','0','0','0','0','0','Mor Grayhoof Trigger - Spawn Mor Grayhoof and Forced Despawn on Summon Mor Grayhoof DND Spellhit'),
-('1604402','16044','8','0','100','0','27203','-1','0','0','0','0','32','16080','0','29','41','0','0','0','0','0','0','0','Mor Grayhoof Trigger - Spawn Mor Grayhoof and Forced Despawn on Summon Various DND Spellhit'),
+('1604401','16044','8','0','100','0','27184','-1','0','0','0','0','32','16080','0','29','0','0','0','0','0','0','0','0','Mor Grayhoof Trigger - Spawn Mor Grayhoof on Summon Mor Grayhoof DND Spellhit'),
+('1604402','16044','8','0','100','0','27203','-1','0','0','0','0','32','16080','0','29','0','0','0','0','0','0','0','0','Mor Grayhoof Trigger - Spawn Mor Grayhoof on Summon Various DND Spellhit'),
 -- Isalien Trigger
-('1604501','16045','8','0','100','0','27190','-1','0','0','0','0','32','16097','0','30','41','0','0','0','0','0','0','0','Isalien Trigger - Spawn Isalien and Forced Despawn on Summon Isalien DND Spellhit'),
-('1604502','16045','8','0','100','0','27203','-1','0','0','0','0','32','16097','0','30','41','0','0','0','0','0','0','0','Isalien Trigger - Spawn Isalien and Forced Despawn on Summon Various DND Spellhit'),
+('1604501','16045','8','0','100','0','27190','-1','0','0','0','0','32','16097','0','30','0','0','0','0','0','0','0','0','Isalien Trigger - Spawn Isalien on Summon Isalien DND Spellhit'),
+('1604502','16045','8','0','100','0','27203','-1','0','0','0','0','32','16097','0','30','0','0','0','0','0','0','0','0','Isalien Trigger - Spawn Isalien on Summon Various DND Spellhit'),
 -- Jarien and Sothos Trigger
-('1604601','16046','8','0','100','0','27191','-1','0','0','0','0','32','16101','0','32','32','16102','0','31','41','0','0','0','Jarien and Sothos Trigger - Spawn Jarien and Sothos and Forced Despawn on Summon Jarien and Sothos DND Spellhit'),
-('1604602','16046','8','0','100','0','27203','-1','0','0','0','0','32','16101','0','32','32','16102','0','31','41','0','0','0','Jarien and Sothos Trigger - Spawn Jarien and Sothos and Forced Despawn on Summon Various DND Spellhit'),
+('1604601','16046','8','0','100','0','27191','-1','0','0','0','0','32','16101','0','32','32','16102','0','31','0','0','0','0','Jarien and Sothos Trigger - Spawn Jarien and Sothos on Summon Jarien and Sothos DND Spellhit'),
+('1604602','16046','8','0','100','0','27203','-1','0','0','0','0','32','16101','0','32','32','16102','0','31','0','0','0','0','Jarien and Sothos Trigger - Spawn Jarien and Sothos on Summon Various DND Spellhit'),
 -- Kormok Trigger
-('1604701','16047','8','0','100','0','27201','-1','0','0','0','0','32','16118','0','33','41','1000','0','0','0','0','0','0','Kormok Trigger - Spawn Kormok and Delayed Despawn on Summon Kormok DND Spellhit'),
-('1604702','16047','8','0','100','0','27203','-1','0','0','0','0','32','16118','0','33','41','1000','0','0','0','0','0','0','Kormok Trigger - Spawn Kormok and Delayed Despawn on Summon Various DND Spellhit'),
+('1604701','16047','8','0','100','0','27201','-1','0','0','0','0','32','16118','0','33','0','0','0','0','0','0','0','0','Kormok Trigger - Spawn Kormok on Summon Kormok DND Spellhit'),
+('1604702','16047','8','0','100','0','27203','-1','0','0','0','0','32','16118','0','33','0','0','0','0','0','0','0','0','Kormok Trigger - Spawn Kormok on Summon Various DND Spellhit'),
 -- Lord Valthalak Trigger
-('1604801','16048','8','0','100','0','27202','-1','0','0','0','0','32','16042','0','34','41','1000','0','0','0','0','0','0','Lord Valthalak Trigger - Spawn Lord Valthalak and Delayed Despawn on Summon Lord Valthalak DND Spellhit'),
-('1604802','16048','8','0','100','0','27203','-1','0','0','0','0','32','16042','0','34','41','1000','0','0','0','0','0','0','Lord Valthalak Trigger - Spawn Lord Valthalak and Delayed Despawn on Summon Various DND Spellhit'),
+('1604801','16048','8','0','100','0','27202','-1','0','0','0','0','32','16042','0','34','0','0','0','0','0','0','0','0','Lord Valthalak Trigger - Spawn Lord Valthalak on Summon Lord Valthalak DND Spellhit'),
+('1604802','16048','8','0','100','0','27203','-1','0','0','0','0','32','16042','0','34','0','0','0','0','0','0','0','0','Lord Valthalak Trigger - Spawn Lord Valthalak on Summon Various DND Spellhit'),
 -- Mor Grayhoof
 ('1608001','16080','11','0','100','0','0','0','0','0','0','0','1','-1523','0','0','0','0','0','0','0','0','0','0','Mor Grayhoof - Yell on Spawn'),
 ('1608002','16080','4','0','100','0','0','0','0','0','0','0','22','1','0','0','0','0','0','0','0','0','0','0','Mor Grayhoof - Set Phase 1 on Aggro'),
@@ -25714,7 +25715,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Elder Farwhisper (15607) - NSR
 -- Ysida Harmon (16031) - NSR
 -- Jarien 16101
-('1610101','16101','6','0','100','0','0','0','0','0','0','0','12','16103','0','600000','0','0','0','0','0','0','0','0','Jarien - Spawn Spirit of Jarien on Death'),
+('1610101','16101','6','0','100','0','0','0','0','0','0','0','11','27644','0','0','0','0','0','0','0','0','0','0','Jarien - Spawn Spirit of Jarien on Death'),
 ('1610102','16101','29','0','100','0','1000','1000','0','0','0','0','1','-1527','0','0','0','0','0','0','0','0','0','0','Jarien - Say OOC'),
 ('1610103','16101','29','0','100','0','9000','9000','0','0','0','0','1','-1529','0','0','0','0','0','0','0','0','0','0','Jarien - Say OOC'),
 ('1610104','16101','29','0','100','0','16000','16000','0','0','0','0','1','-1531','0','0','0','0','0','0','0','0','0','0','Jarien - Say OOC'),
@@ -25724,7 +25725,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1610108','16101','0','0','100','1025','0','0','7000','12000','0','0','11','22575','1','0','0','0','0','0','0','0','0','0','Jarien - Cast Shadow Shock'),
 ('1610109','16101','0','0','100','1025','3000','9000','9000','13000','0','0','11','16856','1','0','0','0','0','0','0','0','0','0','Jarien - Cast Mortal Strike'),
 -- Sothos 16102
-('1610201','16102','6','0','100','0','0','0','0','0','0','0','12','16104','0','600000','0','0','0','0','0','0','0','0','Sothos - Spawn Spirit of Sothos on Death'),
+('1610201','16102','6','0','100','0','0','0','0','0','0','0','11','27643','0','0','0','0','0','0','0','0','0','0','Sothos - Spawn Spirit of Sothos on Death'),
 ('1610202','16102','29','0','100','0','5000','5000','0','0','0','0','1','-1528','0','0','0','0','0','0','0','0','0','0','Sothos - Say OOC'),
 ('1610203','16102','29','0','100','0','14000','14000','0','0','0','0','1','-1530','0','0','0','0','0','0','0','0','0','0','Sothos - Say OOC'),
 ('1610204','16102','29','0','100','0','18000','18000','0','0','0','0','19','2','0','0','0','0','0','0','0','0','0','0','Sothos - Remove UnitFlag'),
@@ -28460,7 +28461,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1166802','11668','0','0','100','1025','4000','6000','2000','4000','0','0','11','19393','4','544','0','0','0','0','0','0','0','0','Firelord - Cast Soul Burn'),
 ('1166803','11668','0','0','100','1025','10000','15000','15000','20000','0','0','11','19392','0','0','0','0','0','0','0','0','0','0','Firelord - Summon Lava Spawn'),
 -- Flame Imp 11669
-('1166901','11669','9','0','100','1025','0','10','4000','7000','0','0','11','20602','17','0','0','0','0','0','0','0','0','0','Flame Imp - Cast Fire Nova'),
+('1166901','11669','0','0','100','1025','5000','15000','4000','7000','0','0','11','20602','17','0','0','0','0','0','0','0','0','0','Flame Imp - Cast Fire Nova'),
 -- Core Hound 11671
 ('1167101','11671','28','0','100','1025','19771','10','5000','9000','0','0','11','19771','1','0','0','0','0','0','0','0','0','0','Core Hound - Cast Serrated Bite on Target Missing Serrated Bite Aura Stack'),
 -- Core Rager (11672) - mob_core_rager
@@ -30348,6 +30349,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Searing Totem 2523 - TotemAI
 -- Earthbind Totem 2630 - TotemAI
 -- Ward of Laze 2667 - TotemAI
+-- Advanced Target Dummy 2674
+('267401','2674','11','0','100','0','0','0','0','0','0','0','11','4507','0','0','50','0','0','0','0','0','0','0','Advanced Target Dummy - Cast Target Dummy Spawn Effect and Set ReactState Passive on Spawn'),
+('267402','2674','29','0','100','0','15000','15000','0','0','0','0','37','0','0','0','0','0','0','0','0','0','0','0','Advanced Target Dummy - Die on Generic Timer'),
 -- Healing Ward V 2992 - TotemAI
 -- Healing Stream Totem 3527 - TotemAI
 -- Healing Ward 3560 - TotemAI
