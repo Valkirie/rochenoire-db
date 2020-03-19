@@ -29,6 +29,7 @@ CREATE TABLE `scale_creature_template` (
 CREATE TABLE `scale_creature_pool` (
   `guid` int(10) unsigned NOT NULL,
   `pool_id` int(10) unsigned DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
