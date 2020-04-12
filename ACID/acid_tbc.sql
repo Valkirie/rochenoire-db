@@ -18332,7 +18332,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1694902','16949','2','0','100','1025','80','0','10000','14000','0','0','11','36825','1','0','0','0','0','0','0','0','0','0','Gan''arg Mekgineer - Cast Drain Life at 80% HP'),
 -- Arcane Vortex 17408
 ('1740801','17408','11','0','100','0','0','0','0','0','0','0','11','30627','0','0','0','0','0','0','0','0','0','0','Arcane Vortex - Cast Arcane Surge Passive on Spawn'),
--- Kalynna Lathred (17636) - NSR
+-- Kalynna Lathred 17636
+('1763601','17636','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Kalynna Lathred - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Angered Nether-wraith 17870
 ('1787001','17870','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Angered Nether-wraith - Enable Range Mode on Aggro'),
 ('1787002','17870','0','0','100','1025','13000','16000','12000','17000','0','0','11','38205','1','0','0','0','0','0','0','0','0','0','Angered Nether-wraith - Cast Shadow Blast'),
@@ -18519,11 +18520,17 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Netherologist Coppernickels (19569) - NSR
 -- Rocket-Chief Fuselage (19570) - NSR
 -- Innkeeper Remi Dodoso (19571) - NSR
--- Gant (19572) - NSR
--- Dash (19573) - NSR
--- Kizzie (19574) - NSR
--- Qiff (19575) - NSR
--- Xyrol (19576) - NSR
+('1957101','19571','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Innkeeper Remi Dodoso  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Gant 19572
+('1957201','19572','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Gant  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Dash 19573
+('1957301','19573','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Dash  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Kizzie 19574
+('1957401','19574','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Kizzie  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Qiff 19575
+('1957501','19575','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Qiff  - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Xyrol 19576
+('1957601','19576','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Xyrol  - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Bot-Specialist Alley (19578) - NSR
 -- Maxx A. Million Mk. I (19582) - NSR
 -- Grennik (19583) - NSR
@@ -18535,8 +18542,10 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1959303','19593','9','0','100','1025','0','8','15000','18000','0','0','11','15091','17','0','0','0','0','0','0','0','0','0','Spellbinder Maryana - Cast Blast Wave'),
 ('1959304','19593','9','0','100','1025','0','30','3000','3500','0','0','11','35927','1','256','0','0','0','0','0','0','0','0','Spellbinder Maryana - Cast Arcane Blast'),
 -- Drained Phase Hunter (19595) - NSR
--- Irradiated Worker (19610) - NSR
--- Irradiated Manager (19612) - NSR
+-- Irradiated Worker 19610
+('1961001','19610','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Irradiated Worker - Start Relay Script (Random Emote) on Receive AI Event 5'),
+-- Irradiated Manager 19612
+('1961201','19612','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Irradiated Manager - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Boots (19617) - NSR
 -- Bill (19621) - NSR
 -- Doc (19623) - NSR
@@ -18561,6 +18570,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1964305','19643','0','0','100','1537','0','0','5000','20000','0','0','11','38391','1','256','0','0','0','0','0','0','0','0','Sunfury Astromancer - Cast Scorch (Melee Mode)'),
 -- Papa Wheeler
 ('1964501','19645','1','0','100','1','120000','180000','120000','180000','0','0','54','0','0','10013','0','0','0','0','0','0','0','0','Papa Wheeler - Random Say OOC'),
+('1964502','19645','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Papa Wheeler  - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Seasoned Vindicator (19651) - NSR
 -- Glacius (19653) - NSR
 -- Summoner Kanthin 19657
@@ -18584,10 +18594,12 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1970703','19707','0','0','100','1025','11000','15000','20000','28000','0','0','11','12024','1','1024','0','0','0','0','0','0','0','0','Sunfury Archer - Cast Net'),
 ('1970704','19707','9','0','100','1025','10','40','9000','12000','0','0','11','37847','1','0','0','0','0','0','0','0','0','0','Sunfury Archer - Cast Immolation Arrow'),
 ('1970705','19707','9','0','100','1025','5','30','2300','3900','0','0','11','6660','1','256','0','0','0','0','0','0','0','0','Sunfury Archer - Cast Shoot'),
--- Chief Engineer Trep (19709) - NSR
+-- Chief Engineer Trep 19709
+('1970901','19709','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Chief Engineer Trep - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Mama Wheeler (19728) - NSR
 -- Nether Beast (19731) - NSR
--- Engineering Crewmember (19737) - SAY SEQUENCE WITH EXPERIMENTAL PILOT
+-- Engineering Crewmember 19737 - SAY SEQUENCE WITH EXPERIMENTAL PILOT
+('1973701','19737','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Engineering Crewmember - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Doomclaw
 ('1973801','19738','9','0','100','1025','0','5','8000','11000','0','0','11','34261','8','32','0','0','0','0','0','0','0','0','Doomclaw - Cast Slime Spray'),
 ('1973802','19738','9','0','100','1025','0','10','14000','18000','0','0','11','36205','0','0','11','36996','1','0','0','0','0','0','Doomclaw - Cast Claw Swipe'),
@@ -18621,11 +18633,12 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Felblade Doomguard
 ('1985301','19853','9','0','100','1025','0','5','8000','12000','0','0','11','32736','1','0','0','0','0','0','0','0','0','0','Felblade Doomguard - Cast Mortal Strike'),
 ('1985302','19853','0','0','100','1025','7000','12000','15000','18000','0','0','11','35238','1','0','0','0','0','0','0','0','0','0','Felblade Doomguard - Cast War Stomp'),
--- Nether-Stalker Khay'ji (19880) - NSR
+-- Nether-Stalker Khay'ji 19880
+('1988001','19880','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Nether-Stalker Khay''ji - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Severed Spirit 19881
 ('1988101','19881','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Severed Spirit - Enable Range Mode on Aggro'),
-('1988102','19881','9','0','100','1025','0','8','12000','15000','0','0','11','11831','17','1024','0','0','0','0','0','0','0','0','Severed Spirit - Cast Frost Nova'),
-('1988103','19881','9','0','100','1025','0','40','3400','4800','0','0','11','20822','1','256','0','0','0','0','0','0','0','0','Severed Spirit - Cast Frostbolt'),
+('1988102','19881','0','0','100','1025','8000','16000','15000','28000','0','0','11','11831','17','1024','0','0','0','0','0','0','0','0','Severed Spirit - Cast Frost Nova'),
+('1988103','19881','0','0','100','1025','0','0','3400','4800','0','0','11','20822','1','256','0','0','0','0','0','0','0','0','Severed Spirit - Cast Frostbolt'),
 -- Area 52 Spotlight
 ('1991301','19913','11','0','100','0','0','0','0','0','0','0','11','39312','0','0','0','0','0','0','0','0','0','0','Area 52 Spotlight - Cast Cosmetic A-52 Spotlight on Spawn'),
 -- Spellreaver Marathelle
@@ -19082,11 +19095,13 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2133503','21335','9','0','100','1025','0','5','6000','8000','0','0','11','36664','4','256','0','0','0','0','0','0','0','0','Tentacle of Markaru - Cast Tentacle Cleave'),
 -- Shadow Horror 21435 - NSR
 -- Kablamm Farflinger 21493
+('2149301','21493','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Kablamm Farflinger - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Pathaleon the Calculator's Image 21504
 -- Nandirx 21732
 -- Karzo 21733
 -- Zixxy 21734
 -- Chubis 21751
+('2175101','21751','30','0','100','1','5','19570','0','0','0','0','53','-10172','0','0','0','0','0','0','0','0','0','0','Chubis - Start Relay Script (Random Emote) on Receive AI Event 5'),
 -- Spawn of Dimensius 21780 - NullAI
 -- Protectorate Regenerator 21783
 ('2178301','21783','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Protectorate Regenerator - Enable Range Mode on Aggro'),
@@ -24305,13 +24320,15 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Shattered Hand Zealot
 ('1746201','17462','9','0','100','1025','0','5','10000','13000','0','0','11','30989','1','0','0','0','0','0','0','0','0','0','Shattered Hand Zealot - Cast Hamstring'),
 -- Shattered Hand Gladiator 17464
-('1746401','17464','1','0','100','0','1000','1000','0','0','0','0','11','19818','0','32','0','0','0','0','0','0','0','0','Shattered Hand Gladiator - Cast Double Attack OOC'),
+('1746401','17464','11','0','100','0','0','0','0','0','0','0','11','19818','0','34','0','0','0','0','0','0','0','0','Shattered Hand Gladiator - Cast Double Attack on Spawn'),
 ('1746402','17464','0','0','100','1025','6000','18000','10000','20000','0','0','11','16856','1','0','0','0','0','0','0','0','0','0','Shattered Hand Gladiator - Cast Mortal Strike'),
 -- Shattered Hand Centurion 17465
 ('1746501','17465','0','0','100','1025','3000','7000','17000','21000','0','0','11','31403','0','0','0','0','0','0','0','0','0','0','Shattered Hand Centurion - Cast Battle Shout'),
 ('1746502','17465','28','0','100','1027','15572','5','5000','9000','0','0','11','15572','1','0','0','0','0','0','0','0','0','0','Shattered Hand Centurion (Normal) - Cast Sunder Armor on Target Missing Aura Stack'),
 ('1746503','17465','28','0','100','1029','16145','5','5000','9000','0','0','11','16145','1','0','0','0','0','0','0','0','0','0','Shattered Hand Centurion (Heroic) - Cast Sunder Armor on Target Missing Aura Stack'),
 -- Lesser Shadow Fissure 17471 - npc_aoe_damage_trigger
+-- Training Dummy 17578
+('1757801','17578','11','0','100','0','0','0','0','0','0','0','61','1','0','0','42','1','0','0','20','0','0','0','Training Dummy - Set Immobilized State and Set Invincible and Prevent Melee on Spawn'),
 -- Heathen Guard
 ('1762101','17621','0','0','100','1025','6000','10000','10000','14000','0','0','11','30474','1','0','0','0','0','0','0','0','0','0','Heathen Guard - Cast Bloodthirst'),
 ('1762102','17621','2','0','100','1025','30','0','120000','120000','0','0','11','30485','0','0','1','-106','0','0','0','0','0','0','Heathen Guard - Cast Enrage at 30% HP'),
@@ -26109,10 +26126,10 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2090106','20901','0','0','100','1061','12000','15000','17000','23000','0','0','11','38942','4','544','11','38943','4','544','11','38914','4','544','Sargeron Archer (Heroic) - Random Cast Frost Arrow or Immolation Arrow or Serpent Sting'),
 ('2090107','20901','9','0','100','1027','5','30','4000','7000','0','0','11','22907','1','256','0','0','0','0','0','0','0','0','Sargeron Archer (Normal) - Cast Shoot'),
 ('2090108','20901','9','0','100','1029','5','30','4000','7000','0','0','11','38940','1','256','0','0','0','0','0','0','0','0','Sargeron Archer (Heroic) - Cast Shoot'),
--- Sargeron Hellcaller
-('2090201','20902','0','0','100','1025','3000','9000','21000','27000','0','0','11','36831','4','32','0','0','0','0','0','0','0','0','Sargeron Hellcaller - Cast Curse of the Elements'),
-('2090202','20902','9','0','100','1027','0','30','11000','17000','0','0','11','36832','4','0','0','0','0','0','0','0','0','0','Sargeron Hellcaller (Normal) - Cast Incinerate'),
-('2090203','20902','9','0','100','1029','0','30','9000','15000','0','0','11','38918','4','0','0','0','0','0','0','0','0','0','Sargeron Hellcaller (Heroic) - Cast Incinerate'),
+-- Sargeron Hellcaller 20902
+('2090201','20902','0','0','100','1025','3000','9000','21000','27000','0','0','11','36831','4','544','0','0','0','0','0','0','0','0','Sargeron Hellcaller - Cast Curse of the Elements'),
+('2090202','20902','9','0','100','1027','0','30','11000','17000','0','0','11','36832','4','512','0','0','0','0','0','0','0','0','Sargeron Hellcaller (Normal) - Cast Incinerate'),
+('2090203','20902','9','0','100','1029','0','30','9000','15000','0','0','11','38918','4','512','0','0','0','0','0','0','0','0','Sargeron Hellcaller (Heroic) - Cast Incinerate'),
 -- Warden Mellichar (20904) - npc_warden_mellichar
 -- Blazing Trickster 20905
 ('2090501','20905','11','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Blazing Trickster - Enable Range Mode on Spawn'),
