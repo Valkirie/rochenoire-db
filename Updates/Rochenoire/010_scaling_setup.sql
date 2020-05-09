@@ -1,18 +1,10 @@
 ALTER TABLE `creature_template_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `entry`;
 ALTER TABLE `creature_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `guid`;
 
-DROP TABLE IF EXISTS `scale_spell`;
 DROP TABLE IF EXISTS `scale_creature_template`;
 DROP TABLE IF EXISTS `scale_creature_pool`;
 DROP TABLE IF EXISTS `scale_loot`;
-
-CREATE TABLE `scale_spell` (
-  `s_entry` mediumint(8) unsigned NOT NULL COMMENT 'spell entry',
-  `m_entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'map entry',
-  `ratio_spell` float unsigned NOT NULL DEFAULT '1' COMMENT 'coeff spell ratio',
-  `comment` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`s_entry`,`m_entry`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `scale_zone`;
 
 CREATE TABLE `scale_creature_template` (
   `c_entry` mediumint(8) unsigned NOT NULL COMMENT 'creature entry',
@@ -38,4 +30,14 @@ CREATE TABLE `scale_loot` (
   `item` mediumint(8) unsigned NOT NULL,
   `ilevel` mediumint(8) unsigned NOT NULL,
   PRIMARY KEY (`entry`,`item`,`ilevel`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `scale_zone`(
+  `AreaName` VARCHAR(255),
+  `MapID` INT,
+  `AreaID` INT NOT NULL,
+  `ParentWorldMapID` INT,
+  `LevelRangeMin` INT,
+  `LevelRangeMax` INT,
+  PRIMARY KEY (`AreaID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
