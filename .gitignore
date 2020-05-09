@@ -42,3 +42,13 @@ InstallFullDB.config
 
 # hum big boss file that we hopfully have to ignore.
 Killerwife_Windows_Install_Script.bat
+Updates/Rochenoire/099_startquest.sql
+Updates/Rochenoire/099_item_template.sql
+Updates/Rochenoire/099_food.sql
+Updates/Rochenoire/099_clean.sql
+Updates/Locales/temp/00_prepare.sql
+Updates/Locales/temp/02_locales_quest.sql
+Updates/Locales/temp/03_locales_creature.sql
+Updates/Locales/temp/04_locales_gameobject.sql
+Updates/Locales/temp/05_locales_item.sql
+Updates/Locales/temp/merge.bat
