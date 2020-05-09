@@ -210,6 +210,32 @@ fi
 echo
 echo
 
+## Locales
+echo "> Processing locales files ..."
+COUNT=0
+for LOCALE in "${ADDITIONAL_PATH}Updates/Locales/"*.sql
+do
+  if [ -e "$LOCALE" ]
+  then
+    echo "    Appending $LOCALE"
+    $MYSQL_COMMAND < "$LOCALE"
+    if [[ $? != 0 ]]
+    then
+      echo "ERROR: cannot apply $LOCALE"
+      exit 1
+    fi
+    ((COUNT++))
+  fi
+done
+if [ "$COUNT" != 0 ]
+then
+  echo "  $COUNT locales files applied successfully"
+else
+  echo "  Did not find any locales file to apply"
+fi
+echo
+echo
+
 #
 #               Core updates
 #
