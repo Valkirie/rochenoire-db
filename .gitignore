@@ -52,3 +52,5 @@ Updates/Locales/temp/03_locales_creature.sql
 Updates/Locales/temp/04_locales_gameobject.sql
 Updates/Locales/temp/05_locales_item.sql
 Updates/Locales/temp/merge.bat
+Updates/Locales/merge.bat
+Updates/Locales/frFR.sql
