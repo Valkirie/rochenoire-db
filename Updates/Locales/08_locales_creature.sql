@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE locales_creature SET name_loc2 = "[Waypoint (Only GM can see it)]", subname_loc2 = "[Visual]" WHERE entry = 1;
 UPDATE locales_creature SET name_loc2 = "Dévoreur", subname_loc2 = NULL WHERE entry = 3;
 UPDATE locales_creature SET name_loc2 = "Vermine kobold", subname_loc2 = NULL WHERE entry = 6;

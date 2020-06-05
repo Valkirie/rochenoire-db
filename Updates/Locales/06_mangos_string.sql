@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE mangos_string SET content_loc2 = "Un joueur a rejoint %s. Les créatures se renforcent." WHERE entry = 11036;
 UPDATE mangos_string SET content_loc2 = "Un joueur a quitté %s. Les créatures s\'affaiblissent." WHERE entry = 11037;
 UPDATE mangos_string SET content_loc2 = "%s a été rescalé pour %u joueurs." WHERE entry = 11038;

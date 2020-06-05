@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE locales_page_text SET Text_loc2 = "Bonjour Morgan,
 
 Les affaires sont florissantes à Comté-de-l\'or, au point que je n\'ai pas eu le temps de vous envoyer la moindre cargaison ! 

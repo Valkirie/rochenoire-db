@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE locales_item SET name_loc2 = "Vieille épée courte", description_loc2 = NULL WHERE entry = 25;
 UPDATE locales_item SET name_loc2 = "Vieux bâton", description_loc2 = NULL WHERE entry = 35;
 UPDATE locales_item SET name_loc2 = "Vieille masse", description_loc2 = NULL WHERE entry = 36;

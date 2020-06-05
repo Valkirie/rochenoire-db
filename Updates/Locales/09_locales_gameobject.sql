@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE locales_gameobject SET name_loc2 = "Dégâts Feu de joie", castbarcaption_loc2 = "" WHERE entry = 4;
 UPDATE locales_gameobject SET name_loc2 = "Statue du vieux lion", castbarcaption_loc2 = "" WHERE entry = 31;
 UPDATE locales_gameobject SET name_loc2 = "Coffre englouti", castbarcaption_loc2 = "" WHERE entry = 32;

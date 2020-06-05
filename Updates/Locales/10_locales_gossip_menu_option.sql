@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE locales_gossip_menu_option SET option_text_loc2 = "GOSSIP_OPTION_QUESTGIVER", box_text_loc2 = NULL WHERE menu_id = 0 AND id = 0;
 UPDATE locales_gossip_menu_option SET option_text_loc2 = "Je voudrais regarder vos articles.", box_text_loc2 = NULL WHERE menu_id = 0 AND id = 1;
 UPDATE locales_gossip_menu_option SET option_text_loc2 = "Je dois voyager.", box_text_loc2 = NULL WHERE menu_id = 0 AND id = 2;

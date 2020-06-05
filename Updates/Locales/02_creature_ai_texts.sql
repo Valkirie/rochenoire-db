@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE creature_ai_texts SET content_loc2 = "Je vois que ces idiots de l\'Abbaye nous ont envoyé de la chair fraîche." WHERE entry = -1;
 UPDATE creature_ai_texts SET content_loc2 = "La Confrérie ne tolérera pas vos actions." WHERE entry = -2;
 UPDATE creature_ai_texts SET content_loc2 = "Ah, une occasion d\'utiliser cette lame fraîchement aiguisée." WHERE entry = -3;

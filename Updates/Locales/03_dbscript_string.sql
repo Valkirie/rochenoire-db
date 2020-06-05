@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE dbscript_string SET content_loc2 = "Salutations, Gezhe ! Dix-sept commandes supplémentaires ont été émises dans le secteur Hara\'samid. Le marché de la veldarite lourde s\'est quasiment effondré, comme vous l\'aviez prédit." WHERE entry = 2000005362;
 UPDATE dbscript_string SET content_loc2 = "Comment, mon amour ? Comment trouverai-je la force de faire face à ce monde vieillissant sans vous avoir à mes côtés..." WHERE entry = 2000005345;
 UPDATE dbscript_string SET content_loc2 = "La douce voix |2 %s s\'estompe dans la brume, \"Sachez que je vous aime toujours...\"" WHERE entry = 2000005344;

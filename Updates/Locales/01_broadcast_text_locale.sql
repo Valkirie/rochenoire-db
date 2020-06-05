@@ -1,3 +1,5 @@
+SET NAMES 'utf8';
+
 UPDATE broadcast_text_locale SET Locale = "frFR", Text_lang = "La tour du Col du nord a besoin de notre aide ! Chargeons une fois encore, que notre suzerain soit fier de nous !", Text1_lang = "" WHERE Id = 14746;
 UPDATE broadcast_text_locale SET Locale = "frFR", Text_lang = "Veuillez lancer un sortilège d\'AMÉLIORATION de haute priorité sur toutes les cibles à proximité.", Text1_lang = "Veuillez lancer un sortilège d\'AMÉLIORATION de haute priorité sur toutes les cibles à proximité." WHERE Id = 14745;
 UPDATE broadcast_text_locale SET Locale = "frFR", Text_lang = "Veuillez lancer un sortilège d\'AFFAIBLISSEMENT de haute priorité sur toutes les cibles à proximité.", Text1_lang = "Veuillez lancer un sortilège d\'AFFAIBLISSEMENT de haute priorité sur toutes les cibles à proximité." WHERE Id = 14744;
