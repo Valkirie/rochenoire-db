@@ -6341,6 +6341,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1609602','16096','2','0','100','1024','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Steamwheedle Bruiser - Flee at 15% HP'),
 ('1609603','16096','9','0','100','1025','0','18','11000','18000','0','0','11','12024','1','1024','0','0','0','0','0','0','0','0','Steamwheedle Bruiser - Cast Net'),
 ('1609604','16096','9','0','100','1025','5','30','2200','3800','0','0','11','6660','1','256','0','0','0','0','0','0','0','0','Steamwheedle Bruiser - Cast Shoot'),
+-- Naias 17207
+('1720701','17207','11','0','100','0','0','0','0','0','0','0','54','-104','11','0','0','0','0','0','0','0','0','0','Naias - Say on Spawn'),
 -- Nizzle
 ('2436601','24366','4','0','100','0','0','0','0','0','0','0','11','14313','0','0','1','-549','0','0','0','0','0','0','Nizzle - Cast Summon Enraged Gryphon and Yell on Aggro'),
 -- Rocket Chicken 25109
@@ -27926,7 +27928,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2122005','21220','29','0','100','2','1000','1000','0','0','0','0','35','1','0','0','0','0','0','0','0','0','0','0','Coilfang Priestess - Set Instace Data64 (SD2) on Generic Timer'),
 -- Coilfang Beast-Tamer
 ('2122101','21221','9','0','100','1025','0','5','9900','10900','0','0','11','38474','1','0','0','0','0','0','0','0','0','0','Coilfang Beast-Tamer - Cast Cleave'),
-('2122102','21221','0','0','100','1025','2000','9000','19300','23400','0','0','11','38484','0','0','0','0','0','0','0','0','0','0','Coilfang Beast-Tamer - Cast Bestial Wrath'),
+('2122102','21221','0','0','100','1025','2000','9000','19300','23400','0','0','11','38484','15','0','0','0','0','0','0','0','0','0','Coilfang Beast-Tamer - Cast Bestial Wrath'),
 -- Tidewalker Depth-Seer
 ('2122401','21224','14','0','100','1025','10000','40','15000','17000','0','0','11','38657','12','0','0','0','0','0','0','0','0','0','Tidewalker Depth-Seer - Cast Rejuvenation on Friendly Missing HP'),
 ('2122402','21224','14','0','100','1025','25000','40','12000','21000','0','0','11','38658','12','0','0','0','0','0','0','0','0','0','Tidewalker Depth-Seer - Cast Healing Touch on Friendly Missing HP'),
@@ -28034,7 +28036,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Coilfang Guardian
 ('2187301','21873','9','0','100','1025','0','8','6000','8400','0','0','11','28168','1','0','0','0','0','0','0','0','0','0','Coilfang Guardian - Cast Arcing Smash'),
 ('2187302','21873','9','0','100','1025','0','5','10000','14400','0','0','11','9080','1','0','0','0','0','0','0','0','0','0','Coilfang Guardian - Cast Hamstring'),
--- Shadow of Leotheras (SD2 Backport)
+-- Shadow of Leotheras 21875
 ('2187501','21875','11','0','100','0','0','0','0','0','0','0','1','-10934','0','0','20','0','0','0','0','0','0','0','Shadow of Leotheras - Yell, Stop Auto Attack on Spawn'),
 ('2187502','21875','5','0','100','1','0','0','1','0','0','0','1','-10935','-10936','-10937','0','0','0','0','0','0','0','0','Shadow of Leotheras - Yell on Player Kill'),
 ('2187503','21875','0','0','100','1025','2000','3000','3000','3000','0','0','11','37674','1','0','0','0','0','0','0','0','0','0','Shadow of Leotheras - Cast Chaos Blast'),
@@ -28125,7 +28127,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1882905','18829','0','0','100','1025','9000','14000','14500','18500','0','0','11','34437','9','0','0','0','0','0','0','0','0','0','Hellfire Warder - Cast Death Coil'),
 ('1882906','18829','0','0','100','1025','13000','18000','12000','16000','0','0','11','34441','8','0','0','0','0','0','0','0','0','0','Hellfire Warder - Cast Shadow Word Pain'),
 ('1882907','18829','4','0','100','0','0','0','0','0','0','0','52','3','0','0','0','0','0','0','0','0','0','0','Hellfire Warder - Interrupt Channelling on Aggro'),
-('1882908','18829','34','0','100','1','34436','-1','0','0','0','0','13','-100','10','0','0','0','0','0','0','0','0','0','Hellfire Warder - Reset Threat on target hit by Shadow Burst'),
+('1882908','18829','34','0','100','1','34436','-1','0','0','0','0','13','-100','6','0','0','0','0','0','0','0','0','0','Hellfire Warder - Reset Threat on target hit by Shadow Burst'),
 
 
 
@@ -31012,7 +31014,7 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-101','For the Dragonmaw!','0','0','1','0','1937','Common Dragonmaw Text'),
 ('-102','Long live the Dragonmaw! Die you worthless $r!','0','0','1','0','1939','Common Dragonmaw Text'),
 ('-103','Brains...','0','0','0','0','1940','1158'),
--- Classic PLEASE RE-USE 104
+('-104','Who challenges Naias? Puny $r, you are little better than those mindless trolls I have played against each other like so many pieces on a game board!','0','0','0','0','0','17207'),
 ('-105','Your bones will break under my boot, $r!','0','0','1','0','1938','Common Dragonmaw Text'),
 ('-106','%s goes into a frenzy!','0','2','0','0','1191','Frenzy Text'),
 -- Classic PLEASE RE-USE 107 - 122
@@ -32477,7 +32479,7 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-10934','At last I am liberated. It has been too long since I have tasted true freedom!','11309','1','0','0','19502','21875'),
 ('-10935','I have no equal!','11306','1','0','0','19993','21875'),
 ('-10936','Perish, mortal!','11307','1','0','0','19994','21875'),
-('-10937','Yes... yes!','11308','1','0','0','11308','21875'),
+('-10937','Yes... yes!','11308','1','0','0','19995','21875'),
 ('-10938','I''m thinking of a vacation. I hear Hearthglen is nice.','0','0','0','0','19561','Old Hillsbrad Foothills'),
 ('-10939','Quitting time can''t come too soon.','0','0','0','0','19562','Old Hillsbrad Foothills'),
 ('-10940','I hear that Blackmoore has been acting strange.','0','0','0','0','19560','Old Hillsbrad Foothills'),
