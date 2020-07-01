@@ -976,7 +976,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Shadowsworn Enforcer (4.0.3 Official Data)
 ('600701','6007','9','0','100','1025','0','5','9500','21700','0','0','11','15496','1','0','0','0','0','0','0','0','0','0','Shadowsworn Enforcer - Cast Cleave'),
 -- Shadowsworn Warlock 6008 (4.0.3 Official Data)
-('600801','6008','1','0','100','0','1000','1000','0','0','0','0','11','5108','0','0','0','0','0','0','0','0','0','0','Shadowsworn Warlock - Voidwalker on Spawn'),
+('600801','6008','11','0','100','0','0','0','0','0','0','0','11','5108','0','0','0','0','0','0','0','0','0','0','Shadowsworn Warlock - Cast Voidwalker on Spawn'),
 ('600802','6008','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Shadowsworn Warlock - Enable Range Mode on Aggro'),
 ('600803','6008','0','0','100','1025','9800','19400','52000','64100','0','0','11','11980','1','0','0','0','0','0','0','0','0','0','Shadowsworn Warlock - Cast Curse of Weakness'),
 ('600804','6008','9','0','100','1025','0','40','3400','4800','0','0','11','20825','1','256','0','0','0','0','0','0','0','0','Shadowsworn Warlock - Cast Shadow Bolt'),
@@ -27958,7 +27958,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Greyheart Tidecaller
 ('2122901','21229','0','0','100','1025','1000','3000','120000','135000','0','0','11','39027','0','0','0','0','0','0','0','0','0','0','Greyheart Tidecaller - Cast Poison Shield'),
 ('2122902','21229','0','0','100','1025','3200','7900','35700','43700','0','0','11','38624','0','0','0','0','0','0','0','0','0','0','Greyheart Tidecaller - Cast Water Elemental Totem'),
-('2122902','21229','11','0','100','0','0','0','0','0','0','0','62','3','0','0','0','0','0','0','0','0','0','0','Greyheart Tidecaller - Enable Despawn Aggregation on Evade'),
+('2122903','21229','11','0','100','0','0','0','0','0','0','0','62','3','0','0','0','0','0','0','0','0','0','0','Greyheart Tidecaller - Enable Despawn Aggregation on Evade'),
 -- Greyheart Nether-Mage 21230 - No Main Spell in Melee Range
 ('2123001','21230','4','0','100','0','0','0','0','0','0','0','30','1','2','3','0','0','0','0','0','0','0','0','Greyheart Nether-Mage - Random Phase Select on Aggro'),
 ('2123002','21230','9','13','100','1025','5','40','3400','4800','0','0','11','38645','1','0','0','0','0','0','0','0','0','0','Greyheart Nether-Mage - Cast Frostbolt (Phase 1)'),
