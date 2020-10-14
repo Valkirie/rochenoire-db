@@ -16,6 +16,150 @@ SET @CGUID := 3000000; -- creatures
 SET @OGUID := 3000000; -- gameobjects
 SET @PGUID := 44900; -- pools
 
+-- ============
+-- BATTLEGROUND
+-- ============
+
+DELETE FROM `battleground_events` WHERE `map` = 30;
+INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES
+(30, 0, 0, 'Firstaid Station - Alliance Assaulted'),
+(30, 0, 1, 'Firstaid Station - Alliance Control'),
+(30, 0, 2, 'Firstaid Station - Horde Assaulted'),
+(30, 0, 3, 'Firstaid Station - Horde Control'),
+(30, 1, 0, 'Stormpike Grave - Alliance Assaulted'),
+(30, 1, 1, 'Stormpike Grave - Alliance Control'),
+(30, 1, 2, 'Stormpike Grave - Horde Assaulted'),
+(30, 1, 3, 'Stormpike Grave - Horde Control'),
+(30, 2, 0, 'Stoneheart Grave - Alliance Assaulted'),
+(30, 2, 1, 'Stoneheart Grave - Alliance Control'),
+(30, 2, 2, 'Stoneheart Grave - Horde Assaulted'),
+(30, 2, 3, 'Stoneheart Grave - Horde Control'),
+(30, 3, 0, 'Snowfall Grave - Alliance Assaulted'),
+(30, 3, 1, 'Snowfall Grave - Alliance Control'),
+(30, 3, 2, 'Snowfall Grave - Horde Assaulted'),
+(30, 3, 3, 'Snowfall Grave - Horde Control'),
+(30, 3, 5, 'Snowfall Grave - Neutral Control'),
+(30, 4, 0, 'Iceblood Grave - Alliance Assaulted'),
+(30, 4, 1, 'Iceblood Grave - Alliance Control'),
+(30, 4, 2, 'Iceblood Grave - Horde Assaulted'),
+(30, 4, 3, 'Iceblood Grave - Horde Control'),
+(30, 5, 0, 'Frostwolf Grave - Alliance Assaulted'),
+(30, 5, 1, 'Frostwolf Grave - Alliance Control'),
+(30, 5, 2, 'Frostwolf Grave - Horde Assaulted'),
+(30, 5, 3, 'Frostwolf Grave - Horde Control'),
+(30, 6, 0, 'Frostwolf Hut - Alliance Assaulted'),
+(30, 6, 1, 'Frostwolf Hut - ALliance Control'),
+(30, 6, 2, 'Frostwolf Hut - Horde Assaulted'),
+(30, 6, 3, 'Frostwolf Hut - Horde Control'),
+(30, 7, 1, 'Dunbaldar South - Alliance Control'),
+(30, 7, 2, 'Dunbaldar South - Horde Assaulted'),
+(30, 7, 3, 'Dunbaldar South - Horde Control'),
+(30, 8, 1, 'Dunbaldar North - Alliance Control'),
+(30, 8, 2, 'Dunbaldar North - Horde Assaulted'),
+(30, 8, 3, 'Dunbaldar North - Horde Control'),
+(30, 9, 1, 'Icewing Bunker - Alliance Control'),
+(30, 9, 2, 'Icewing Bunker - Horde Assaulted'),
+(30, 9, 3, 'Icewing Bunker - Horde Control'),
+(30, 10, 1, 'Stoneheart Bunker - Alliance Control'),
+(30, 10, 2, 'Stoneheart Bunker - Horde Assaulted'),
+(30, 10, 3, 'Stoneheart Bunker - Horde Control'),
+(30, 11, 0, 'Iceblood Tower - Alliance Assaulted'),
+(30, 11, 1, 'Iceblood Tower - Alliance Control'),
+(30, 11, 3, 'Iceblood Tower - Horde Control'),
+(30, 12, 0, 'Tower Point - Alliance Assaulted'),
+(30, 12, 1, 'Tower Point - Alliance Control'),
+(30, 12, 3, 'Tower Point - Horde Control'),
+(30, 13, 0, 'Frostwolf east Tower - Alliance Assaulted'),
+(30, 13, 1, 'Frostwolf east Tower - Alliance Control'),
+(30, 13, 3, 'Frostwolf east Tower - Horde Control'),
+(30, 14, 0, 'Frostwolf west Tower - Alliance Assaulted'),
+(30, 14, 1, 'Frostwolf west Tower - Alliance Control'),
+(30, 14, 3, 'Frostwolf west Tower - Horde Control'),
+(30, 15, 0, 'Firstaid Station - Alliance Defender Quest0'),
+(30, 15, 1, 'Firstaid Station - Alliance Defender Quest1'),
+(30, 15, 2, 'Firstaid Station - Alliance Defender Quest2'),
+(30, 15, 3, 'Firstaid Station - Alliance Defender Quest3'),
+(30, 15, 4, 'Firstaid Station - Horde Defender Quest0'),
+(30, 15, 5, 'Firstaid Station - Horde Defender Quest1'),
+(30, 15, 6, 'Firstaid Station - Horde Defender Quest2'),
+(30, 15, 7, 'Firstaid Station - Horde Defender Quest3'),
+(30, 16, 0, 'Stormpike Grave - Alliance Defender Quest0'),
+(30, 16, 1, 'Stormpike Grave - Alliance Defender Quest1'),
+(30, 16, 2, 'Stormpike Grave - Alliance Defender Quest2'),
+(30, 16, 3, 'Stormpike Grave - Alliance Defender Quest3'),
+(30, 16, 4, 'Stormpike Grave - Horde Defender Quest0'),
+(30, 16, 5, 'Stormpike Grave - Horde Defender Quest1'),
+(30, 16, 6, 'Stormpike Grave - Horde Defender Quest2'),
+(30, 16, 7, 'Stormpike Grave - Horde Defender Quest3'),
+(30, 17, 0, 'Stoneheart Grave - Alliance Defender Quest0'),
+(30, 17, 1, 'Stoneheart Grave - Alliance Defender Quest1'),
+(30, 17, 2, 'Stoneheart Grave - Alliance Defender Quest2'),
+(30, 17, 3, 'Stoneheart Grave - Alliance Defender Quest3'),
+(30, 17, 4, 'Stoneheart Grave - Horde Defender Quest0'),
+(30, 17, 5, 'Stoneheart Grave - Horde Defender Quest1'),
+(30, 17, 6, 'Stoneheart Grave - Horde Defender Quest2'),
+(30, 17, 7, 'Stoneheart Grave - Horde Defender Quest3'),
+(30, 18, 0, 'Snowfall Grave - Alliance Defender Quest0'),
+(30, 18, 1, 'Snowfall Grave - Alliance Defender Quest1'),
+(30, 18, 2, 'Snowfall Grave - Alliance Defender Quest2'),
+(30, 18, 3, 'Snowfall Grave - Alliance Defender Quest3'),
+(30, 18, 4, 'Snowfall Grave - Horde Defender Quest0'),
+(30, 18, 5, 'Snowfall Grave - Horde Defender Quest1'),
+(30, 18, 6, 'Snowfall Grave - Horde Defender Quest2'),
+(30, 18, 7, 'Snowfall Grave - Horde Defender Quest3'),
+(30, 19, 0, 'Iceblood Grave - Alliance Defender Quest0'),
+(30, 19, 1, 'Iceblood Grave - Alliance Defender Quest1'),
+(30, 19, 2, 'Iceblood Grave - Alliance Defender Quest2'),
+(30, 19, 3, 'Iceblood Grave - Alliance Defender Quest3'),
+(30, 19, 4, 'Iceblood Grave - Horde Defender Quest0'),
+(30, 19, 5, 'Iceblood Grave - Horde Defender Quest1'),
+(30, 19, 6, 'Iceblood Grave - Horde Defender Quest2'),
+(30, 19, 7, 'Iceblood Grave - Horde Defender Quest3'),
+(30, 20, 0, 'Frostwolf Grave - Alliance Defender Quest0'),
+(30, 20, 1, 'Frostwolf Grave - Alliance Defender Quest1'),
+(30, 20, 2, 'Frostwolf Grave - Alliance Defender Quest2'),
+(30, 20, 3, 'Frostwolf Grave - Alliance Defender Quest3'),
+(30, 20, 4, 'Frostwolf Grave - Horde Defender Quest0'),
+(30, 20, 5, 'Frostwolf Grave - Horde Defender Quest1'),
+(30, 20, 6, 'Frostwolf Grave - Horde Defender Quest2'),
+(30, 20, 7, 'Frostwolf Grave - Horde Defender Quest3'),
+(30, 21, 0, 'Frostwolf Hut - Alliance Defender Quest0'),
+(30, 21, 1, 'Frostwolf Hut - Alliance Defender Quest1'),
+(30, 21, 2, 'Frostwolf Hut - Alliance Defender Quest2'),
+(30, 21, 3, 'Frostwolf Hut - Alliance Defender Quest3'),
+(30, 21, 4, 'Frostwolf Hut - Horde Defender Quest0'),
+(30, 21, 5, 'Frostwolf Hut - Horde Defender Quest1'),
+(30, 21, 6, 'Frostwolf Hut - Horde Defender Quest2'),
+(30, 21, 7, 'Frostwolf Hut - Horde Defender Quest3'),
+(30, 46, 1, 'North Mine - Alliance Boss'),
+(30, 46, 3, 'North Mine - Horde Boss'),
+(30, 46, 5, 'North Mine - Neutral Boss'),
+(30, 47, 1, 'South Mine - Alliance Boss'),
+(30, 47, 3, 'South Mine - Horde Boss'),
+(30, 47, 5, 'South Mine - Neutral Boss'),
+(30, 48, 0, 'Alliance Captain'),
+(30, 49, 0, 'Horde Captain'),
+(30, 50, 1, 'North Mine - Alliance Control'),
+(30, 50, 3, 'North Mine - Horde Control'),
+(30, 50, 5, 'North Mine - Neutral Control'),
+(30, 51, 1, 'South Mine - Alliance Control'),
+(30, 51, 3, 'South Mine - Horde Control'),
+(30, 51, 5, 'South Mine - Neutral Control'),
+(30, 52, 0, 'Alliance Marshal - Dunbaldar South'),
+(30, 53, 0, 'Alliance Marshal - Dunbaldar North'),
+(30, 54, 0, 'Alliance Marshal - Icewing Bunker'),
+(30, 55, 0, 'Alliance Marshal - Stoneheart Bunker'),
+(30, 56, 0, 'Horde Marshal - Iceblood Tower'),
+(30, 57, 0, 'Horde Marshal - Towerpoint'),
+(30, 58, 0, 'Horde Marshal - East Frostwolf Tower'),
+(30, 59, 0, 'Horde Marshal - West Frostwolf Tower'),
+(30, 60, 0, 'Herald - That Guy Who Yells All The Time'),
+(30, 61, 0, 'Alliance - Boss'),
+(30, 62, 0, 'Horde - Boss'),
+(30, 63, 0, 'Alliance - Captain Dead'),
+(30, 64, 0, 'Horde - Captain Dead'),
+(30, 254, 0, 'Doors');
+
 -- =========
 -- CREATURES
 -- =========
@@ -1398,34 +1542,34 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 -- (@CGUID+289
 (@CGUID+290, 11998, 30, -1483.7078, -697.6837, 47.0681, 2.042022, 490, 490, 0, 0, 0, 0), -- Frostwolf Herald
 -- (@CGUID+291 - 298
-(@CGUID+299, 12050, 30, 635.17, -29.5594, 46.5056, 4.81711, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+300, 12050, 30, 642.488, -32.9437, 46.365, 4.67748, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+301, 12050, 30, 642.326, -27.9442, 46.9211, 4.59022, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+302, 12050, 30, 635.945, -33.6171, 45.7164, 4.97419, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+303, 12050, 30, 669.272, -297.304, 30.291, 4.66604, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+304, 12050, 30, 674.08, -292.328, 30.4817, 0.0918785, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+305, 12050, 30, 667.01, -288.532, 29.8809, 1.81583, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+306, 12050, 30, 664.153, -294.042, 30.2851, 3.28531, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+307, 12050, 30, 81.7027, -406.135, 47.7843, 0.598464, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+308, 12050, 30, 78.1431, -409.215, 48.0401, 5.05953, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+309, 12050, 30, 73.4135, -407.035, 46.7527, 3.34736, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+310, 12050, 30, 78.2258, -401.859, 46.4202, 2.05852, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+311, 12050, 30, -207.412, -110.616, 78.7959, 2.43251, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+312, 12050, 30, -197.95, -112.205, 78.5686, 6.22441, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+313, 12050, 30, -202.709, -116.829, 78.4358, 5.13742, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+314, 12050, 30, -202.059, -108.314, 78.5783, 5.91968, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+315, 12050, 30, -615.501, -393.802, 60.4299, 3.06147, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+316, 12050, 30, -608.513, -392.717, 62.5724, 2.06323, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+317, 12050, 30, -609.769, -400.072, 60.7174, 5.22367, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+318, 12050, 30, -616.093, -398.293, 60.5628, 3.73613, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+319, 12050, 30, -1077.7, -340.21, 55.4682, 6.25569, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+320, 12050, 30, -1082.74, -333.821, 54.7962, 2.05459, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+321, 12050, 30, -1090.66, -341.267, 54.6768, 3.27746, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+322, 12050, 30, -1081.58, -344.63, 55.256, 4.75636, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+323, 12050, 30, -1408.95, -311.69, 89.2536, 4.49954, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+324, 12050, 30, -1407.15, -305.323, 89.1993, 2.86827, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+325, 12050, 30, -1400.64, -304.3, 89.7008, 1.0595, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
-(@CGUID+326, 12050, 30, -1400.4, -311.35, 89.3028, 4.99434, 120, 120, 5, 0, 0, 1), -- Stormpike Defender
+(@CGUID+299, 12050, 30, 635.17, -29.5594, 46.5056, 4.81711, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+300, 12050, 30, 642.488, -32.9437, 46.365, 4.67748, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+301, 12050, 30, 642.326, -27.9442, 46.9211, 4.59022, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+302, 12050, 30, 635.945, -33.6171, 45.7164, 4.97419, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+303, 12050, 30, 669.272, -297.304, 30.291, 4.66604, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+304, 12050, 30, 674.08, -292.328, 30.4817, 0.0918785, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+305, 12050, 30, 667.01, -288.532, 29.8809, 1.81583, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+306, 12050, 30, 664.153, -294.042, 30.2851, 3.28531, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+307, 12050, 30, 81.7027, -406.135, 47.7843, 0.598464, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+308, 12050, 30, 78.1431, -409.215, 48.0401, 5.05953, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+309, 12050, 30, 73.4135, -407.035, 46.7527, 3.34736, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+310, 12050, 30, 78.2258, -401.859, 46.4202, 2.05852, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+311, 12050, 30, -207.412, -110.616, 78.7959, 2.43251, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+312, 12050, 30, -197.95, -112.205, 78.5686, 6.22441, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+313, 12050, 30, -202.709, -116.829, 78.4358, 5.13742, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+314, 12050, 30, -202.059, -108.314, 78.5783, 5.91968, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+315, 12050, 30, -615.501, -393.802, 60.4299, 3.06147, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+316, 12050, 30, -608.513, -392.717, 62.5724, 2.06323, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+317, 12050, 30, -609.769, -400.072, 60.7174, 5.22367, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+318, 12050, 30, -616.093, -398.293, 60.5628, 3.73613, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+319, 12050, 30, -1077.7, -340.21, 55.4682, 6.25569, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+320, 12050, 30, -1082.74, -333.821, 54.7962, 2.05459, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+321, 12050, 30, -1090.66, -341.267, 54.6768, 3.27746, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+322, 12050, 30, -1081.58, -344.63, 55.256, 4.75636, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+323, 12050, 30, -1408.95, -311.69, 89.2536, 4.49954, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+324, 12050, 30, -1407.15, -305.323, 89.1993, 2.86827, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+325, 12050, 30, -1400.64, -304.3, 89.7008, 1.0595, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
+(@CGUID+326, 12050, 30, -1400.4, -311.35, 89.3028, 4.99434, 120, 120, 0, 0, 0, 0), -- Stormpike Defender
 (@CGUID+327, 12051, 30, -747.5397, -346.3601, 66.77458, 0.171959, 430, 430, 0, 0, 0, 2), -- Frostwolf Legionnaire
 (@CGUID+328, 12051, 30, -1218.4, -301.2, 68.3, 0.8, 430, 430, 0, 0, 0, 2), -- Frostwolf Legionnaire
 (@CGUID+329, 14285, 30, -1369.2, -539.982, 55.0697, 1.70821, 430, 430, 0, 0, 0, 0), -- Frostwolf Battleguard	// 14285,14282 in this section not Sniff
@@ -1448,34 +1592,34 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+346, 14282, 30, -1494.16, -701.661, 46.8447, 0.793239, 300, 300, 0, 0, 0, 0), -- Frostwolf Bloodhound
 (@CGUID+347, 14282, 30, -1492, -703.365, 46.8902, 0.793239, 300, 300, 0, 0, 0, 0), -- Frostwolf Bloodhound
 -- (@CGUID+348 - 354
-(@CGUID+355, 12053, 30, 635.17, -29.5594, 46.5056, 4.81711, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+356, 12053, 30, 642.488, -32.9437, 46.365, 4.67748, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+357, 12053, 30, 642.326, -27.9442, 46.9211, 4.59022, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+358, 12053, 30, 635.945, -33.6171, 45.7164, 4.97419, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+359, 12053, 30, 669.272, -297.304, 30.291, 4.66604, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+360, 12053, 30, 674.08, -292.328, 30.4817, 0.0918785, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+361, 12053, 30, 667.01, -288.532, 29.8809, 1.81583, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+362, 12053, 30, 664.153, -294.042, 30.2851, 3.28531, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+363, 12053, 30, 81.7027, -406.135, 47.7843, 0.598464, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+364, 12053, 30, 78.1431, -409.215, 48.0401, 5.05953, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+365, 12053, 30, 73.4135, -407.035, 46.7527, 3.34736, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+366, 12053, 30, 78.2258, -401.859, 46.4202, 2.05852, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+367, 12053, 30, -207.412, -110.616, 78.7959, 2.43251, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+368, 12053, 30, -197.95, -112.205, 78.5686, 6.22441, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+369, 12053, 30, -202.709, -116.829, 78.4358, 5.13742, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+370, 12053, 30, -202.059, -108.314, 78.5783, 5.91968, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+371, 12053, 30, -615.501, -393.802, 60.4299, 3.06147, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+372, 12053, 30, -608.513, -392.717, 62.5724, 2.06323, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+373, 12053, 30, -609.769, -400.072, 60.7174, 5.22367, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+374, 12053, 30, -616.093, -398.293, 60.5628, 3.73613, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+375, 12053, 30, -1077.7, -340.21, 55.4682, 6.25569, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+376, 12053, 30, -1082.74, -333.821, 54.7962, 2.05459, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+377, 12053, 30, -1090.66, -341.267, 54.6768, 3.27746, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+378, 12053, 30, -1081.58, -344.63, 55.256, 4.75636, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+379, 12053, 30, -1408.95, -311.69, 89.2536, 4.49954, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+380, 12053, 30, -1407.15, -305.323, 89.1993, 2.86827, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+381, 12053, 30, -1400.64, -304.3, 89.7008, 1.0595, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
-(@CGUID+382, 12053, 30, -1400.4, -311.35, 89.3028, 4.99434, 120, 120, 5, 0, 0, 1), -- Frostwolf Guardian
+(@CGUID+355, 12053, 30, 635.17, -29.5594, 46.5056, 4.81711, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+356, 12053, 30, 642.488, -32.9437, 46.365, 4.67748, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+357, 12053, 30, 642.326, -27.9442, 46.9211, 4.59022, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+358, 12053, 30, 635.945, -33.6171, 45.7164, 4.97419, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+359, 12053, 30, 669.272, -297.304, 30.291, 4.66604, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+360, 12053, 30, 674.08, -292.328, 30.4817, 0.0918785, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+361, 12053, 30, 667.01, -288.532, 29.8809, 1.81583, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+362, 12053, 30, 664.153, -294.042, 30.2851, 3.28531, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+363, 12053, 30, 81.7027, -406.135, 47.7843, 0.598464, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+364, 12053, 30, 78.1431, -409.215, 48.0401, 5.05953, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+365, 12053, 30, 73.4135, -407.035, 46.7527, 3.34736, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+366, 12053, 30, 78.2258, -401.859, 46.4202, 2.05852, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+367, 12053, 30, -207.412, -110.616, 78.7959, 2.43251, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+368, 12053, 30, -197.95, -112.205, 78.5686, 6.22441, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+369, 12053, 30, -202.709, -116.829, 78.4358, 5.13742, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+370, 12053, 30, -202.059, -108.314, 78.5783, 5.91968, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+371, 12053, 30, -615.501, -393.802, 60.4299, 3.06147, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+372, 12053, 30, -608.513, -392.717, 62.5724, 2.06323, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+373, 12053, 30, -609.769, -400.072, 60.7174, 5.22367, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+374, 12053, 30, -616.093, -398.293, 60.5628, 3.73613, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+375, 12053, 30, -1077.7, -340.21, 55.4682, 6.25569, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+376, 12053, 30, -1082.74, -333.821, 54.7962, 2.05459, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+377, 12053, 30, -1090.66, -341.267, 54.6768, 3.27746, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+378, 12053, 30, -1081.58, -344.63, 55.256, 4.75636, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+379, 12053, 30, -1408.95, -311.69, 89.2536, 4.49954, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+380, 12053, 30, -1407.15, -305.323, 89.1993, 2.86827, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+381, 12053, 30, -1400.64, -304.3, 89.7008, 1.0595, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
+(@CGUID+382, 12053, 30, -1400.4, -311.35, 89.3028, 4.99434, 120, 120, 0, 0, 0, 0), -- Frostwolf Guardian
 (@CGUID+383, 12096, 30, 587.6331, -45.98156, 37.5438, 5.811946, 430, 430, 0, 0, 0, 0), -- Stormpike Quartermaster
 (@CGUID+384, 12097, 30, -1293.787, -194.4072, 72.43979, 5.846853, 430, 430, 0, 0, 0, 0), -- Frostwolf Quartermaster
 (@CGUID+385, 12121, 30, -1376.312, -219.3085, 99.45462, 4.607669, 1785, 1785, 0, 0, 0, 0), -- Drakan
@@ -2449,6 +2593,11 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 -- (@CGUID+1162, 14777, 30, -1388.38, -226.065, 99.3698, 6.22783, 430, 430, 0, 0, 0, 0), -- West Frostwolf Warmaster
 -- (@CGUID+1164, 14943, 30, 633.803, -299.425, 30.1336, 3.46924, 490, 490, 0, 0, 0, 0), -- Guse's War Rider
 
+-- TBC+
+UPDATE `creature` SET `spawnMask` = 1 WHERE `map` = 30;
+
+-- WOTLK+
+
 -- ===========
 -- GAMEOBJECTS
 -- ===========
@@ -2978,6 +3127,11 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+997, 177410, 30, -1241.247, -345.115, 59.68674, 0.3577935, 0, 0, 0, 0, 0, 0, 100, 1), -- Brazier -> Spawns Campfire 2061
 (@OGUID+998, 177408, 30, -743.4266, -398.242, 76.42656, 0.8726642, 0, 0, 0, 0, 0, 0, 100, 1), -- Bonfire -> Spawns Bonfire Damage 2066
 (@OGUID+999, 177411, 30, -1202.805, -271.5985, 72.58054, 0.3577935, 0, 0, 0, 0, 0, 0, 100, 1); -- Brazier -> Spawns Campfire 2061
+
+-- TBC+
+UPDATE `gameobject` SET `spawnMask` = 1 WHERE `map` = 30;
+
+-- WOTLK+
 
 -- ======
 -- EVENTS
