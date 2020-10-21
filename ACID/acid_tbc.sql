@@ -27320,7 +27320,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Priestess of Dementia 22957 - Summon Images ss.41401
 ('2295701','22957','0','0','100','1025','5000','11000','12000','18000','0','0','11','41397','17','0','0','0','0','0','0','0','0','0','Priestess of Dementia - Cast Confusion'),
 ('2295702','22957','0','0','100','1025','7000','14000','25000','35000','0','0','11','41404','17','0','0','0','0','0','0','0','0','0','Priestess of Dementia - Cast Dementia'),
-('2295703','22957','0','0','100','1025','15000','16000','20000','30000','0','0','12','23436','8','0','12','23436','8','0','0','0','0','0','Priestess of Dementia - Cast Summon Images'),
+('2295703','22957','0','0','100','1025','15000','16000','20000','30000','0','0','12','23436','0','0','12','23436','0','0','0','0','0','0','Priestess of Dementia - Cast Summon Images'),
 -- Spellbound Attendant 22959
 ('2295901','22959','13','0','100','1025','11000','17000','0','0','0','0','11','41395','1','0','0','0','0','0','0','0','0','0','Spellbound Attendant - Cast Kick'),
 ('2295902','22959','0','0','100','1025','5000','9000','12000','16000','0','0','11','41396','5','544','0','0','0','0','0','0','0','0','Spellbound Attendant - Cast Sleep'),
@@ -27367,7 +27367,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2302804','23028','30','5','100','1025','0','22963','0','0','0','0','11','40845','0','3','54','-10125','0','0','22','2','0','0','Bonechewer Taskmaster - Cast Fury and Emote and Set Phase 2 on Receive AI Event 0 (Phase 1)'),
 ('2302805','23028','30','3','100','1025','0','22963','0','0','0','0','11','40845','0','3','0','0','0','0','0','0','0','0','Bonechewer Taskmaster - Cast Fury on Receive AI Event 0 (Phase 2)'),
 -- Dragonmaw Sky Stalker 23030
-('2303001','23030','11','0','100','0','0','0','0','0','0','0','57','1','35','0','50','1','0','0','0','0','0','0','Dragonmaw Sky Stalker - Enable Range Mode and Set REACT_DEFENSIVE on Spawn'),
+('2303001','23030','11','0','100','0','0','0','0','0','0','0','57','1','30','0','50','1','0','0','0','0','0','0','Dragonmaw Sky Stalker - Enable Range Mode and Set REACT_DEFENSIVE on Spawn'),
 ('2303002','23030','9','0','100','1025','5','60','11000','16000','0','0','11','40872','4','512','0','0','0','0','0','0','0','0','Dragonmaw Sky Stalker - Cast Immolation Arrow'),
 ('2303003','23030','9','0','100','1025','5','40','5000','8000','0','0','11','40873','1','256','0','0','0','0','0','0','0','0','Dragonmaw Sky Stalker - Cast Shoot'),
 -- Shadowmoon Soldier 23047 - RP: "Yes Sir!"
@@ -27469,7 +27469,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2331802','23318','0','0','100','1025','5000','10000','10000','15000','0','0','11','41177','1','0','0','0','0','0','0','0','0','0','Ashtongue Rogue - Cast Eviscerate'),
 -- Ashtongue Broken (23319) - NSR
 -- Dragonmaw Wind Reaver 23330 - Yell: "Permission to buzz the tower!","Dragonriders mount up!", also Say Orcish: "Dogg kagg mog Ruk'ka'ha Kil ogg lok'mogul n " - Dragonmaw Wind Reaver 23330
-('2333001','23330','11','0','100','0','0','0','0','0','0','0','57','1','35','0','50','1','0','0','0','0','0','0','Dragonmaw Wind Reaver - Enable Range Mode and Set REACT_DEFENSIVE on Spawn'),
+('2333001','23330','11','0','100','0','0','0','0','0','0','0','57','1','30','0','50','1','0','0','0','0','0','0','Dragonmaw Wind Reaver - Enable Range Mode and Set REACT_DEFENSIVE on Spawn'),
 ('2333002','23330','0','0','100','1025','9000','14000','12000','16000','0','0','11','40876','4','512','0','0','0','0','0','0','0','0','Dragonmaw Wind Reaver - Cast Doom Bolt'),
 ('2333003','23330','0','0','100','1025','9000','17000','11000','19000','0','0','11','40875','1','1024','0','0','0','0','0','0','0','0','Dragonmaw Wind Reaver - Cast Freeze'),
 ('2333004','23330','9','0','100','1025','0','40','2400','2800','0','0','11','40877','1','256','0','0','0','0','0','0','0','0','Dragonmaw Wind Reaver - Cast Fireball'),
@@ -27545,9 +27545,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Arcane Charge 23429
 ('2342901','23429','11','0','100','0','0','0','0','0','0','0','11','41347','0','0','11','40031','0','0','0','0','0','0','Arcane Charge - Cast Spotlight and Birth - No Visual (Instant Spawn) on Spawn'),
 ('2342902','23429','29','0','100','0','2000','2000','0','0','0','0','11','41349','0','0','37','0','0','0','41','400','0','0','Arcane Charge - Cast L4 Arcane Charge and Die and Delayed Despawn on Generic Timer'),
--- Image of Dementia 23436 -- 100000 Threat on New Target
-('2343601','23436','11','0','100','0','0','0','0','0','0','0','11','41399','0','0','38','0','0','0','41','13000','0','0','Image of Dementia - Cast Whirlwind and Zone Combat Pulse and Delayed Despawn on Spawn'),
-('2343602','23436','0','0','100','1025','1200','1200','1200','1200','0','0','13','-100','1','0','13','100','8','0','0','0','0','0','Image of Dementia - Reset Threat and Attack New Target'),
+-- Image of Dementia 23436
+('2343601','23436','11','0','100','0','0','0','0','0','0','0','11','41399','0','34','38','0','0','0','41','13000','0','0','Image of Dementia - Cast Whirlwind and Zone Combat Pulse and Delayed Despawn on Spawn'),
 -- Veras Vanish Effect 23451
 ('2345101','23451','11','0','100','0','0','0','0','0','0','0','11','40031','0','0','0','0','0','0','0','0','0','0','Veras Vanish Effect - Cast Birth - No Visual (Instant Spawn) on Spawn'),
 ('2345102','23451','29','0','100','0','800','800','0','0','0','0','11','41510','0','0','0','0','0','0','0','0','0','0','Veras Vanish Effect - Cast Envenom on Generic Timer'),
