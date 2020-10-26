@@ -394,20 +394,24 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (23897, 0, 6, 244.639, 1025.133, 3.468338, 100, 5000, 2389701),
 -- Amani'shi Hatcher 23818
 (23818, 1, 1, -55.05891, 1147.595, 18.70522, 100, 0, 0),
-(23818, 1, 2, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
+(23818, 1, 2, -35.24889, 1124.789, 19.20835, 100, 0, 0),
+(23818, 1, 3, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
 
 (23818, 2, 1, -55.0473, 1153.593, 18.7052, 100, 0, 0),
-(23818, 2, 2, -34.76778, 1192.843, 18.71136, 100, 1000, 0),
+(23818, 2, 2, -35.65754, 1175.968, 19.20828, 100, 0, 0),
+(23818, 2, 3, -34.76778, 1192.843, 18.71136, 100, 1000, 0),
 
 (23818, 3, 1, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
 
 (23818, 4, 1, -34.76778, 1192.843, 18.71136, 100, 1000, 0),
 -- Amani'shi Hatcher 24504
 (24504, 1, 1, -55.05891, 1147.595, 18.70522, 100, 0, 0),
-(24504, 1, 2, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
+(24504, 1, 2, -36.74889, 1126.289, 19.20835, 100, 0, 0),
+(24504, 1, 3, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
 
 (24504, 2, 1, -55.0473, 1153.593, 18.7052, 100, 0, 0),
-(24504, 2, 2, -34.76778, 1192.843, 18.71136, 100, 1000, 0),
+(24504, 2, 2, -35.65754, 1175.968, 19.20828, 100, 0, 0),
+(24504, 2, 3, -34.76778, 1192.843, 18.71136, 100, 1000, 0),
 
 (24504, 3, 1, -34.43886, 1104.483, 18.71147, 100, 1000, 0),
 
@@ -869,14 +873,14 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+408, @CGUID+44, 1024), -- Amani'shi Flame Caster -> Halazzi
 
 -- Zul'jin
-(@CGUID+479, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+480, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+481, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+482, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+483, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+484, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+485, @CGUID+254, 1031), -- Amani'shi Savage -> Zul'jin
-(@CGUID+486, @CGUID+254, 1031); -- Amani'shi Savage -> Zul'jin
+(@CGUID+479, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+480, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+481, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+482, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+483, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+484, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+485, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
+(@CGUID+486, @CGUID+254, 17415); -- Amani'shi Savage -> Zul'jin
 
 REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (23598, 568, 23578, 4096, 0), -- Amani Dragonhawk Hatchling -> Jan'alai
