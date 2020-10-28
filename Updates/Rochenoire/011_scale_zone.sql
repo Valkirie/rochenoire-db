@@ -28,6 +28,7 @@ insert  into `scale_zone`(`AreaName`,`MapID`,`AreaID`,`ParentWorldMapID`,`LevelR
 ('The Barrens',1,17,13,10,45),
 ('Western Plaguelands',0,28,14,40,60),
 ('Stranglethorn Vale',0,33,14,25,55),
+('Alterac Mountains',0,36,0,30,60),
 ('Loch Modan',0,38,14,10,45),
 ('Westfall',0,40,14,10,45),
 ('Deadwind Pass',0,41,14,50,70),
