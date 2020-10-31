@@ -13895,9 +13895,10 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Goggeroc
 ('1192001','11920','9','0','100','1025','0','5','9000','13000','0','0','11','8646','1','0','0','0','0','0','0','0','0','0','Goggeroc - Cast Snap Kick'),
 ('1192002','11920','0','0','100','1025','6000','9000','12000','16000','0','0','11','10966','1','0','0','0','0','0','0','0','0','0','Goggeroc - Cast Uppercut'),
--- Besseleth
-('1192101','11921','9','0','100','1025','0','30','9000','12000','0','0','11','745','1','0','0','0','0','0','0','0','0','0','Besseleth - Cast Web'),
-('1192102','11921','9','0','100','1025','0','5','12000','17000','0','0','11','5416','1','0','0','0','0','0','0','0','0','0','Besseleth - Cast Venom Sting'),
+-- Besseleth 11921
+('1192101','11921','11','0','100','0','0','0','0','0','0','0','11','3417','0','34','0','0','0','0','0','0','0','0','Besseleth - Cast Thrash on Spawn'),
+('1192102','11921','0','0','100','1025','0','10000','9000','12000','0','0','11','745','1','0','0','0','0','0','0','0','0','0','Besseleth - Cast Web'),
+('1192103','11921','0','0','100','1025','0','10000','12000','17000','0','0','11','5416','1','0','0','0','0','0','0','0','0','0','Besseleth - Cast Venom Sting'),
 -- Kulwia
 ('1204301','12043','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Kulwia - Flee at 15% HP'),
 -- Bloodfury Ripper
@@ -17776,19 +17777,20 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Tamed Ravager 19461 - NSR
 -- Vacillating Voidcaller 19527
 ('1952701','19527','11','0','100','0','0','0','0','0','0','0','11','34302','0','2','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Coalesce on Spawn'),
-('1952702','19527','1','0','100','0','0','0','0','0','0','0','57','2','25','0','22','1','0','0','0','0','0','0','Vacillating Voidcaller - Enable Range Mode and Set Phase 1 OOC'),
-('1952703','19527','8','253','100','0','0','2','0','0','0','0','11','34336','0','0','22','2','0','0','54','-10106','0','0','Vacillating Voidcaller - Cast Damage Reduction: Holy and Set Phase 2 and Text Emote on Holy Spellhit (Phase 1)'),
-('1952704','19527','8','253','100','0','0','4','0','0','0','0','11','34333','0','0','22','3','0','0','54','-10107','0','0','Vacillating Voidcaller - Cast Damage Reduction: Fire and Set Phase 3 and Text Emote on Fire Spellhit (Phase 1)'),
-('1952705','19527','8','253','100','0','0','8','0','0','0','0','11','34335','0','0','22','4','0','0','54','-10108','0','0','Vacillating Voidcaller - Cast Damage Reduction: Nature and Set Phase 4 and Text Emote on Nature Spellhit (Phase 1)'),
-('1952706','19527','8','253','100','0','0','16','0','0','0','0','11','34334','0','0','22','5','0','0','54','-10109','0','0','Vacillating Voidcaller - Cast Damage Reduction: Frost and Set Phase 5 and Text Emote on Frost Spellhit (Phase 1)'),
-('1952707','19527','8','253','100','0','0','32','0','0','0','0','11','34338','0','0','22','6','0','0','54','-10110','0','0','Vacillating Voidcaller - Cast Damage Reduction: Shadow and Set Phase 6 and Text Emote on Shadow Spellhit (Phase 1)'),
-('1952708','19527','8','253','100','0','0','64','0','0','0','0','11','34331','0','0','22','7','0','0','54','-10111','0','0','Vacillating Voidcaller - Cast Damage Reduction: Arcane and Set Phase 7 and Text Emote on Arcane Spellhit (Phase 1)'),
+('1952702','19527','4','0','100','0','0','0','0','0','0','0','57','2','25','0','22','1','0','0','0','0','0','0','Vacillating Voidcaller - Enable Range Mode and Set Phase 1 on Aggro'),
+('1952703','19527','8','253','100','0','0','2','0','0','0','0','11','34336','0','1','22','2','0','0','54','-10106','0','0','Vacillating Voidcaller - Cast Damage Reduction: Holy and Set Phase 2 and Text Emote on Holy Spellhit (Phase 1)'),
+('1952704','19527','8','253','100','0','0','4','0','0','0','0','11','34333','0','1','22','3','0','0','54','-10107','0','0','Vacillating Voidcaller - Cast Damage Reduction: Fire and Set Phase 3 and Text Emote on Fire Spellhit (Phase 1)'),
+('1952705','19527','8','253','100','0','0','8','0','0','0','0','11','34335','0','1','22','4','0','0','54','-10108','0','0','Vacillating Voidcaller - Cast Damage Reduction: Nature and Set Phase 4 and Text Emote on Nature Spellhit (Phase 1)'),
+('1952706','19527','8','253','100','0','0','16','0','0','0','0','11','34334','0','1','22','5','0','0','54','-10109','0','0','Vacillating Voidcaller - Cast Damage Reduction: Frost and Set Phase 5 and Text Emote on Frost Spellhit (Phase 1)'),
+('1952707','19527','8','253','100','0','0','32','0','0','0','0','11','34338','0','1','22','6','0','0','54','-10110','0','0','Vacillating Voidcaller - Cast Damage Reduction: Shadow and Set Phase 6 and Text Emote on Shadow Spellhit (Phase 1)'),
+('1952708','19527','8','253','100','0','0','64','0','0','0','0','11','34331','0','1','22','7','0','0','54','-10111','0','0','Vacillating Voidcaller - Cast Damage Reduction: Arcane and Set Phase 7 and Text Emote on Arcane Spellhit (Phase 1)'),
 ('1952709','19527','0','189','100','1025','0','1000','2000','3000','0','0','11','34344','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Shadow Bolt (Phase 1,6)'),
 ('1952710','19527','0','251','100','1025','0','1000','2000','3000','0','0','11','34346','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Holy Bolt (Phase 2)'),
 ('1952711','19527','0','247','100','1025','0','1000','2000','3000','0','0','11','34348','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Fireball (Phase 3)'),
 ('1952712','19527','0','239','100','1025','0','1000','2000','3000','0','0','11','34345','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Lighting Bolt (Phase 4)'),
 ('1952713','19527','0','223','100','1025','0','1000','2000','3000','0','0','11','34347','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Frostball (Phase 5)'),
 ('1952714','19527','0','127','100','1025','0','1000','5000','6000','0','0','11','34446','1','256','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Cast Arcane Missiles (Phase 7)'),
+('1952715','19527','7','0','100','0','0','0','0','0','0','0','22','0','0','0','0','0','0','0','0','0','0','0','Vacillating Voidcaller - Set Phase 0 on Evade'),
 -- Amilya Airheart 19558
 ('1955801','19558','4','0','100','0','0','0','0','0','0','0','11','14307','0','0','1','-548','0','0','0','0','0','0','Amilya Airheart - Cast Summon Enraged Wyvern and Yell on Aggro'),
 ('1955802','19558','4','0','100','0','0','0','0','0','0','0','57','2','75','0','0','0','0','0','0','0','0','0','Amilya Airheart - Enable Range Mode on Aggro'),
@@ -17799,7 +17801,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Bleeding Hollow Riding Worg 19640
 ('1964001','19640','2','0','100','1025','70','0','18000','26000','0','0','45','5','20','0','0','0','0','0','0','0','0','0','Bleeding Hollow Riding Worg - Send AI Event 5 at 70% HP'),
 -- Void Spawner L 19681
-('1968101','19681','29','0','100','1','0','0','60000','60000','0','0','11','34303','15','0','0','0','0','0','0','0','0','0','Void Spawner L - Cast Nether Charge on Generic Timer'),
+('1968101','19681','29','0','100','1','0','60000','60000','60000','0','0','11','34303','15','0','0','0','0','0','0','0','0','0','Void Spawner L - Cast Nether Charge on Generic Timer'),
 -- Bonechewer Evoker 19701 (3.0.3 Official Data - Logs Only)
 ('1970101','19701','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Bonechewer Evoker - Enable Range Mode on Aggro'),
 ('1970102','19701','2','0','100','1024','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Bonechewer Evoker - Flee at 15% HP'),
@@ -21226,6 +21228,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2066902','20669','7','0','100','0','0','0','0','0','0','0','41','0','0','0','0','0','0','0','0','0','0','0','Shade of Mal''druk - Forced Despawn on Evade'),
 -- Gur'zil
 ('2076201','20762','4','0','100','0','0','0','0','0','0','0','11','14307','0','0','1','-548','0','0','0','0','0','0','Gur''zil - Cast Summon Enraged Wyvern and Yell on Aggro'),
+-- Bloodscale Elemental 20792 - NSR
 -- Xeleth
 ('2189401','21894','11','0','100','0','0','0','0','0','0','0','55','11','0','0','54','-10781','0','0','0','0','0','0','Xeleth - Attack Spawner (Player) and Yell on Spawn'),
 ('2189402','21894','0','0','100','1025','0','0','12500','12500','0','0','11','36414','1','0','0','0','0','0','0','0','0','0','Xeleth - Cast Focused Bursts'),
@@ -24560,6 +24563,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Sunblade Sentinel 24777
 ('2477701','24777','11','0','100','2','0','0','0','0','0','0','11','44537','0','34','0','0','0','0','0','0','0','0','Sunblade Sentinel (Normal) - Cast Fel Lightning on Spawn'),
 ('2477702','24777','11','0','100','4','0','0','0','0','0','0','11','46048','0','34','0','0','0','0','0','0','0','0','Sunblade Sentinel (Heroic) - Cast Fel Lightning on Spawn'),
+-- Nether Energy 24781
 ('2478101','24781','30','0','100','1','5','24762','0','0','0','0','28','0','44451','0','11','44432','15','0','41','60000','0','0','Nether Energy - Remove Purple Banish State, Cast Cube Ground State on Receive AI Event A'),
 ('2478102','24781','30','0','100','1','6','24762','0','0','0','0','28','0','44432','0','11','44451','15','0','0','0','0','0','Nether Energy - Remove Cube Ground State, Cast Purple Banish State on Receive AI Event B'),
 ('2478103','24781','6','0','100','0','0','0','0','0','0','0','41','1000','0','0','0','0','0','0','0','0','0','0','Nether Energy - Delayed Despawn on Death'),
