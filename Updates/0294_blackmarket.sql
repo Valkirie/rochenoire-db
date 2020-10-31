@@ -37,19 +37,129 @@ REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, T
 REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES (-1901061,"What a scammer, $N ! You don't have enough tokens !", "Quel arnaqueur, $N! Vous n'avez pas assez de jetons!", 5960, 5, 1, "BlackMarket SCAM");
 REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES (-1901062,"You're wasting my time...", "Je perds mon temps ...", 5960, 14, 0, "BlackMarket WASTE");
 
-DELETE FROM creature_template WHERE entry IN (22000,22001,22002);
-REPLACE INTO `creature_template` VALUES(22000,'Graxle Sheeftlevel','Black Market Representative',NULL,'67','67','0','7355','7355','7355','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
-REPLACE INTO `creature_template` VALUES(22001,'Ezka Ajustgear','Black Market Representative',NULL,'67','67','0','8010','8010','8010','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
-REPLACE INTO `creature_template` VALUES(22002,'Haughty Miixstaat','Black Market Representative',NULL,'67','67','0','15300','15300','15300','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
-UPDATE creature_template SET NpcFlags = 3, ScriptName = 'custom_BlackMarket' WHERE entry IN (22000,22001,22002);
+DELETE FROM creature_template WHERE entry IN (39700,39701,39702);
+REPLACE INTO `creature_template` VALUES(39700,'Graxle Sheeftlevel','Black Market Representative',NULL,'67','67','0','7355','7355','7355','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
+REPLACE INTO `creature_template` VALUES(39701,'Ezka Ajustgear','Black Market Representative',NULL,'67','67','0','8010','8010','8010','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
+REPLACE INTO `creature_template` VALUES(39702,'Haughty Miixstaat','Black Market Representative',NULL,'67','67','0','15300','15300','15300','0','475','1','0','7','3','3','0','1','32768','0','1088','0','1','1.42857','20','0','0','0','0','1','0','1','2','1','2','1','1','1','12652','12652','0','0','455','581','301.34','422.17','5892','239','100','2000','2000','0','0','0','0','9460','0','0','0','0','0','0','0','0','0','0','0','0','1','0','0','0','0','0','0','9460','7956','0','EventAI','custom_BlackMarket');
+UPDATE creature_template SET NpcFlags = 3, ScriptName = 'custom_BlackMarket' WHERE entry IN (39700,39701,39702);
 
-DELETE FROM creature WHERE id IN (22000,22001,22002);
-REPLACE INTO `creature` (id,map,modelid,position_x,position_y,position_z,orientation) VALUES (22000,1,7355,'6721.65','-4663.43','721.004','2.40214'),
-(22001,1,8010,'-7188.17','-3796.79','9.45269','1.0876'),
-(22002,0,15300,'-14374.5','397.87','6.6266','1.46358');
+DELETE FROM creature WHERE id IN (39700,39701,39702);
+REPLACE INTO `creature` (id,map,modelid,position_x,position_y,position_z,orientation) VALUES
+(39700,'1','1118','6721.65','-4663.43','721.004','2.40214'),
+(39701,'1','1141','-7188.17','-3796.79','9.45269','1.0876'),
+(39702,'0','1162','-14374.5','397.87','6.6266','1.46358');
 
 -- OUTDATED REPLACE INTO `npc_text` VALUES ('55134','Have a good one, $c.  Ya lookin\' for somethin\'?  I\'ve got what you need, lemme tell ya $g man : sis;!  Take a look at theses offers.','','0','1','0','2','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
 REPLACE INTO `npc_text` VALUES ('55136',"Ya lookin' for somethin' $N?$B,There's no fin\'a equipment than wut I got here, lemme tell you $g man : sis;!",'','0','1','0','6','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
 REPLACE INTO `npc_text` VALUES ('55137',"Yo' brin' me your old stuff, I\'ll suit ya with some new stuff, freshly forged.",'','0','1','0','1','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
 REPLACE INTO `npc_text` VALUES ('55138',"You're just embarrassing yourself with all that rusty equipment! Look'a here at what I've got for ya.",'','0','1','0','1','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
 REPLACE INTO `npc_text` VALUES ('55139',"Here\'s wut I can do for ya. It might take some time fo' me ta find it based on its rarity. $B$BI'll mail it ta you as soon as I've found it. Don't worry bout the shipping cost, its included !$B$BWhatcha' think man? Do we have a deal ?",'','0','1','0','6','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
+
+-- creature_loot_template
+REPLACE INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) values
+(15687,29434,100,0,2,2,0,'Badge of Justice'),
+(15688,29434,100,0,2,2,0,'Badge of Justice'),
+(15689,29434,100,0,2,2,0,'Badge of Justice'),
+(15690,29434,100,0,3,3,0,'Badge of Justice'),
+(15691,29434,100,0,2,2,0,'Badge of Justice'),
+(16152,29434,100,0,1,1,0,'Badge of Justice'),
+(16457,29434,100,0,2,2,0,'Badge of Justice'),
+(16524,29434,100,0,2,2,0,'Badge of Justice'),
+(17225,29434,100,0,3,3,0,'Badge of Justice'),
+(17257,29434,100,0,3,3,0,'Badge of Justice'),
+(17521,29434,100,0,2,2,0,'Badge of Justice'),
+(17533,29434,100,0,1,1,0,'Badge of Justice'),
+(17534,29434,100,0,1,1,0,'Badge of Justice'),
+(17767,29434,100,0,2,2,0,'Badge of Justice'),
+(17808,29434,100,0,2,2,0,'Badge of Justice'),
+(17842,29434,100,0,2,2,0,'Badge of Justice'),
+(17888,29434,100,0,2,2,0,'Badge of Justice'),
+(17968,29434,100,0,3,3,0,'Badge of Justice'),
+(18168,29434,100,0,2,2,0,'Badge of Justice'),
+(18433,29434,100,0,1,1,0,'Badge of Justice'),
+(18436,29434,100,0,1,1,0,'Badge of Justice'),
+(18601,29434,100,0,1,1,0,'Badge of Justice'),
+(18607,29434,100,0,1,1,0,'Badge of Justice'),
+(18621,29434,100,0,1,1,0,'Badge of Justice'),
+(18805,29434,100,0,2,2,0,'Badge of Justice'),
+(18831,29434,100,0,2,2,0,'Badge of Justice'),
+(19044,29434,100,0,3,3,0,'Badge of Justice'),
+(19514,29434,100,0,2,2,0,'Badge of Justice'),
+(19516,29434,100,0,2,2,0,'Badge of Justice'),
+(19622,29434,100,0,3,3,0,'Badge of Justice'),
+(19893,29434,100,0,1,1,0,'Badge of Justice'),
+(19894,29434,100,0,1,1,0,'Badge of Justice'),
+(19895,29434,100,0,1,1,0,'Badge of Justice'),
+(20168,29434,100,0,1,1,0,'Badge of Justice'),
+(20169,29434,100,0,1,1,0,'Badge of Justice'),
+(20183,29434,100,0,1,1,0,'Badge of Justice'),
+(20184,29434,100,0,1,1,0,'Badge of Justice'),
+(20266,29434,100,0,1,1,0,'Badge of Justice'),
+(20267,29434,100,0,1,1,0,'Badge of Justice'),
+(20268,29434,100,0,1,1,0,'Badge of Justice'),
+(20306,29434,100,0,1,1,0,'Badge of Justice'),
+(20318,29434,100,0,1,1,0,'Badge of Justice'),
+(20521,29434,100,0,1,1,0,'Badge of Justice'),
+(20531,29434,100,0,1,1,0,'Badge of Justice'),
+(20535,29434,100,0,1,1,0,'Badge of Justice'),
+(20568,29434,100,0,1,1,0,'Badge of Justice'),
+(20596,29434,100,0,1,1,0,'Badge of Justice'),
+(20597,29434,100,0,1,1,0,'Badge of Justice'),
+(20629,29434,100,0,1,1,0,'Badge of Justice'),
+(20630,29434,100,0,1,1,0,'Badge of Justice'),
+(20633,29434,100,0,1,1,0,'Badge of Justice'),
+(20636,29434,100,0,1,1,0,'Badge of Justice'),
+(20637,29434,100,0,1,1,0,'Badge of Justice'),
+(20653,29434,100,0,1,1,0,'Badge of Justice'),
+(20657,29434,100,0,1,1,0,'Badge of Justice'),
+(20690,29434,100,0,1,1,0,'Badge of Justice'),
+(20706,29434,100,0,1,1,0,'Badge of Justice'),
+(20737,29434,100,0,1,1,0,'Badge of Justice'),
+(20738,29434,100,0,1,1,0,'Badge of Justice'),
+(20745,29434,100,0,1,1,0,'Badge of Justice'),
+(20923,29434,100,0,1,1,0,'Badge of Justice'),
+(21212,29434,100,0,3,3,0,'Badge of Justice'),
+(21213,29434,100,0,2,2,0,'Badge of Justice'),
+(21214,29434,100,0,2,2,0,'Badge of Justice'),
+(21215,29434,100,0,2,2,0,'Badge of Justice'),
+(21216,29434,100,0,2,2,0,'Badge of Justice'),
+(21217,29434,100,0,2,2,0,'Badge of Justice'),
+(21533,29434,100,0,1,1,0,'Badge of Justice'),
+(21536,29434,100,0,1,1,0,'Badge of Justice'),
+(21537,29434,100,0,1,1,0,'Badge of Justice'),
+(21551,29434,100,0,1,1,0,'Badge of Justice'),
+(21558,29434,100,0,1,1,0,'Badge of Justice'),
+(21559,29434,100,0,1,1,0,'Badge of Justice'),
+(21581,29434,100,0,1,1,0,'Badge of Justice'),
+(21582,29434,100,0,1,1,0,'Badge of Justice'),
+(21590,29434,100,0,1,1,0,'Badge of Justice'),
+(21599,29434,100,0,1,1,0,'Badge of Justice'),
+(21624,29434,100,0,1,1,0,'Badge of Justice'),
+(21626,29434,100,0,1,1,0,'Badge of Justice'),
+(22841,29434,100,0,2,2,0,'Badge of Justice'),
+(22871,29434,100,0,2,2,0,'Badge of Justice'),
+(22887,29434,100,0,2,2,0,'Badge of Justice'),
+(22898,29434,100,0,2,2,0,'Badge of Justice'),
+(22917,29434,100,0,2,2,0,'Badge of Justice'),
+(22930,29434,100,0,1,1,0,'Badge of Justice'),
+(22947,29434,100,0,2,2,0,'Badge of Justice'),
+(22948,29434,100,0,2,2,0,'Badge of Justice'),
+(22950,29434,100,0,2,2,0,'Badge of Justice'),
+(23035,29434,100,0,1,1,0,'Badge of Justice'),
+(23574,29434,100,0,2,2,0,'Badge of Justice'),
+(23576,29434,100,0,1,1,0,'Badge of Justice'),
+(23577,29434,100,0,2,2,0,'Badge of Justice'),
+(23578,29434,100,0,2,2,0,'Badge of Justice'),
+(23863,29434,100,0,3,3,0,'Badge of Justice'),
+(24239,29434,100,0,3,3,0,'Badge of Justice'),
+(24857,29434,100,0,1,1,0,'Badge of Justice'),
+(24882,29434,100,0,2,2,0,'Badge of Justice'),
+(24892,29434,100,0,2,2,0,'Badge of Justice'),
+(25038,29434,100,0,2,2,0,'Badge of Justice'),
+(25165,29434,100,0,2,2,0,'Badge of Justice'),
+(25166,29434,100,0,2,2,0,'Badge of Justice'),
+(25315,29434,100,0,3,3,0,'Badge of Justice'),
+(25560,29434,100,0,1,1,0,'Badge of Justice'),
+(25562,29434,100,0,1,1,0,'Badge of Justice'),
+(25573,29434,100,0,1,1,0,'Badge of Justice'),
+(25840,29434,100,0,2,2,0,'Badge of Justice');
