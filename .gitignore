@@ -25,7 +25,6 @@
 *.vi
 *~
 *.sass-cache
-/dev/*.sql
 /dev/*/
 
 # OS or Editor folders
