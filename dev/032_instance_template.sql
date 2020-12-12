@@ -1,4 +1,12 @@
 ALTER TABLE `instance_template` ADD COLUMN `minPlayers` TINYINT UNSIGNED DEFAULT 0 NOT NULL AFTER `levelMax`;
+ALTER TABLE `instance_template` ADD COLUMN `nbrTank` TINYINT UNSIGNED DEFAULT 0 NOT NULL AFTER `maxPlayers`;
+
+UPDATE instance_template SET nbrTank = 3 WHERE maxPlayers = 40;
+UPDATE instance_template SET nbrTank = 2 WHERE maxPlayers = 25;
+UPDATE instance_template SET nbrTank = 2 WHERE maxPlayers = 20;
+UPDATE instance_template SET nbrTank = 2 WHERE maxPlayers = 10;
+UPDATE instance_template SET nbrTank = 1 WHERE maxPlayers = 5;
+
 UPDATE instance_template SET minPlayers = maxPlayers;
 
 -- Ahn'Qiraj
