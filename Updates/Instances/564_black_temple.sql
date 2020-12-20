@@ -2078,6 +2078,32 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (23421, 0, 0, 1, 16, 0, 0, NULL), -- Ashtongue Channeler
 (23498, 0, 0, 1, 16, 0, 0, '34429 41913'); -- Parasitic Shadowfiend
 
+INSERT INTO `creature_spawn_data` (`guid`, `id`) VALUES
+(@CGUID+449, 3), -- Dragonmaw Sky Stalker
+(@CGUID+452, 3), -- Dragonmaw Sky Stalker
+(@CGUID+453, 3), -- Dragonmaw Sky Stalker
+(@CGUID+457, 3), -- Dragonmaw Sky Stalker
+(@CGUID+458, 3), -- Dragonmaw Sky Stalker
+(@CGUID+462, 3), -- Dragonmaw Sky Stalker
+(@CGUID+463, 3), -- Dragonmaw Sky Stalker
+(@CGUID+610, 3), -- Dragonmaw Wind Reaver
+(@CGUID+611, 3), -- Dragonmaw Wind Reaver
+(@CGUID+612, 3), -- Dragonmaw Wind Reaver
+(@CGUID+784, 3), -- Dragonmaw Sky Stalker
+(@CGUID+785, 3), -- Dragonmaw Sky Stalker
+(@CGUID+786, 3), -- Dragonmaw Sky Stalker
+(@CGUID+787, 3), -- Dragonmaw Sky Stalker
+(@CGUID+788, 3), -- Dragonmaw Sky Stalker
+(@CGUID+789, 3), -- Dragonmaw Sky Stalker
+(@CGUID+790, 3), -- Dragonmaw Sky Stalker
+(@CGUID+791, 3), -- Dragonmaw Sky Stalker
+(@CGUID+792, 3), -- Dragonmaw Sky Stalker
+(@CGUID+793, 3), -- Dragonmaw Sky Stalker
+(@CGUID+794, 3), -- Dragonmaw Sky Stalker
+(@CGUID+795, 3), -- Dragonmaw Wind Reaver
+(@CGUID+796, 3), -- Dragonmaw Wind Reaver
+(@CGUID+797, 3); -- Dragonmaw Wind Reaver
+
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 -- High Warlord Naj'entus
 (@CGUID+113, @CGUID+127, 1679), -- Coilskar Sea-Caller -> Aqueous Lord
@@ -2462,16 +2488,6 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+700, @CGUID+699, 1679), -- Hungering Soul Fragment -> Hungering Soul Fragment
 (@CGUID+694, @CGUID+693, 1679), -- Hungering Soul Fragment -> Hungering Soul Fragment
 (@CGUID+698, @CGUID+697, 1679), -- Hungering Soul Fragment -> Hungering Soul Fragment
-(@CGUID+701, @CGUID+93, 1024), -- Hungering Soul Fragment -> Reliquary of the Lost
-(@CGUID+695, @CGUID+93, 1024), -- Hungering Soul Fragment -> Reliquary of the Lost
-(@CGUID+699, @CGUID+93, 1024), -- Hungering Soul Fragment -> Reliquary of the Lost
-(@CGUID+693, @CGUID+93, 1024), -- Hungering Soul Fragment -> Reliquary of the Lost
-(@CGUID+697, @CGUID+93, 1024), -- Hungering Soul Fragment -> Reliquary of the Lost
-(@CGUID+688, @CGUID+93, 1024), -- Suffering Soul Fragment -> Reliquary of the Lost
-(@CGUID+685, @CGUID+93, 1024), -- Suffering Soul Fragment -> Reliquary of the Lost
-(@CGUID+684, @CGUID+93, 1024), -- Suffering Soul Fragment -> Reliquary of the Lost
-(@CGUID+686, @CGUID+93, 1024), -- Suffering Soul Fragment -> Reliquary of the Lost
-(@CGUID+687, @CGUID+93, 1024), -- Suffering Soul Fragment -> Reliquary of the Lost
 -- Mother Shahraz
 (@CGUID+263, @CGUID+262, 1167), -- Temple Concubine -> Temple Concubine
 (@CGUID+264, @CGUID+262, 1167), -- Temple Concubine -> Temple Concubine
@@ -3142,21 +3158,21 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+446, 23028, 564, 1, 817.602, 927.482, 56.7336, 2.32234, 7200, 7200, 0, 0, 0, 2), -- Bonechewer Taskmaster
 (@CGUID+447, 23028, 564, 1, 618.848, 967.643, 56.0339, 5.46778, 7200, 7200, 0, 0, 0, 2), -- Bonechewer Taskmaster
 (@CGUID+448, 23028, 564, 1, 623.037, 970.488, 56.0675, 5.46771, 7200, 7200, 0, 0, 0, 0), -- Bonechewer Taskmaster
-(@CGUID+449, 23030, 564, 1, 601.6918, 852.726, 64.19906, 5.602507, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
+(@CGUID+449, 23030, 564, 1, 601.6918, 852.726, 64.19906, 5.602507, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
 -- @CGUID+450 -- REUSE
 -- @CGUID+451 -- REUSE
-(@CGUID+452, 23030, 564, 1, 623.2493, 779.8209, 71.35022, 2.740167, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+453, 23030, 564, 1, 625.8873, 814.3218, 67.75632, 0.2030302, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
+(@CGUID+452, 23030, 564, 1, 623.2493, 779.8209, 71.35022, 2.740167, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+453, 23030, 564, 1, 625.8873, 814.3218, 67.75632, 0.2030302, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
 -- @CGUID+454 -- REUSE
 -- @CGUID+455 -- REUSE
 -- @CGUID+456 -- REUSE
-(@CGUID+457, 23030, 564, 1, 716.7581, 667.9764, 171.9325, 3.150776, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+458, 23030, 564, 1, 697.834, 658.5719, 181.0927, 3.358212, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
+(@CGUID+457, 23030, 564, 1, 716.7581, 667.9764, 171.9325, 3.150776, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+458, 23030, 564, 1, 697.834, 658.5719, 181.0927, 3.358212, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
 -- @CGUID+459 -- REUSE
 -- @CGUID+460 -- REUSE
 -- @CGUID+461 -- REUSE
-(@CGUID+462, 23030, 564, 1, 756.7599, 921.978, 167.261, 2.632375, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+463, 23030, 564, 1, 758.653, 869.2677, 184.5064, 3.243881, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
+(@CGUID+462, 23030, 564, 1, 756.7599, 921.978, 167.261, 2.632375, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+463, 23030, 564, 1, 758.653, 869.2677, 184.5064, 3.243881, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
 -- @CGUID+464 -- REUSE
 -- @CGUID+465 -- REUSE
 (@CGUID+466, 23033, 564, 1, 564.068, 413.016, 211.713, 0.982765, 7200, 7200, 5, 0, 0, 1), -- Invisible Stalker (Floating)
@@ -3303,9 +3319,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+607, 0, 564, 1, 667.795, 938.849, 54.7873, 3.42085, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+608, 0, 564, 1, 740.413, 946.561, 54.34, 3.54302, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+609, 0, 564, 1, 745.0646, 920.3674, 54.02595, 2.687807, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
-(@CGUID+610, 23330, 564, 1, 613.789, 817.147, 67.6669, 1.312755, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
-(@CGUID+611, 23330, 564, 1, 604.079, 772.641, 71.259, 1.09956, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
-(@CGUID+612, 23330, 564, 1, 626.741, 854.619, 64.869, 4.11898, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
+(@CGUID+610, 23330, 564, 1, 613.789, 817.147, 67.6669, 1.312755, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
+(@CGUID+611, 23330, 564, 1, 604.079, 772.641, 71.259, 1.09956, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
+(@CGUID+612, 23330, 564, 1, 626.741, 854.619, 64.869, 4.11898, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
 (@CGUID+613, 23337, 564, 1, 599.842, 387.937, 112.822, 0.401426, 7200, 7200, 0, 0, 0, 0), -- Illidari Centurion
 (@CGUID+614, 23337, 564, 1, 599.525, 411.442, 112.827, 5.89921, 7200, 7200, 0, 0, 0, 0), -- Illidari Centurion
 (@CGUID+615, 23337, 564, 1, 712.932, 387.965, 117.475, 1.71042, 7200, 7200, 0, 0, 0, 0), -- Illidari Centurion
@@ -3377,25 +3393,25 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+681, 23398, 564, 1, 616.133, 66.1577, 112.473, 5.53334, 15, 15, 5, 0, 0, 1), -- Angered Soul Fragment
 (@CGUID+682, 23398, 564, 1, 605.794, 62.7557, 111.802, 4.54002, 15, 15, 5, 0, 0, 1), -- Angered Soul Fragment
 (@CGUID+683, 23398, 564, 1, 589.603, 70.1735, 111.759, 5.73653, 15, 15, 5, 0, 0, 1), -- Angered Soul Fragment
-(@CGUID+684, 23399, 564, 1, 571.9584, 100.141, 112.7107, 1.038657, 15, 15, 0, 0, 0, 2), -- Suffering Soul Fragment
-(@CGUID+685, 23399, 564, 1, 489.027, 81.41601, 110.6453, 0.4182625, 15, 15, 0, 0, 0, 2), -- Suffering Soul Fragment
-(@CGUID+686, 23399, 564, 1, 603.3951, 38.2294, 112.7442, 0.3404358, 15, 15, 0, 0, 0, 2), -- Suffering Soul Fragment
-(@CGUID+687, 23399, 564, 1, 589.9243, 92.85661, 112.9238, 3.42163, 15, 15, 0, 0, 0, 2), -- Suffering Soul Fragment
-(@CGUID+688, 23399, 564, 1, 555.0276, 30.41302, 112.445, 2.668754, 15, 15, 0, 0, 0, 2), -- Suffering Soul Fragment
+(@CGUID+684, 23399, 564, 1, 571.9584, 100.141, 112.7107, 1.038657, 30, 30, 0, 0, 0, 2), -- Suffering Soul Fragment
+(@CGUID+685, 23399, 564, 1, 489.027, 81.41601, 110.6453, 0.4182625, 30, 30, 0, 0, 0, 2), -- Suffering Soul Fragment
+(@CGUID+686, 23399, 564, 1, 603.3951, 38.2294, 112.7442, 0.3404358, 30, 30, 0, 0, 0, 2), -- Suffering Soul Fragment
+(@CGUID+687, 23399, 564, 1, 589.9243, 92.85661, 112.9238, 3.42163, 30, 30, 0, 0, 0, 2), -- Suffering Soul Fragment
+(@CGUID+688, 23399, 564, 1, 555.0276, 30.41302, 112.445, 2.668754, 30, 30, 0, 0, 0, 2), -- Suffering Soul Fragment
 (@CGUID+689, 23400, 564, 1, 552.198, 308.972, 271.552, 1.09956, 7200, 7200, 0, 0, 0, 2), -- Illidari Archon
 (@CGUID+690, 23400, 564, 1, 558.363, 285.371, 271.746, 0.366519, 7200, 7200, 0, 0, 0, 2), -- Illidari Archon
 (@CGUID+691, 23400, 564, 1, 526.347, 262.832, 271.589, 0.907571, 7200, 7200, 0, 0, 0, 2), -- Illidari Archon
 (@CGUID+692, 23400, 564, 1, 576.823, 123.1, 258.216, 0.436332, 7200, 7200, 0, 0, 0, 2), -- Illidari Archon
-(@CGUID+693, 23401, 564, 1, 583.439, 93.3269, 112.575, 5.46468, 15, 15, 0, 0, 0, 2), -- Hungering Soul Fragment
-(@CGUID+694, 23401, 564, 1, 580.441, 89.2323, 111.168, 5.45932, 15, 15, 0, 0, 0, 0), -- Hungering Soul Fragment
-(@CGUID+695, 23401, 564, 1, 590.204, 40.2891, 112.716, 4.08324, 15, 15, 0, 0, 0, 2), -- Hungering Soul Fragment
-(@CGUID+696, 23401, 564, 1, 595.565, 39.1595, 112.715, 4.08327, 15, 15, 0, 0, 0, 0), -- Hungering Soul Fragment
-(@CGUID+697, 23401, 564, 1, 512.155, 30.0493, 113.605, 3.58807, 15, 15, 0, 0, 0, 2), -- Hungering Soul Fragment
-(@CGUID+698, 23401, 564, 1, 514.565, 25.6593, 113.5, 3.58806, 15, 15, 0, 0, 0, 0), -- Hungering Soul Fragment
-(@CGUID+699, 23401, 564, 1, 473.218, 73.2273, 111.846, 3.17182, 15, 15, 0, 0, 0, 2), -- Hungering Soul Fragment
-(@CGUID+700, 23401, 564, 1, 476.464, 78.3278, 111.853, 3.17182, 15, 15, 0, 0, 0, 0), -- Hungering Soul Fragment
-(@CGUID+701, 23401, 564, 1, 550.194, 95.3418, 112.567, 0.886959, 15, 15, 0, 0, 0, 2), -- Hungering Soul Fragment
-(@CGUID+702, 23401, 564, 1, 545.6, 97.619, 112.453, 0.886985, 15, 15, 0, 0, 0, 0), -- Hungering Soul Fragment
+(@CGUID+693, 23401, 564, 1, 583.439, 93.3269, 112.575, 5.46468, 20, 20, 0, 0, 0, 2), -- Hungering Soul Fragment
+(@CGUID+694, 23401, 564, 1, 580.441, 89.2323, 111.168, 5.45932, 20, 20, 0, 0, 0, 0), -- Hungering Soul Fragment
+(@CGUID+695, 23401, 564, 1, 590.204, 40.2891, 112.716, 4.08324, 20, 20, 0, 0, 0, 2), -- Hungering Soul Fragment
+(@CGUID+696, 23401, 564, 1, 595.565, 39.1595, 112.715, 4.08327, 20, 20, 0, 0, 0, 0), -- Hungering Soul Fragment
+(@CGUID+697, 23401, 564, 1, 512.155, 30.0493, 113.605, 3.58807, 20, 20, 0, 0, 0, 2), -- Hungering Soul Fragment
+(@CGUID+698, 23401, 564, 1, 514.565, 25.6593, 113.5, 3.58806, 20, 20, 0, 0, 0, 0), -- Hungering Soul Fragment
+(@CGUID+699, 23401, 564, 1, 473.218, 73.2273, 111.846, 3.17182, 20, 20, 0, 0, 0, 2), -- Hungering Soul Fragment
+(@CGUID+700, 23401, 564, 1, 476.464, 78.3278, 111.853, 3.17182, 20, 20, 0, 0, 0, 0), -- Hungering Soul Fragment
+(@CGUID+701, 23401, 564, 1, 550.194, 95.3418, 112.567, 0.886959, 20, 20, 0, 0, 0, 2), -- Hungering Soul Fragment
+(@CGUID+702, 23401, 564, 1, 545.6, 97.619, 112.453, 0.886985, 20, 20, 0, 0, 0, 0), -- Hungering Soul Fragment
 (@CGUID+703, 23402, 564, 1, 553.594, 316.801, 271.601, 4.13643, 7200, 7200, 0, 0, 0, 0), -- Illidari Battle-mage
 (@CGUID+704, 23402, 564, 1, 548.835, 311.907, 271.467, 0.890118, 7200, 7200, 0, 0, 0, 2), -- Illidari Battle-mage
 (@CGUID+705, 23402, 564, 1, 564.531, 282.864, 271.814, 2.67035, 7200, 7200, 0, 0, 0, 0), -- Illidari Battle-mage
@@ -3477,20 +3493,20 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 -- (@CGUID+781,
 -- (@CGUID+782,
 -- (@CGUID+783,
-(@CGUID+784, 23030, 564, 1, 717.615, 694.212, 171.9325, 6.25, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+785, 23030, 564, 1, 717.314, 637.741, 171.9325, 0.018406, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+786, 23030, 564, 1, 698.043, 670.68, 181.093, 6.265877, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+787, 23030, 564, 1, 697.539, 641.564, 181.093, 6.265877, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+788, 23030, 564, 1, 742.3175, 920.8049, 167.261, 1.651852, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+789, 23030, 564, 1, 781.6795, 922.1385, 167.261, 1.577239, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+790, 23030, 564, 1, 758.7187, 859.0482, 184.50599, 3.148018, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+791, 23030, 564, 1, 759.2268, 884.8674, 184.50599, 3.104822, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Sky Stalker
-(@CGUID+792, 23030, 564, 1, 791.9598, 864.118, 93.93944, 0, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+793, 23030, 564, 1, 808.744, 752.8126, 93.69208, 0, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+794, 23030, 564, 1, 687.0418, 872.5399, 81.68005, 0, 7200, 7200, 0, 0, 0, 2), -- Dragonmaw Sky Stalker
-(@CGUID+795, 23330, 564, 1, 792.3768, 876.2903, 93.939438, 6.272003, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
-(@CGUID+796, 23330, 564, 1, 798.21307, 755.11657, 93.692078, 4.497001, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
-(@CGUID+797, 23330, 564, 1, 701.24536, 868.2406, 81.68005, 4.418467, 7200, 7200, 0, 0, 0, 0), -- Dragonmaw Wind Reaver
+(@CGUID+784, 23030, 564, 1, 717.615, 694.212, 171.9325, 6.25, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+785, 23030, 564, 1, 717.314, 637.741, 171.9325, 0.018406, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+786, 23030, 564, 1, 698.043, 670.68, 181.093, 6.265877, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+787, 23030, 564, 1, 697.539, 641.564, 181.093, 6.265877, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+788, 23030, 564, 1, 742.3175, 920.8049, 167.261, 1.651852, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+789, 23030, 564, 1, 781.6795, 922.1385, 167.261, 1.577239, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+790, 23030, 564, 1, 758.7187, 859.0482, 184.50599, 3.148018, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+791, 23030, 564, 1, 759.2268, 884.8674, 184.50599, 3.104822, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+792, 23030, 564, 1, 791.9598, 864.118, 93.93944, 0, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+793, 23030, 564, 1, 808.744, 752.8126, 93.69208, 0, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+794, 23030, 564, 1, 687.0418, 872.5399, 81.68005, 0, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Sky Stalker
+(@CGUID+795, 23330, 564, 1, 792.3768, 876.2903, 93.939438, 6.272003, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
+(@CGUID+796, 23330, 564, 1, 798.21307, 755.11657, 93.692078, 4.497001, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
+(@CGUID+797, 23330, 564, 1, 701.24536, 868.2406, 81.68005, 4.418467, 7200, 7200, 0, 0, 0, 3), -- Dragonmaw Wind Reaver
 (@CGUID+798, 23089, 564, 1, 748.5206, 236.6311, 353.0794, 2.373648, 7200, 7200, 0, 0, 0, 0); -- Akama - Illidan
 
 -- ===========

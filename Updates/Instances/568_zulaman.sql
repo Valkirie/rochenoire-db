@@ -547,6 +547,8 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (24858, 4, 39, 364.2945, 1429.232, 99.35547, 100, 0, 0),
 (24858, 4, 40, 385.5457, 1429.076, 97.52219, 100, 0, 0);
 
+UPDATE creature SET equipment_id=5592 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)
+
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
 -- (@CGUID+23, 0, 0, 1, 16, 0, 0, '46750'), -- World Trigger (Not Immune PC)
 (@CGUID+66, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Scout
@@ -623,27 +625,27 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 -- Entrance
-(@CGUID+259, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+260, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+261, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+262, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+263, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+264, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+265, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
-(@CGUID+266, @CGUID+104, 3), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+259, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+260, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+261, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+262, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+263, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+264, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+265, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
+(@CGUID+266, @CGUID+104, 1), -- Amani'shi Savage -> Amani'shi Guardian
 (@CGUID+113, @CGUID+104, 3), -- Amani'shi Guardian -> Amani'shi Guardian
 
 -- Hex Lord Malacrass
 (@CGUID+368, @CGUID+369, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+369, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
+(@CGUID+369, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
 
 (@CGUID+54, @CGUID+406, 1167), -- Amani'shi Medicine Man -> Amani'shi Tempest
 (@CGUID+409, @CGUID+406, 1167), -- Amani'shi Flame Caster -> Amani'shi Tempest
 (@CGUID+437, @CGUID+406, 1167), -- creature_spawn_entry -> Amani'shi Tempest
-(@CGUID+406, @CGUID+366, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass
+(@CGUID+406, @CGUID+366, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass (Speech Trigger)
 
 (@CGUID+370, @CGUID+371, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+371, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
+(@CGUID+371, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
 
 -- Nalorakk
 (@CGUID+326, @CGUID+50, 1679), -- Amani'shi Wind Walker -> Amani'shi Medicine Man
@@ -692,13 +694,13 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+395, @CGUID+42, 1025), -- Amani'shi Tempest -> Akil'zon
 
 -- Jan'alai
-(@CGUID+67, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+68, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+69, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+70, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+72, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+73, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
-(@CGUID+74, @CGUID+45, 1024), -- Amani'shi Scout -> Jan'alai
+(@CGUID+67, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+68, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+69, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+70, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+72, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+73, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
+(@CGUID+74, @CGUID+45, 1040), -- Amani'shi Scout -> Jan'alai
 
 (@CGUID+100, @CGUID+65, 1167), -- Amani'shi Flame Caster -> Amani'shi Scout
 (@CGUID+119, @CGUID+65, 1167), -- Amani'shi Guardian -> Amani'shi Scout
@@ -862,15 +864,15 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+414, @CGUID+44, 1024), -- Amani'shi Guardian -> Halazzi
 
 (@CGUID+410, @CGUID+411, 1679), -- Amani'shi Guardian -> Amani'shi Guardian
-(@CGUID+411, @CGUID+44, 1024), -- Amani'shi Guardian -> Halazzi
+(@CGUID+411, @CGUID+44, 1025), -- Amani'shi Guardian -> Halazzi
 
 (@CGUID+116, @CGUID+95, 1167), -- Amani'shi Guardian -> Amani'shi Flame Caster
 (@CGUID+434, @CGUID+95, 1167), -- Amani'shi Handler -> Amani'shi Flame Caster
-(@CGUID+95, @CGUID+44, 1024), -- Amani'shi Flame Caster -> Halazzi
+(@CGUID+95, @CGUID+44, 1025), -- Amani'shi Flame Caster -> Halazzi
 
 (@CGUID+416, @CGUID+408, 1167), -- Amani'shi Guardian -> Amani'shi Flame Caster
 (@CGUID+436, @CGUID+408, 1167), -- Amani'shi Handler -> Amani'shi Flame Caster
-(@CGUID+408, @CGUID+44, 1024), -- Amani'shi Flame Caster -> Halazzi
+(@CGUID+408, @CGUID+44, 1025), -- Amani'shi Flame Caster -> Halazzi
 
 -- Zul'jin
 (@CGUID+479, @CGUID+254, 17415), -- Amani'shi Savage -> Zul'jin
@@ -979,12 +981,12 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+66, 23586, 568, 1, -198.805, 1227.37, 1.09097, 1.32645, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Scout
 (@CGUID+67, 23586, 568, 1, -139.333, 1165, 3.26637, 1.88496, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Scout
 (@CGUID+68, 23586, 568, 1, -219.3753, 1380.724, 0.03532424, 1.047198, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Scout
-(@CGUID+69, 23586, 568, 1, -197.946, 1325.93, 1.25821, 1.76407, 300, 300, 0, 0, 0, 2), -- Amani'shi Scout
-(@CGUID+70, 23586, 568, 1, -134.575, 1189.24, 0.125, 1.69314, 300, 300, 0, 0, 0, 2), -- Amani'shi Scout
+(@CGUID+69, 23586, 568, 1, -197.946, 1325.93, 1.25821, 1.76407, 180, 300, 0, 0, 0, 2), -- Amani'shi Scout
+(@CGUID+70, 23586, 568, 1, -134.575, 1189.24, 0.125, 1.69314, 180, 300, 0, 0, 0, 2), -- Amani'shi Scout
 (@CGUID+71, 23586, 568, 1, -143.626, 1144.37, 0.202364, 6.02139, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Scout
-(@CGUID+72, 23586, 568, 1, -181.278, 1273.06, 1.6089, 3.0394, 300, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
-(@CGUID+73, 23586, 568, 1, -107.676, 1154.55, 0.083333, 3.94444, 300, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
-(@CGUID+74, 23586, 568, 1, -167.522, 1194.68, 0.642452, 5.3058, 300, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
+(@CGUID+72, 23586, 568, 1, -181.278, 1273.06, 1.6089, 3.0394, 180, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
+(@CGUID+73, 23586, 568, 1, -107.676, 1154.55, 0.083333, 3.94444, 180, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
+(@CGUID+74, 23586, 568, 1, -167.522, 1194.68, 0.642452, 5.3058, 180, 300, 0, 0, 0, 2), -- Amani'shi Scout (not confirmed by sniff)
 -- @CGUID+75 - 92 -- REUSE
 (@CGUID+93, 23596, 568, 1, 243.45, 1033.66, 3.55167, 1.8675, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Flame Caster
 (@CGUID+94, 23596, 568, 1, -78.6729, 1199.08, 5.63549, 1.16937, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Flame Caster
@@ -1226,7 +1228,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+330, 23834, 568, 1, -194.592, 1151.05, 0.124147, 5.97311, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+331, 23834, 568, 1, -201.899, 1110.36, 0.223543, 5.9804, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+332, 23834, 568, 1, -219.674, 1112.36, -0.475973, 4.45835, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
-(@CGUID+333, 24239, 568, 1, 117.8645, 923.6944, 33.9725, 1.588249, 259200, 259200, 0, 0, 0, 0), -- Hex Lord Malacrass
+-- @CGUID+333
 (@CGUID+334, 24312, 568, 1, -204.928, 1136.49, 0.388893, 6.00393, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+335, 24312, 568, 1, -222.574, 1124.88, -0.057337, 1.32645, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+336, 24312, 568, 1, -208.865, 1116.26, 0.377559, 1.20428, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
@@ -1259,8 +1261,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+363, 24312, 568, 1, -206.665, 1135.72, 0.211828, 3.35103, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+364, 24325, 568, 1, 192.938, 1422.35, 15.7245, 5.91667, 7200, 7200, 0, 0, 0, 0), -- Eagle Troll Spawn Target
 (@CGUID+365, 24358, 568, 1, 120.687, 1674, 42.0217, 1.59044, 7200, 7200, 0, 0, 0, 0), -- Harrison Jones
-(@CGUID+366, 24363, 568, 1, 118.8317, 1009.857, 67.82713, 4.869469, 7200, 7200, 0, 0, 0, 0), -- Hex Lord Malacrass (Speech Trigger)
-(@CGUID+367, 24363, 568, 1, 116.2857, 1277.441, -15.26866, 4.590216, 7200, 7200, 0, 0, 0, 0), -- Hex Lord Malacrass (Speech Trigger)
+(@CGUID+366, 24363, 568, 1, 118.8317, 1009.857, 67.82713, 4.869469, 259200, 259200, 0, 0, 0, 0), -- Hex Lord Malacrass (Speech Trigger)
+(@CGUID+367, 24363, 568, 1, 116.2857, 1277.441, -15.26866, 4.590216, 259200, 259200, 0, 0, 0, 0), -- Hex Lord Malacrass (Speech Trigger)
 (@CGUID+368, 24374, 568, 1, 130.0015, 1071.3330, 24.10230, 1.531324, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Berserker					// Spawn Event with Movement?
 (@CGUID+369, 24374, 568, 1, 108.6336, 1069.8063, 24.35230, 1.637809, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Berserker					// Spawn Event with Movement?
 (@CGUID+370, 24374, 568, 1, 127.3527, 976.71862, 31.15251, 1.762782, 7200, 7200, 0, 0, 0, 0), -- Amani'shi Berserker
