@@ -4178,8 +4178,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Spirit Healer (6491) - NSR
 -- Exarch Larethor (24813) - NSR
 -- Madrigosa (25160)
--- Shattered Sun Marksman
-('2493801','24938','11','0','100','0','0','0','0','0','0','0','21','0','0','0','0','0','0','0','0','0','0','0','Shattered Sun Marksman - Stop Combat Movement on Spawn'),
+-- Shattered Sun Marksman 24938 - npc_shattered_sun_fighter
 -- Wretched Devourer
 ('2496001','24960','4','0','10','0','0','0','0','0','0','0','1','-10510','-10511','-10512','0','0','0','0','0','0','0','0','Wretched Devourer - Random Say on Aggro'),
 ('2496002','24960','0','0','100','1025','9000','12000','120000','180000','0','0','11','33483','4','0','0','0','0','0','0','0','0','0','Wretched Devourer - Cast Mana Tap'),
@@ -4281,7 +4280,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Captain Valindria (25088) - NSR
 -- Vindicator Kaalan (25108) - NSR
 -- Anchorite Ayuri (25112) - NSR
--- Shattered Sun Warrior (25115) - NSR
+-- Shattered Sun Warrior 25115 - npc_shattered_sun_fighter
 -- Sunblade Lookout 25132
 ('2513201','25132','1','0','10','1','25000','120000','50000','120000','0','0','1','-10427','0','0','0','0','0','0','0','0','0','0','Sunblade Lookout - Random Yell OOC'),
 ('2513202','25132','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Sunblade Lookout - Enable Range Mode on Aggro'),
@@ -25218,8 +25217,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('454205','4542','2','0','100','1024','30','0','0','0','0','0','11','12039','0','0','0','0','0','0','0','0','0','0','High Inquisitor Fairbanks - Cast Heal at 30% HP'),
 ('454206','4542','2','0','100','1024','25','0','0','0','0','0','11','11647','0','0','0','0','0','0','0','0','0','0','High Inquisitor Fairbanks - Cast Power Word: Shield at 25% HP'),
 ('454207','4542','4','0','100','0','0','0','0','0','0','0','47','0','0','0','0','0','0','0','0','0','0','0','High Inquisitor Fairbanks - Set Stand State to Stand on Aggro'),
-('454208','4542','8','0','100','0','28441','-1','0','0','0','0','53','9002','6','0','40','0','0','0','0','0','0','0','High Inquisitor Fairbanks - Start Relay Script and Set Sheath State on AB Effect 000 Spellhit'),
-('454209','4542','11','0','100','0','0','0','0','0','0','0','11','8278','0','1','11','8279','0','1','0','0','0','0','High Inquisitor Fairbanks - Cast Invisibility Detection and Cast Stealth Detection on Spawn'),
+('454208','4542','8','0','100','0','28441','-1','0','0','0','0','53','9002','6','0','40','0','0','0','47','0','0','0','High Inquisitor Fairbanks - Start Relay Script and Set Sheath State and Set Stand State on AB Effect 000 Spellhit'),
+('454209','4542','11','0','100','0','0','0','0','0','0','0','11','8278','0','1','11','8279','0','1','47','7','0','0','High Inquisitor Fairbanks - Cast Invisibility Detection and Cast Stealth Detection and Set Stand State Dead on Spawn'),
 -- Bloodmage Thalnos 4543
 ('454301','4543','4','0','100','0','0','0','0','0','0','0','1','-1202','0','0','0','0','0','0','0','0','0','0','Bloodmage Thalnos - Yell on Aggro'),
 ('454302','4543','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Bloodmage Thalnos - Enable Range Mode on Aggro'),
@@ -29194,7 +29193,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Felguard Slayer 25864
 ('2586401','25864','11','0','100','0','0','0','0','0','0','0','38','0','0','0','0','0','0','0','0','0','0','0','Felguard Slayer - Zone Combat Pulse on Spawn'),
 -- Sunblade Dragonhawk 25867
-('2586701','25867','9','0','100','1025','0','5','8000','11000','0','0','11','47251','1','0','0','0','0','0','0','0','0','0','Sunblade Dragonhawk - Cast Flame Breath'),
+('2586701','25867','0','0','100','1025','4000','8000','4000','12000','0','0','11','47251','1','0','0','0','0','0','0','0','0','0','Sunblade Dragonhawk - Cast Flame Breath'),
 -- Darkness 25879 - npc_darkness
 -- Doomfire Shard 25948 - Cast s.46305 on c.25592 on Death
 ('2594801','25948','11','0','100','0','0','0','0','0','0','0','11','31722','0','34','0','0','0','0','0','0','0','0','Doomfire Shard - Cast Immolation on Spawn'),
@@ -29633,7 +29632,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Zul'jin 23863 - boss_zuljin
 -- Amani'shi Savage 23889
 ('2388901','23889','11','0','100','0','0','0','0','0','0','0','31','1','2','0','0','0','0','0','0','0','0','0','Amani''shi Savage - Random Phase on Spawn'),
-('2388902','23889','0','0','100','1025','2000','7000','1000','9000','0','0','11','9080','4','512','0','0','0','0','0','0','0','0','Amani''shi Savage - Cast Hamstring'),
+('2388902','23889','0','0','100','1025','2000','7000','1000','9000','0','0','11','9080','4','0','0','0','0','0','0','0','0','0','Amani''shi Savage - Cast Hamstring'),
 ('2388903','23889','0','5','100','1025','6000','12000','5000','9000','0','0','11','11971','1','0','0','0','0','0','0','0','0','0','Amani''shi Savage - Cast Sunder Armor (Phase 1)'),
 ('2388904','23889','0','3','100','1025','6000','12000','10000','18000','0','0','11','12054','1','0','0','0','0','0','0','0','0','0','Amani''shi Savage - Cast Rend (Phase 2)'),
 ('2388905','23889','6','0','100','0','0','0','0','0','0','0','41','5000','0','0','0','0','0','0','0','0','0','0','Amani''shi Savage - Delayed Despawn on Death'),
@@ -30731,6 +30730,10 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Masked Orphan Matron 23973 - npc_orphan_matron
 -- Costumed Orphan Matron 24519 - npc_orphan_matron
 
+-- Brewfest
+-- The Brewmaiden 27166
+('2716601','27166','11','0','100','0','0','0','0','0','0','0','11','48032','0','2','11','48186','0','2','11','51847','0','2','The Brewmaiden - Cast Brewmaiden Spotlight and Cast Brewmaiden Despawn Control Aura and Cast The Brewmaiden''s Blessing (Rank 6) on Spawn'),
+('2716602','27166','11','0','100','0','0','0','0','0','0','0','41','30000','0','0','21','0','0','0','1','-11233','0','0','The Brewmaiden - Delayed Despawn and Disable Combat Movement and Say Text on Spawn'),
 -- Lunar Festival
 ('1588201','15882','1','0','100','0','0','0','0','0','0','0','11','26347','0','1','0','0','0','0','0','0','0','0','Pat''s Firework Guy - RED'),
 ('1588301','15883','1','0','100','0','0','0','0','0','0','0','11','26349','0','1','0','0','0','0','0','0','0','0','Pat''s Firework Guy - YELLOW'),
@@ -32808,6 +32811,7 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-11230','You don''t do your job, I''ll shoot you myself.','0','0','0','0','19094','Razak Ironsides 21118'),
 ('-11231','Come on you apes. You want to live forever?','0','0','0','0','19095','Razak Ironsides 21118'),
 ('-11232','Warm it up and give ''em everything you''ve got.','0','0','0','0','19096','Razak Ironsides 21118'),
+('-11233','Do ye want ta live forever?','0','0','0','0','26303','The Brewmaiden 27166'),
 
 ('-19997','May the light bless you.','0','0','0','1','24856','25639'),
 ('-19998','Your wounds are severe, but you will live.','0','0','0','1','24857','25639'),
