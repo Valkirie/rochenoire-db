@@ -3,16 +3,17 @@ REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
 (11039, 'Black Market Delivery', 'Livraison du marché noir'),
 (11040, 'This package contains %s and is meant to be delivered to %s only. If you are not the original receiver, please return it to the closest Black Market representative.', 'Ce paquet contient %s et est destiné à être livré à %s. Si vous n\'êtes pas le destinataire original, veuillez le retourner au représentant du marché noir le plus proche.');
 
-DELETE FROM mangos_string WHERE entry IN (11041,11042,11043,11044,11045,11046);
+DELETE FROM mangos_string WHERE entry IN (11041,11042,11043,11044,11045,11046,11047);
 REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
 (11041, "Armor, Miscellaneous", "Armure, Divers"),
 (11042, "Armor, Cloth", "Armure, Tissu"),
 (11043, "Armor, Leather", "Armure, Cuir"),
 (11044, "Armor, Mail", "Armure, Mailles"),
 (11045, "Armor, Plate", "Armure, Plaques"),
-(11046, "Armor, Shield", "Armure, Boucliers");
+(11046, "Armor, Buckler", "Armure, Boucliers"),
+(11047, "Armor, Shield", "Armure, Boucliers");
 
-DELETE FROM mangos_string WHERE entry IN (11050,11051,11052,11053,11054,11055,11056,11057,11058,11059,11060,11061,11062,11063,11064,11065,11066,11067);
+DELETE FROM mangos_string WHERE entry BETWEEN 11050 AND 11070;
 REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
 (11050,"Weapon, Axe 1H","Armes, Haches à une main"),
 (11051,"Weapon, Axe 2H","Armes, Haches à deux mains"),
@@ -23,15 +24,18 @@ REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
 (11056,"Weapon, Polearm","Armes, Armes d'hast"),
 (11057,"Weapon, Sword 1H","Armes, Épées à une main"),
 (11058,"Weapon, Sword 2H","Armes, Épées à deux mains"),
-(11059,"Weapon, Staff","Armes, Bâtons"),
-(11060,"Weapon, Fist Weapon","Armes, Armes de pugilat"),
-(11061,"Weapon, Miscellaneous","Armes, Divers"),
-(11062,"Weapon, Dagger","Armes, Dagues"),
-(11063,"Weapon, Thrown","Armes, Armes de jet"),
-(11064,"Weapon, Spear","Armes, Lances"),
-(11065,"Weapon, Crossbow","Armes, Arbalètes"),
-(11066,"Weapon, Wand","Armes, Bâtons"),
-(11067,"Weapon, Fishing Pole","Armes, Cannes à pêche");
+(11059,"Weapon, Obsolete","Armes, Obsolète"),
+(11060,"Weapon, Staff","Armes, Bâtons"),
+(11061,"Weapon, Exotic","Armes, Exotique"),
+(11062,"Weapon, Exotic","Armes, Exotique"),
+(11063,"Weapon, Fist Weapon","Armes, Armes de pugilat"),
+(11064,"Weapon, Miscellaneous","Armes, Divers"),
+(11065,"Weapon, Dagger","Armes, Dagues"),
+(11066,"Weapon, Thrown","Armes, Armes de jet"),
+(11067,"Weapon, Spear","Armes, Lances"),
+(11068,"Weapon, Crossbow","Armes, Arbalètes"),
+(11069,"Weapon, Wand","Armes, Bâtons"),
+(11070,"Weapon, Fishing Pole","Armes, Cannes à pêche");
 
 DELETE FROM mangos_string WHERE entry IN (11100,11101,11102);
 REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
