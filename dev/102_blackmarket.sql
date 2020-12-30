@@ -1,60 +1,89 @@
--- BlackMarket
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11039, 'Black Market Delivery', 'Livraison du marché noir');
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11040, 'This package is meant to be delivered to $N only. If you are not the original receiver, please return it to the closest Black Market representative.', '');
+DELETE FROM mangos_string WHERE entry IN (11039,11040);
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
+(11039, 'Black Market Delivery', 'Livraison du marché noir'),
+(11040, 'This package contains %s and is meant to be delivered to %s only. If you are not the original receiver, please return it to the closest Black Market representative.', 'Ce paquet contient %s et est destiné à être livré à %s. Si vous n\'êtes pas le destinataire original, veuillez le retourner au représentant du marché noir le plus proche.');
 
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11041, "Armor, Miscellaneous", "Armure, Divers");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11042, "Armor, Cloth", "Armure, Tissu");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11043, "Armor, Leather", "Armure, Cuir");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11044, "Armor, Mail", "Armure, Mailles");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11045, "Armor, Plate", "Armure, Plaques");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11046, "Armor, Shield", "Armure, Boucliers");
+DELETE FROM mangos_string WHERE entry IN (11041,11042,11043,11044,11045,11046);
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
+(11041, "Armor, Miscellaneous", "Armure, Divers"),
+(11042, "Armor, Cloth", "Armure, Tissu"),
+(11043, "Armor, Leather", "Armure, Cuir"),
+(11044, "Armor, Mail", "Armure, Mailles"),
+(11045, "Armor, Plate", "Armure, Plaques"),
+(11046, "Armor, Shield", "Armure, Boucliers");
 
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11050,"Weapon, Axe 1H","Armes, Haches à une main");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11051,"Weapon, Axe 2H","Armes, Haches à deux mains");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11052,"Weapon, Bow","Armes, Arcs");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11053,"Weapon, Gun","Armes, Armes à feu");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11054,"Weapon, Mace 1H","Armes, Masses à une main");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11055,"Weapon, Mace 2H","Armes, Masses à deux mains");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11056,"Weapon, Polearm","Armes, Armes d'hast");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11057,"Weapon, Sword 1H","Armes, Épées à une main");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11058,"Weapon, Sword 2H","Armes, Épées à deux mains");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11059,"Weapon, Staff","Armes, Bâtons");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11060,"Weapon, Fist Weapon","Armes, Armes de pugilat");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11061,"Weapon, Miscellaneous","Armes, Divers");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11062,"Weapon, Dagger","Armes, Dagues");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11063,"Weapon, Thrown","Armes, Armes de jet");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11064,"Weapon, Spear","Armes, Lances");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11065,"Weapon, Crossbow","Armes, Arbalètes");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11066,"Weapon, Wand","Armes, Bâtons");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11067,"Weapon, Fishing Pole","Armes, Cannes à pêche");
+DELETE FROM mangos_string WHERE entry IN (11050,11051,11052,11053,11054,11055,11056,11057,11058,11059,11060,11061,11062,11063,11064,11065,11066,11067);
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
+(11050,"Weapon, Axe 1H","Armes, Haches à une main"),
+(11051,"Weapon, Axe 2H","Armes, Haches à deux mains"),
+(11052,"Weapon, Bow","Armes, Arcs"),
+(11053,"Weapon, Gun","Armes, Armes à feu"),
+(11054,"Weapon, Mace 1H","Armes, Masses à une main"),
+(11055,"Weapon, Mace 2H","Armes, Masses à deux mains"),
+(11056,"Weapon, Polearm","Armes, Armes d'hast"),
+(11057,"Weapon, Sword 1H","Armes, Épées à une main"),
+(11058,"Weapon, Sword 2H","Armes, Épées à deux mains"),
+(11059,"Weapon, Staff","Armes, Bâtons"),
+(11060,"Weapon, Fist Weapon","Armes, Armes de pugilat"),
+(11061,"Weapon, Miscellaneous","Armes, Divers"),
+(11062,"Weapon, Dagger","Armes, Dagues"),
+(11063,"Weapon, Thrown","Armes, Armes de jet"),
+(11064,"Weapon, Spear","Armes, Lances"),
+(11065,"Weapon, Crossbow","Armes, Arbalètes"),
+(11066,"Weapon, Wand","Armes, Bâtons"),
+(11067,"Weapon, Fishing Pole","Armes, Cannes à pêche");
 
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11100,"Yes. (cost: %u Badge of Justice).","Oui. (coût: %u Ecusson de justice)");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11101,"No.","Non.");
-REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES (11102,"Your item will be replaced by %s.","Votre objet va être remplacé par %s.");
+DELETE FROM mangos_string WHERE entry IN (11100,11101,11102);
+REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES
+(11100,"Yes. (cost: %u Badge of Justice).","Oui. (coût: %u Ecusson de justice)"),
+(11101,"No.","Non."),
+(11102,"Your item will be replaced by %s.","Votre objet va être remplacé par %s.");
 
 DELETE FROM script_texts WHERE entry IN (-1901060,-1901061,-1901062);
-REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES (-1901060,"You don't have enough inventory space $N!", "Vous n'avez pas assez de place dans votre inventaire $N!", 0, 1, 0, "BlackMarket DONE");
-REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES (-1901061,"What a scammer, $N ! You don't have enough tokens !", "Quel arnaqueur, $N! Vous n'avez pas assez de jetons!", 5960, 5, 1, "BlackMarket SCAM");
-REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES (-1901062,"You're wasting my time...", "Je perds mon temps ...", 5960, 14, 0, "BlackMarket WASTE");
+REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
+(-1901060,"You don't have enough inventory space $N!", "Vous n'avez pas assez de place dans votre inventaire $N!", 0, 1, 0, "BlackMarket DONE"),
+(-1901061,"What a scammer, $N ! You don't have enough tokens !", "Quel arnaqueur, $N! Vous n'avez pas assez de jetons!", 5960, 5, 1, "BlackMarket SCAM"),
+(-1901062,"You're wasting my time...", "Je perds mon temps ...", 5960, 14, 0, "BlackMarket WASTE");
 
-DELETE FROM creature_template WHERE entry IN (39700,39701,39702);
-REPLACE INTO `creature_template` VALUES(39700,'Graxle Sheeftlevel','Black Market Representative',NULL,'67','67',0,'7355',0,0,0,'475',1,0,7,3,3,0,3,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket');
-REPLACE INTO `creature_template` VALUES(39701,'Ezka Ajustgear','Black Market Representative',NULL,'67','67',0,'8010',0,0,0,'475',1,0,7,3,3,0,3,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket');
-REPLACE INTO `creature_template` VALUES(39702,'Haughty Miixstaat','Black Market Representative',NULL,'67','67',0,'15300',0,0,0,'475',1,0,7,3,3,0,3,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket');
+DELETE FROM script_texts WHERE entry IN (-1901063,-1901064,-1901065,-1901066,-1901067,-1901068,-1901069);
+REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
+(-1901063,"Time is money friend, that's all I ever hear, how about moving this dang mailbox to me if time is so important...", "Le temps c'est de l'argent, que diriez-vous alors de me rapprocher cette foutue boîte aux lettres...", 0, 1, 0, "BlackMarket CALL1"),
+(-1901064,"Go there... Do this...", "Vas là-bas... Fais ça...", 0, 1, 0, "BlackMarket CALL2"),
+(-1901065,"Why don't you just go and raid yourself some new damn items, instead of bothering me?", "Pourquoi n'allez-vous pas simplement rafler vous-même de nouveaux objets, au lieu de m'embêter ?", 0, 1, 0, "BlackMarket CALL3"),
+(-1901066,"I don't get paid enough for this...", "Je ne suis pas assez payé pour ça...", 0, 1, 0, "BlackMarket MAIL1"),
+(-1901067,"Used to be chief engineer back in Kezan, you know. Now look at me...", "J'étais ingénieur en chef à Kezan, vous savez. Maintenant, regardez-moi...", 0, 1, 0, "BlackMarket MAIL2"),
+(-1901068,"My back is killing me...", "Mon dos me tue...", 0, 1, 0, "BlackMarket MAIL3"),
+(-1901069,"I'll mail it ta you $N as soon as I've found it. Don't worry bout the shipping cost, its *included*.", "Je vous l'enverrai dès que je l'aurai déniché $N. Ne vous préoccupez pas des frais d'expédition, ils sont *offerts*.", 0, 1, 0, "BlackMarket DONE");
 
-DELETE FROM creature WHERE id IN (39700,39701,39702);
+DELETE FROM creature_template WHERE entry IN (39700,39701,39702,39703);
+REPLACE INTO `creature_template` VALUES
+(39700,'Graxle Sheeftlevel','Black Market Representative',NULL,'67','67',0,'7355',0,0,0,'475',1,0,7,3,3,0,1,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket'),
+(39701,'Ezka Ajustgear','Black Market Representative',NULL,'67','67',0,'8010',0,0,0,'475',1,0,7,3,3,0,1,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket'),
+(39702,'Haughty Miixstaat','Black Market Representative',NULL,'67','67',0,'15300',0,0,0,'475',1,0,7,3,3,0,1,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket'),
+(39703,'Sully Wellgeared','Black Market Representative',NULL,'67','67',0,'22890',0,0,0,'475',1,0,7,3,3,0,1,'32768',0,'1088',0,1,'1.42857','20',0,0,0,0,1,0,1,2,1,2,1,1,1,'12652','12652',0,0,'455','581','301.34','422.17','5892','239','100','2000','2000',0,0,0,0,'9460',0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,'9460',0,0,'EventAI','custom_BlackMarket');
+
+DELETE FROM creature WHERE id IN (39700,39701,39702,39703);
 REPLACE INTO `creature` (id,map,modelid,position_x,position_y,position_z,orientation) VALUES
 (39700,1,7355,'6721.65','-4663.43','721.004','2.40214'),
 (39701,1,8010,'-7188.17','-3796.79','9.45269','1.0876'),
-(39702,0,15300,'-14374.5','397.87','6.6266','1.46358');
+(39702,0,15300,'-14374.5','397.87','6.6266','1.46358'),
+(39703,1,22890,'-1058.380005','-3666.629883','23.918100','2.862340');
 
--- OUTDATED REPLACE INTO `npc_text` VALUES ('55134','Have a good one, $c.  Ya lookin\' for somethin\'?  I\'ve got what you need, lemme tell ya $g man : sis;!  Take a look at theses offers.','',0,1,0,2,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-REPLACE INTO `npc_text` VALUES ('55136',"Ya lookin' for somethin' $N?$B,There's no fin\'a equipment than wut I got here, lemme tell you $g man : sis;!",'',0,1,0,6,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-REPLACE INTO `npc_text` VALUES ('55137',"Yo' brin' me your old stuff, I\'ll suit ya with some new stuff, freshly forged.",'',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-REPLACE INTO `npc_text` VALUES ('55138',"You're just embarrassing yourself with all that rusty equipment! Look'a here at what I've got for ya.",'',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
-REPLACE INTO `npc_text` VALUES ('55139',"Here\'s wut I can do for ya. It might take some time fo' me ta find it based on its rarity. $B$BI'll mail it ta you as soon as I've found it. Don't worry bout the shipping cost, its included !$B$BWhatcha' think man? Do we have a deal ?",'',0,1,0,6,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
+DELETE FROM creature_template_addon WHERE entry IN (39703);
+REPLACE INTO creature_template_addon (entry,emote) VALUES
+(39703, 415); -- EMOTE_STATE_SIT
+
+-- DEBUG
+UPDATE creature_template SET ExtraFlags = 4096 WHERE entry IN (39700,39701,39702);
+
+REPLACE INTO `npc_text` VALUES
+('55136',"Ya lookin' for somethin' $N?$B,There's no fin\'a equipment than wut I got here, lemme tell you $g man : sis;!",'',0,1,0,6,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
+('55137',"Yo' brin' me your old stuff, I\'ll suit ya with some new stuff, freshly forged.",'',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
+('55138',"You're just embarrassing yourself with all that rusty equipment! Look'a here at what I've got for ya.",'',0,1,0,1,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0),
+('55139',"Here\'s wut I can do for ya. It might take some time fo' me ta find it based on its rarity. $B$BWhatcha' think man? Do we have a deal ?",'',0,1,0,6,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0,'','',0,0,0,0,0,0,0,0);
 
 -- creature_loot_template
+UPDATE item_template SET RequiredLevel = 0 WHERE entry = 29434;
 REPLACE INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`, `comments`) values
 (15687,29434,100,0,2,2,0,'Badge of Justice'),
 (15688,29434,100,0,2,2,0,'Badge of Justice'),
