@@ -1,5 +1,6 @@
 ALTER TABLE `creature_template_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `entry`;
 ALTER TABLE `creature_addon` ADD COLUMN `lvar` MEDIUMINT(8) DEFAULT 0 NOT NULL AFTER `guid`;
+ALTER TABLE item_enchantment_template ADD COLUMN type TINYINT UNSIGNED DEFAULT 0 NOT NULL AFTER chance; 
 
 DROP TABLE IF EXISTS `scale_creature_template`;
 DROP TABLE IF EXISTS `scale_creature_pool`;
