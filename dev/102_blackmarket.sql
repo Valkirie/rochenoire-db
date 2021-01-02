@@ -49,15 +49,33 @@ REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, T
 (-1901061,"What a scammer, $N ! You don't have enough tokens !", "Quel arnaqueur, $N! Vous n'avez pas assez de jetons!", 5960, 5, 1, "BlackMarket SCAM"),
 (-1901062,"You're wasting my time...", "Je perds mon temps ...", 5960, 14, 0, "BlackMarket WASTE");
 
-DELETE FROM script_texts WHERE entry IN (-1901063,-1901064,-1901065,-1901066,-1901067,-1901068,-1901069);
+DELETE FROM script_texts WHERE entry IN (-1901063,-1901064,-1901065,-1901066);
 REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
 (-1901063,"Time is money friend, that's all I ever hear, how about moving this dang mailbox to me if time is so important...", "Le temps c'est de l'argent, que diriez-vous alors de me rapprocher cette foutue boîte aux lettres...", 0, 1, 0, "BlackMarket CALL1"),
 (-1901064,"Go there... Do this...", "Vas là-bas... Fais ça...", 0, 1, 0, "BlackMarket CALL2"),
-(-1901065,"Why don't you just go and raid yourself some new damn items, instead of bothering me?", "Pourquoi n'allez-vous pas simplement rafler vous-même de nouveaux objets, au lieu de m'embêter ?", 0, 1, 0, "BlackMarket CALL3"),
-(-1901066,"I don't get paid enough for this...", "Je ne suis pas assez payé pour ça...", 0, 1, 0, "BlackMarket MAIL1"),
-(-1901067,"Used to be chief engineer back in Kezan, you know. Now look at me...", "J'étais ingénieur en chef à Kezan, vous savez. Maintenant, regardez-moi...", 0, 1, 0, "BlackMarket MAIL2"),
-(-1901068,"My back is killing me...", "Mon dos me tue...", 0, 1, 0, "BlackMarket MAIL3"),
-(-1901069,"I'll mail it ta you $N as soon as I've found it. Don't worry bout the shipping cost, its *included*.", "Je vous l'enverrai dès que je l'aurai déniché $N. Ne vous préoccupez pas des frais d'expédition, ils sont *offerts*.", 0, 1, 0, "BlackMarket DONE");
+(-1901065,"Why don't you just go get your own damn items instead of bothering me?", "Pourquoi n'allez-vous pas simplement rafler vous-même de nouveaux objets, au lieu de m'embêter ?", 0, 1, 0, "BlackMarket CALL3"),
+(-1901066,"Maybe I could talk one of those gnomes over there into doing this walking for me.", "Peut-être que je pourrais convaincre un de ces gnomes de faire cette course pour moi.", 0, 1, 0, "BlackMarket CALL4");
+
+DELETE FROM script_texts WHERE entry IN (-1901067,-1901068,-1901069,-1901070);
+REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
+(-1901067,"I'm not gettin' paid enough for this.", "Je ne suis pas assez payé pour ça...", 0, 1, 0, "BlackMarket MAIL1"),
+(-1901068,"...Used to be a chief engineer back in Kezan, you know. Now look at me...", "...J'étais ingénieur en chef à Kezan, vous savez. Maintenant, regardez-moi...", 0, 1, 0, "BlackMarket MAIL2"),
+(-1901069,"Ah! Wait, I didn't mean to mail those! Those pictures are definitely going to land in Booty Bay now...", "Ah ! Attendez, je ne voulais pas les poster ! Ces photos vont définitivement se retrouver à la Baie-du-Butin maintenant...", 0, 1, 0, "BlackMarket MAIL3"),
+(-1901070,"I hear those damn gnomes have machines that can fly now... I'd kill to get my hands on one of those.", "J'ai entendu dire que ces fichus gnomes avaient des machines volantes... Je tuerais pour mettre la main sur l'une d'entre elles.", 0, 1, 0, "BlackMarket MAIL4");
+
+DELETE FROM script_texts WHERE entry IN (-1901071,-1901072,-1901073,-1901074);
+REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
+(-1901071,"That's it? I got mouths to feed, $N! Find me something where I can turn'a profit at least.", "C'est tout ? J'ai des bouches à nourrir, $N ! Trouve-moi quelque chose qui me rapporte au moins un peu.", 0, 1, 0, "BlackMarket DEAL1"),
+(-1901072,"I'll mail it to ya as soon as I've found it. Don'cha worry bout the shipping cost, its *included*.", "Je vous l'enverrai dès que je l'aurai trouvé. Ne vous inquiétez pas pour les frais d'expédition, ils sont *inclus*.", 0, 1, 0, "BlackMarket DEAL2"),
+(-1901073,"Don't forget, I got the best deals anywhere, even on the hard ta' find stuff!", "N'oubliez pas que j'ai les meilleures offres du monde, même sur les trucs les plus difficiles à trouver !", 0, 1, 0, "BlackMarket DEAL3"),
+(-1901074,"Some of this stuff might be hard to find... Don'cha worry though, I'm on it!", "Certaines de ces choses pourraient être difficiles à trouver... Mais ne vous inquiétez pas, je m'en occupe !", 0, 1, 0, "BlackMarket DEAL4");
+
+DELETE FROM script_texts WHERE entry IN (-1901075,-1901076,-1901077,-1901078);
+REPLACE INTO script_texts (entry, content_default, content_loc2, sound, emote, TYPE, COMMENT) VALUES
+(-1901075,"Hey $N, stop by the black market...", "Hé $N, arrête-toi au marché noir...", 0, 1, 4, "BlackMarket YELL1"),
+(-1901076,"Upgrades! Get your upgrades here!", "Améliorations ! Demandez vos améliorations ici !", 0, 1, 0, "BlackMarket YELL2"),
+(-1901077,"Got some old gear you're thinking about selling? Give me a minute of your time and I can make it worth your while to save it pal!", "Vous avez du vieux matériel à vendre ? Donnez-moi une minute de votre temps et je peux vous aider à l'améliorer, mon ami !", 0, 1, 0, "BlackMarket YELL3"),
+(-1901078,"Make that rusty gear of yours shine like a new Goblin Drag Car!", "Faites briller votre équipement rouillé comme un Chariot gobelin flambant neuf !", 0, 1, 4, "BlackMarket YELL4");
 
 DELETE FROM creature_template WHERE entry IN (39700,39701,39702,39703);
 REPLACE INTO `creature_template` VALUES
