@@ -8,6 +8,12 @@ UPDATE mail_level_reward SET level = 20 WHERE level = 30 AND mailTemplateId IN (
 UPDATE `quest_template` SET `MinLevel` = 20 WHERE `entry` IN (1661, 3631, 4485, 4486, 4487, 4488, 4489, 4490);
 UPDATE npc_trainer_template SET reqlevel = 20 WHERE spell IN (1710, 5784, 5785, 13819, 34769, 34768, 13820, 13819);
 
+-- Paladin/Warlock 100% Mounts available at level 40
+UPDATE `quest_template` SET `MinLevel` = 40 WHERE `entry` IN (7644, 7645, 7646, 7647); -- Judgment and Redemption
+UPDATE `quest_template` SET `MinLevel` = 40 WHERE `entry` IN (7623, 7624, 7625, 7629, 7631); -- Dreadsteed of Xoroth
+
+UPDATE npc_trainer_template SET reqlevel = 40 WHERE spell IN (23214, 23215, 34766, 34767, 23161);
+
 -- Flexible Raid text implementation
 REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11036', 'A player joined %s. Creatures grow stronger.', 'Un joueur a rejoint %s. Les créatures se renforcent.');
 REPLACE INTO `mangos_string` (`entry`, `content_default`, `content_loc2`) VALUES ('11037', 'A player left %s. Creatures weaken.', 'Un joueur a quitté %s. Les créatures s\'affaiblissent.');
