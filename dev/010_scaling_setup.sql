@@ -33,11 +33,12 @@ CREATE TABLE `scale_loot` (
   PRIMARY KEY (`entry`,`item`,`ilevel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `scale_zone`(
-  `ZoneName` VARCHAR(255),
-  `MapID` INT,
-  `ZoneID` INT NOT NULL,
-  `LevelRangeMin` INT,
-  `LevelRangeMax` INT,
-  PRIMARY KEY (`ZoneID`)
+CREATE TABLE `scale_zone` (
+  `areaName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `mapId` int unsigned NOT NULL,
+  `areaId` int unsigned NOT NULL,
+  `LevelRangeMin` int DEFAULT NULL,
+  `LevelRangeMax` int DEFAULT NULL,
+  `areaFlags` int unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`areaId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
