@@ -2598,9 +2598,11 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Kobold Vermin 6 (2.4.2 Official Data)
 ('601','6','4','0','10','0','0','0','0','0','0','0','1','-7','-8','0','0','0','0','0','0','0','0','0','Kobold Vermin - Random Say on Aggro'),
 -- Forest Spider (2.4.2 Official Data)
-('3001','30','1','0','100','0','1000','1000','0','0','0','0','11','11959','0','32','0','0','0','0','0','0','0','0','Forest Spider - Cast Poison Proc OOC'),
--- Defias Thug (2.4.2 Official Data)
+('3001','30','11','0','100','0','0','0','0','0','0','0','11','11959','0','34','0','0','0','0','0','0','0','0','Forest Spider - Cast Poison Proc on Spawn'),
+-- Defias Thug 38
 ('3801','38','4','0','30','0','0','0','0','0','0','0','1','-2','-3','-4','0','0','0','0','0','0','0','0','Defias Thug - Random Say on Aggro'),
+('3802','38','30','0','100','1','5','38','0','0','0','0','22','1','0','0','0','0','0','0','0','0','0','0','Defias Thug - Set Phase 1 on Receive AI Event Custom A'),
+('3803','38','1','1','100','1','1000','6000','7000','16000','0','0','5','1','0','0','0','0','0','0','0','0','0','0','Defias Thug - Emote on OOC Timer (Phase 1)'),
 -- Kobold Miner (2.4.2 Official Data)
 ('4001','40','4','0','30','0','0','0','0','0','0','0','1','-7','0','0','0','0','0','0','0','0','0','0','Kobold Miner - Random Say on Aggro'),
 ('4002','40','0','0','100','1025','4000','14100','38000','42000','0','0','11','6016','1','0','0','0','0','0','0','0','0','0','Kobold Miner - Cast Pierce Armor'),
@@ -2815,7 +2817,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Helene Peltskinner (6306) - NSR
 -- Donni Anthania (6367) - NSR
 -- Cat (6368) - NSR
--- Dane Winslow (6373) - NSR
+-- Dane Winslow 6373
+('637301','6373','11','0','100','0','0','0','0','0','0','0','11','11939','0','0','0','0','0','0','0','0','0','0','Dane Winslow - Cast Summon Imp on Spawn'),
 -- Cylina Darkheart
 ('637401','6374','11','0','100','0','0','0','0','0','0','0','11','11939','0','0','0','0','0','0','0','0','0','0','Cylina Darkheart - Cast Summon Imp on Spawn'),
 -- Spirit Healer (6491) - NSR
@@ -4199,7 +4202,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2496606','24966','0','0','100','1025','8000','15000','12000','24000','0','0','11','11971','1','0','0','0','0','0','0','0','0','0','Wretched Fiend - Cast Sunder Armor'),
 -- Captain Theris Dawnhearth (24967) - NSR
 -- Erratic Sentry 24972
-('2497201','24972','1','0','33','1025','30000','60000','60000','180000','0','0','11','45014','0','0','1','-10745','0','0','0','0','0','0','Erratic Sentry - Cast Capacitor Overload and Emote OOC'),
+('2497201','24972','1','0','15','1025','30000','60000','60000','180000','0','0','11','45014','0','0','1','-10745','0','0','0','0','0','0','Erratic Sentry - Cast Capacitor Overload and Emote OOC'),
 ('2497202','24972','2','0','40','1024','50','35','0','0','0','0','11','45014','0','0','1','-10745','0','0','0','0','0','0','Erratic Sentry - Cast Capacitor Overload and Emote at 50% HP'),
 ('2497203','24972','0','0','100','1025','12000','24000','15000','25000','0','0','11','45336','17','0','0','0','0','0','0','0','0','0','Erratic Sentry - Cast Electrical Overload'),
 ('2497204','24972','0','0','100','1025','10000','30000','20000','40000','0','0','11','35892','17','0','0','0','0','0','0','0','0','0','Erratic Sentry - Cast Suppression'),
@@ -4474,6 +4477,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('122203','1222','2','0','100','1024','15','0','0','0','0','0','5','11','0','0','5','11','0','0','11','3204','0','0','Dark Iron Sapper - Laugh Emote at 15% HP'),
 -- Young Threshadon 1224 - NSR
 -- Miran 1379 - npc_miran
+-- Saean 1380
+('138001','1380','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Saean - Flee at 15% HP'),
 -- Berserk Trogg (2.4.3 Official Data)
 ('139301','1393','4','0','10','0','0','0','0','0','0','0','1','-213','-214','-215','0','0','0','0','0','0','0','0','Berserk Trogg - Random Say on Aggro'),
 ('139302','1393','2','0','100','1024','40','0','0','0','0','0','11','3019','0','0','1','-46','0','0','0','0','0','0','Berserk Trogg - Cast Enrage at 40% HP'),
@@ -4493,6 +4498,11 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Thorgrum Borrelson (2.4.3 Official Data)
 ('157201','1572','4','0','100','0','0','0','0','0','0','0','11','14313','0','0','1','-549','0','0','0','0','0','0','Thorgrum Borrelson - Cast Summon Enraged Gryphon and Yell on Aggro'),
 -- Loch Crocolisk 1693 - NSR
+-- Dark Iron Ambusher 1981
+('198101','1981','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Dark Iron Ambusher - Flee at 15% HP'),
+-- Huldar 2057
+('205701','2057','4','0','100','0','0','0','0','0','0','0','17','168','0','0','0','0','0','0','0','0','0','0','Huldar - Remove NpCFlags on Aggro'),
+('205702','2057','7','0','100','0','0','0','0','0','0','0','17','168','3','0','0','0','0','0','0','0','0','0','Huldar - Set NpCFlags on Evade'),
 -- Ram (2.4.3 Official Data)
 ('209801','2098','2','0','100','0','99','0','0','0','0','0','25','0','0','0','0','0','0','0','0','0','0','0','Ram - Flee at 99% HP'),
 -- Dark Iron Raider (2.4.3 Official Data)
@@ -29063,7 +29073,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Shadow Image 25214 - npc_shadow_image
 -- Demonic Vapor 25265 - npc_demonic_vapor
 -- Demonic Vapor 25267 (Trail)
-('2526701','25267','1','0','100','0','10000','10000','0','0','0','0','11','45400','0','0','0','0','0','0','0','0','0','0','Demonic Vapor (Trail) - Cast Summon Blazing Dead on OOC Timer'),
+('2526701','25267','29','0','100','0','5000','5000','0','0','0','0','11','45400','0','0','0','0','0','0','0','0','0','0','Demonic Vapor (Trail) - Cast Summon Blazing Dead on Timer'),
 -- Unyielding Dead 25268
 ('2526801','25268','11','0','100','0','0','0','0','0','0','0','38','0','0','0','11','45415','0','0','0','0','0','0','Unyielding Dead - Zone Combat Pulse and Cast Blazing Dead Passive on Spawn'),
 -- Dancing Flames (25305) - npc_dancing_flames
