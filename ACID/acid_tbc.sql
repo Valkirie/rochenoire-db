@@ -743,7 +743,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('274301','2743','0','0','100','1025','7600','18600','22500','33100','0','0','11','17207','0','0','0','0','0','0','0','0','0','0','Shadowforge Warrior - Cast Whirlwind'),
 ('274302','2743','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Shadowforge Warrior - Flee at 15% HP'),
 -- Shadowforge Commander
-('274401','2744','4','0','100','0','0','0','0','0','0','0','11','1032','0','0','0','0','0','0','0','0','0','0','Shadowforge Tunneler - Cast Devotion Aura on Aggro'),
+('274401','2744','4','0','100','0','0','0','0','0','0','0','11','1032','0','0','0','0','0','0','0','0','0','0','Shadowforge Commander - Cast Devotion Aura on Aggro'),
+('274402','2744','2','0','100','1024','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Shadowforge Commander - Flee at 15% HP'),
 -- Ambassador Infernus (3.1.1 Official Data)
 ('274501','2745','9','0','100','1025','0','30','12200','29500','0','0','11','9552','4','0','0','0','0','0','0','0','0','0','Ambassador Infernus - Cast Searing Flames'),
 ('274502','2745','9','0','100','1025','0','5','14200','28300','0','0','11','11970','0','0','0','0','0','0','0','0','0','0','Ambassador Infernus - Cast Fire Nova'),
@@ -2387,12 +2388,13 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Bloodletter
 ('1095401','10954','0','0','100','1025','5000','7000','8000','12000','0','0','11','15583','1','0','0','0','0','0','0','0','0','0','Bloodletter - Cast Rupture'),
 ('1095402','10954','0','0','100','1025','14000','18000','20000','25000','0','0','11','15667','1','0','0','0','0','0','0','0','0','0','Bloodletter - Cast Sinister Strike'),
--- Fallen Hero 10996
-('1099601','10996','11','0','100','0','0','0','0','0','0','0','11','18950','0','32','0','0','0','0','0','0','0','0','Fallen Hero - Cast Invisibility and Stealth Detection on Spawn'),
-('1099602','10996','4','0','100','0','0','0','0','0','0','0','11','18396','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Dismounting Blast on Aggro'),
-('1099603','10996','0','0','100','1025','4000','6000','7000','9000','0','0','11','19643','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Mortal Strike'),
-('1099604','10996','0','0','100','1025','1000','3000','9000','12000','0','0','11','18328','0','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Incapacitating Shout'),
-('1099605','10996','9','0','100','1025','0','5','8000','14000','0','0','11','15618','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Snap Kick'),
+-- Fallen Hero 10996 - s.18396 mount condition?
+('1099601','10996','11','0','100','0','0','0','0','0','0','0','11','18950','0','34','0','0','0','0','0','0','0','0','Fallen Hero - Cast Invisibility and Stealth Detection on Spawn'),
+('1099602','10996','4','0','100','0','0','0','0','0','0','0','1','-1303','-1304','0','0','0','0','0','0','0','0','0','Fallen Hero - Say on Aggro'),
+('1099603','10996','4','0','100','0','0','0','0','0','0','0','11','18396','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Dismounting Blast on Aggro'),
+('1099604','10996','0','0','100','1025','6000','12000','8000','14000','0','0','11','15618','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Snap Kick'),
+('1099605','10996','0','0','100','1025','4000','6000','7000','9000','0','0','11','19643','1','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Mortal Strike'),
+('1099606','10996','0','0','100','1025','0','0','60000','60000','0','0','11','18328','17','0','0','0','0','0','0','0','0','0','Fallen Hero - Cast Incapacitating Shout'),
 -- Smokey LaRue (11033) - NSR
 -- Lord Maxwell Tyrosus (11034) - NSR
 -- Betina Bigglezink (11035) - NSR
@@ -7156,7 +7158,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- High Executor Derrington (10837) - NSR
 -- Argent Officer Garush (10839) - NSR
 -- Argent Quartermaster Hasana (10856) - NSR
--- Fallen Hero (10996) - ALREADY SCRIPTED IN ANOTHER ZONE
 -- Alexi Barov
 ('1102201','11022','9','0','100','1025','0','5','13000','18000','0','0','11','15583','1','0','0','0','0','0','0','0','0','0','Alexi Barov - Cast Rupture'),
 ('1102202','11022','0','0','100','1025','5000','9000','9000','13000','0','0','11','14873','4','0','0','0','0','0','0','0','0','0','Alexi Barov - Cast Sinister Strike'),
@@ -7768,7 +7769,6 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1094302','10943','9','0','100','1025','0','30','16000','24000','0','0','11','16333','4','0','0','0','0','0','0','0','0','0','Decrepit Guardian - Cast Debilitating Touch'),
 -- Jeziba (10976) - NSR
 -- Scarlet Hound (10979) - NSR
--- Fallen Hero (10996) - SCRIPTED IN ANOTHER ZONE
 -- Weldon Barov
 ('1102301','11023','0','0','100','1025','1000','5000','12000','18000','0','0','11','16244','0','0','0','0','0','0','0','0','0','0','Weldon Barov - Cast Demoralizing Shout'),
 ('1102302','11023','9','0','100','1025','0','5','6000','9000','0','0','11','15580','1','0','0','0','0','0','0','0','0','0','Weldon Barov - Cast Strike'),
@@ -11374,7 +11374,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('439401','4394','6','0','100','0','0','0','0','0','0','0','11','43135','0','7','0','0','0','0','0','0','0','0','Bubbling Swamp Ooze - Cast Bubbling Ooze on Death'),
 ('439402','4394','8','0','100','0','42485','-1','0','0','0','0','11','42486','6','0','11','3617','0','0','0','0','0','0','Bubbling Swamp Ooze - Cast Ooze Channel Credit and Quiet Suicide on End of Ooze Channel Spellhit'),
 -- Mudrock Spikeshell 4397
-('439701','4397','11','0','100','0','0','0','0','0','0','0','11','8393','0','34','0','0','0','0','0','0','0','0','Mudrock Spikeshell - Cast Barbs on Spawn'),
+('439701','4397','11','0','100','0','0','0','0','0','0','0','11','9464','0','34','0','0','0','0','0','0','0','0','Mudrock Spikeshell - Cast Barbs on Spawn'),
 -- Muckshell Clacker
 ('440101','4401','9','0','100','1025','0','5','20000','25000','0','0','11','3604','1','0','0','0','0','0','0','0','0','0','Muckshell Clacker - Cast Tendon Rip'),
 -- Muckshell Snapclaw 4402
@@ -19038,8 +19038,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2077201','20772','2','0','100','1024','90','0','0','0','0','0','11','36579','0','0','0','0','0','0','0','0','0','0','Netherock - Cast Summon Netherock Crumbler at 90% HP'),
 ('2077202','20772','2','0','100','1024','60','0','0','0','0','0','11','36584','0','0','0','0','0','0','0','0','0','0','Netherock - Cast Summon Netherock Crumbler at 60% HP'),
 ('2077203','20772','2','0','100','1024','30','0','0','0','0','0','11','36585','0','0','0','0','0','0','0','0','0','0','Netherock - Cast Summon Netherock Crumbler at 30% HP'),
--- Barbscale Crocolisk
-('2077301','20773','9','0','100','1025','0','5','20000','20000','0','0','11','3604','1','0','0','0','0','0','0','0','0','0','Barbscale Crocolisk - Cast Tendon Rip'),
+-- Barbscale Crocolisk 20773
+('2077301','20773','11','0','100','0','0','0','0','0','0','0','11','34343','15','34','0','0','0','0','0','0','0','0','Barbscale Crocolisk - Cast Thorns on Spawn'),
+('2077302','20773','0','0','100','1025','3000','9000','20000','20000','0','0','11','3604','1','0','0','0','0','0','0','0','0','0','Barbscale Crocolisk - Cast Tendon Rip'),
 -- Farahlon Lasher
 ('2077401','20774','9','0','100','1025','0','30','14000','19000','0','0','11','12747','1','0','0','0','0','0','0','0','0','0','Farahlon Lasher - Cast Entangling Roots'),
 ('2077402','20774','9','0','100','1025','0','8','16000','21000','0','0','11','36604','1','0','0','0','0','0','0','0','0','0','Farahlon Lasher - Cast Flanking Growth'),
@@ -26006,6 +26007,9 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Veyzhak the Cannibal 5399
 ('539901','5399','9','0','100','1025','0','5','7000','14000','0','0','11','11977','1','32','0','0','0','0','0','0','0','0','Veyzhak the Cannibal - Cast Rend'),
 ('539902','5399','2','0','100','1024','30','0','0','0','0','0','11','8599','0','0','1','-46','0','0','0','0','0','0','Veyzhak the Cannibal - Cast Enrage at 30% HP'),
+-- Zekkis 5400
+('540001','5400','0','0','100','1025','0','5000','60000','60000','0','0','11','8282','1','32','0','0','0','0','0','0','0','0','Zekkis - Cast Curse of Blood'),
+('540002','5400','0','0','100','1025','5000','10000','120000','120000','0','0','11','7102','1','32','0','0','0','0','0','0','0','0','Zekkis - Cast Contagion of Rot'),
 -- Kazkaz the Unholy 5401
 ('540101','5401','0','0','100','1025','14000','28000','24000','30000','0','0','11','7645','2','0','0','0','0','0','0','0','0','0','Kazkaz the Unholy - Cast Dominate Mind'),
 ('540102','5401','0','0','100','1025','5900','9700','15900','32200','0','0','11','9081','1','0','0','0','0','0','0','0','0','0','Kazkaz the Unholy - Cast Shadow Bolt Volley'),
@@ -31498,7 +31502,8 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-1300','Should I live through this, I shall make it my life''s sole ambition to destroy Arthas...','0','0','0','0','9682','14484, 14485'),
 ('-1301','I won''t make it... go... go on without me...','0','0','0','0','9680','14484, 14485'),
 ('-1302','Death take me! I cannot go on! I have nothing left...','0','0','0','0','9683','14484, 14485'),
--- Classic PLEASE RE-USE 1303 - 1304
+('-1303','Be cleansed by blade, filth!','0','0','0','0','6375','Fallen Hero 10996'),
+('-1304','You dare defile this holy ground?','0','0','0','0','6374','Fallen Hero 10996'),
 ('-1305','The light condemns all who harbor evil.  Now you will die!','0','0','0','0','2627','Scarlet Monastery'),
 ('-1306','You carry the taint of the scourge.  Prepare to enter the twisting nether.','0','0','0','0','2625','Scarlet Monastery'),
 ('-1307','There is no escape for you.  The Crusade shall destroy all who carry the scourge''s taint.','0','0','0','0','2626','Scarlet Monastery'),

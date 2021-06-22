@@ -25,7 +25,25 @@
 -- Classic section
 -- ============================================================
 -- Make Moonwell GO server-side (visible by GM only)
-UPDATE gameobject_template SET data3=1 WHERE entry=177272; 
+UPDATE gameobject_template SET data3=1 WHERE entry=177272;
+
+-- Make Incantion of Celebras Trap only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=178963;
+
+-- Make some trap GO only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=103575; -- Containment Coffer TRAP
+UPDATE gameobject_template SET data8=1 WHERE entry=128972; -- Shallow Grave TRAP
+UPDATE gameobject_template SET data8=1 WHERE entry=176592; -- Shellfish Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=176750; -- Kodo Bones
+UPDATE gameobject_template SET data8=1 WHERE entry=177493; -- Fire of Elune (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=177529; -- Altar of Elune (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=178124; -- Resonite Crystal (Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=178248; -- Naga Brazier (trap
+UPDATE gameobject_template SET data8=1 WHERE entry=171941; -- Blackrock Keg Trap
+UPDATE gameobject_template SET data8=1 WHERE entry=180391; -- Heart of Hakkar Spell Emitter
+UPDATE gameobject_template SET data8=1 WHERE entry=181214; -- Necropolis critter spawner
+UPDATE gameobject_template SET data8=1 WHERE entry=179324; -- Frostwolf Landmine
+UPDATE gameobject_template SET data8=1 WHERE entry=179325; -- Stormpike Landmine
 
 -- Set radius of Supply Crate trap to zero to prevent trap from triggering with coming by players (it should trigger on player usage of original GO)
 UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 175537);
@@ -33,7 +51,7 @@ UPDATE gameobject_template SET data2=0 WHERE entry IN (175534, 175535, 175536, 1
 -- Make Dawn's Gambit Trap only visible by GM
 UPDATE gameobject_template SET data2=5, data3=0, data8=0 WHERE entry=176110;
 -- Dawn's Gambit: add data from GO trap 176110 until we are able to trigger trap GOs without spells
-UPDATE gameobject_template SET data2=5, data3=18110, data4=1, data8=1 WHERE entry=177304; 
+UPDATE gameobject_template SET data2=5, data3=18110, data4=1, data8=1 WHERE entry=177304;
 
 -- The Demon Seed GO: make it despawnable on use with short autoclose value
 UPDATE gameobject_template SET data3=65536, data5=1 WHERE entry=3524;
@@ -49,10 +67,14 @@ UPDATE gameobject_template SET data2=10 WHERE entry=109515;
 -- Set a 70 yards diameter for Ragnaros GO because because it needs to be triggered by SD2 script otherwise (and said script do not exist yet)
 UPDATE gameobject_template SET data2=70 WHERE entry=178088;
 
+-- Set 20 yards radius to Suppression Device GO and cooldown because it needs to be triggered by SD2 script otherwise (and said script does not exist yet because GO spell casting in not implemented)
+UPDATE gameobject_template SET data2=20 WHERE entry=179784;
+
+
 -- Currently the core cannot make a GO usable for a specific quest if the items it holds are not objectives of the quest
 
 -- Link Hive'Ashi Pod GO to quest 1126 so it is usable by players on the quest
-UPDATE gameobject_template SET data8=1126 WHERE entry=178553; 
+UPDATE gameobject_template SET data8=1126 WHERE entry=178553;
 
 -- Link Azsharite GOs to quest 3602 so they are usable by players on the quest
 UPDATE gameobject_template SET data8=3602 WHERE entry IN (152620, 152621, 152622, 152631);
@@ -79,6 +101,12 @@ UPDATE gameobject_template SET data1 = 5 WHERE entry BETWEEN 176094 AND 176097;
 -- Make PX-238 Winter Wondervolt TRAP GO server-side (visible by GM only)
 UPDATE gameobject_template SET `data8`=1 WHERE entry=180797; 
 
+-- Temporary fix data6 for GO 178559 (Larva Spewer) in prevision of coming core update
+UPDATE gameobject_template SET data6=0 WHERE entry=178559;
+
+-- Drek'Thar's Scrolls 179004 - seemingly never used
+UPDATE `gameobject_template` SET `data1` = 0 WHERE `entry` = 179004;
+
 -- ============================================================
 -- TBC section
 -- ============================================================
@@ -93,6 +121,10 @@ UPDATE gameobject_template SET data3=0, data8=1 WHERE entry=178673; -- 21650, 0
 
 -- Zul'Aman - Tanzar's Trunk - Is not subject to group loot per blizzlike data but all the other chests are. Confirmed data in sniff to be 0, however no such issues reported on retail. Confirmation that blizz sends unfixed GO template data???
 UPDATE gameobject_template SET data15=1 WHERE entry IN(186648);
+
+-- Make some trap GO only visible by GM
+UPDATE gameobject_template SET data8=1 WHERE entry=184718; -- Cauldron Summoner
+UPDATE gameobject_template SET data8=1 WHERE entry=184722; -- Cauldron Bug Summoner
 
 -- -------------------------------
 -- Item custom changes
