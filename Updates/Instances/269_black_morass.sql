@@ -136,7 +136,6 @@ INSERT INTO creature_movement_template SELECT 18995 AS entry, pathId, `point`, p
 INSERT INTO creature_movement_template SELECT 21139 AS entry, pathId, `point`, position_x, position_y, position_z, orientation, waittime, script_id, `comment` FROM creature_movement_template WHERE entry=21818;
 
 -- Dark Portal Beam Invisible Stalker
-UPDATE creature_template SET MovementType=2 WHERE entry=18555;
 DELETE FROM creature_movement_template WHERE entry=18555;
 INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
 (18555,0,1,-2015.482,7120.704,23.13793,0,0,100),
@@ -264,17 +263,16 @@ INSERT INTO `creature_movement_template` (`entry`,`pathID`,`point`,`position_x`,
 (17023,24,1,-2088.388,7119.204,34.53128,1000,7,6.213372),
 (17023,24,2,-2088.388,7119.204,34.53128,1000,1,6.213372);
 
--- INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
+-- INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
 
-DELETE FROM creature_template_addon WHERE entry=18555; -- previously added, but we need better control over it (no longer casted using addon)
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(15608, 0, 0, 0, 0, 0, 0, '31635 31556'), -- Medivh
-(17881, 0, 0, 1, 16, 0, 0, NULL), -- Aeonus
-(18170, 0, 0, 0, 0, 0, 0, '19817'), -- Infinite Slayer
-(18982, 0, 0, 1, 0, 0, 0, '18950 22766'), -- Sable Jaguar
-(18983, 0, 0, 1, 0, 0, 0, '34365'), -- Blackfang Tarantula
-(21140, 0, 0, 1, 16, 0, 0, '19818'), -- Rift Lord
-(21862, 0, 0, 0, 0, 0, 0, '32570'); -- Dark Portal Dummy 1.30
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(15608, 0, 0, 0, 0, 0, '31635 31556'), -- Medivh
+(17881, 0, 0, 1, 0, 0, NULL), -- Aeonus
+(18170, 0, 0, 0, 0, 0, '19817'), -- Infinite Slayer
+(18982, 0, 0, 1, 0, 0, '18950 22766'), -- Sable Jaguar
+(18983, 0, 0, 1, 0, 0, '34365'), -- Blackfang Tarantula
+(21140, 0, 0, 1, 0, 0, '19818'), -- Rift Lord
+(21862, 0, 0, 0, 0, 0, '32570'); -- Dark Portal Dummy 1.30
 
 -- INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 
@@ -588,9 +586,9 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id`=1702301;
 INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
-(1702301,15000,0,0,0,0,2000020005,0,0,0,15608,20,0,'Medivh - Orcs of the Horde! This portal is the gateway to your new destiny! Azeroth lies before you, ripe for the taking!',0,0,0,0),
+(1702301,15000,0,0,0,0,19909,0,0,0,15608,20,0,'Medivh - Orcs of the Horde! This portal is the gateway to your new destiny! Azeroth lies before you, ripe for the taking!',0,0,0,0),
 (1702301,23000,32,0,0,0,0,0,0,0,0,0,0,'Shadow Council Enforcer - Resume Waypoints',0,0,0,0),
-(1702301,24000,0,0,0,0,2000020006,0,0,0,0,0,0,'Shadow Council Enforcer - Gul''dan speaks the truth! We should return at once to tell our brothers of the news! Retreat back through the portal!',0,0,0,0);
+(1702301,24000,0,0,0,0,19911,0,0,0,0,0,0,'Shadow Council Enforcer - Gul''dan speaks the truth! We should return at once to tell our brothers of the news! Retreat back through the portal!',0,0,0,0);
 
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (2181801,1855501);
 INSERT INTO `dbscripts_on_creature_movement` (id, delay, priority, command, datalong, datalong2, datalong3, buddy_entry, search_radius, data_flags, dataint, dataint2, dataint3, dataint4, x, y, z, o, comments) VALUES
@@ -599,11 +597,6 @@ INSERT INTO `dbscripts_on_creature_movement` (id, delay, priority, command, data
 (2181801, 1500, 1, 15, 31326, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Portal Spawn - Corrupt Medivh'),
 
 (1855501, 0, 0, 15, 32566, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Dark Portal Beam Invisible Stalker - Purple Banish State');
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020005,2000020006);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES 
-(2000020005, 'Orcs of the Horde! This portal is the gateway to your new destiny! Azeroth lies before you, ripe for the taking!', 0, 1, 0, 5, 19909, 'Medivh (Entry: 15608)'),
-(2000020006, 'Gul''dan speaks the truth! We should return at once to tell our brothers of the news! Retreat back through the portal!', 0, 1, 0, 5, 19911, 'Shadow Council Enforcer (Entry: 17023)');
 
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

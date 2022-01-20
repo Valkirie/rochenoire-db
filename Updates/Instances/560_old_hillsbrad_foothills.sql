@@ -11,17 +11,16 @@ TODO
 * Tarren Mill Horsehand movement/script and interactions
 * Capt Sanders/Edward Hanes script/movement
 * Nat Pagle / Hal McAllister talking? emotes?
-* Bartolo script (response when player gets close)
-* Helcular / Kel'Thuzad movement script seems slow/unresponsive to start - on retail they are already walking when you approach Southshore (missing movement entirely?)
+* Helcular / Kel'Thuzad - possibly missing texts, should stop waypoints when talking
 * Caretaker Smithers script and movement
 * Vishas, Sally Whitemane, Renault Mograine movement/script
-* Herod the Bully script
-* Beggar and Hillsbrad Citizen pooling/scripts
+* Hillsbrad Citizen pooling/scripts
 * Tarren Mill Fisherman script + emotes
 * Thomas Yance "leaving a customer" 3 different yells
 * Innkeeper Monica missing random emote? "shakes her head at all of the commotion."
 * some creatures seem to be pooled with together with other entrys (patrols in the barracks)
 * Don Carlos, Guerrero Heroic Dummy Template?
+* Little Jimmy Vishas, Sally Whitemane, Renault Mograine script and movement
 
 EndDBScriptData */
 
@@ -1126,7 +1125,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+614, 9, 2620.766, 592.524, 56.46237, 0, 0, 0),
 (@CGUID+614, 10, 2637.223, 612.3849, 55.86766, 0, 0, 0);
 
-DELETE FROM creature_movement_template WHERE entry IN (17848,18092,18093,18094,18649,18664,18764,18765,28132,18672,18655,18656);
+DELETE FROM creature_movement_template WHERE entry IN (17848,18092,18093,18094,18649,18664,18764,18765,28132,18672,18655,18656,20350,20360);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 -- Lieutenant Drake
 -- Normal
@@ -1794,37 +1793,109 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (18672, 0, 153, 2623.61, 724.212, 55.6816, 5.48129, 0, 0),
 (18672, 0, 154, 2637.17, 711.104, 56.1149, 5.36348, 0, 0),
 (18672, 0, 155, 2640.62, 703.12, 56.0341, 4.91973, 0, 0),
-(18672, 0, 156, 2640.84, 691.622, 55.4653, 4.53882, 0, 0);
+(18672, 0, 156, 2640.84, 691.622, 55.4653, 4.53882, 0, 0),
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+361, 0, 3, 0, 0, 0, 0, NULL), -- creature_spawn_entry
-(@CGUID+401, 0, 3, 0, 0, 0, 0, NULL), -- creature_spawn_entry
-(@CGUID+436, 0, 1, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+437, 0, 1, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+438, 0, 1, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+439, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+441, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+442, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+443, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+445, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+447, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+449, 0, 1, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+455, 0, 3, 0, 0, 0, 0, NULL), -- Orc Prisoner
-(@CGUID+456, 0, 1, 0, 0, 0, 0, NULL); -- Orc Prisoner
+-- Kel'thuzad
+(20350, 0, 1, 1816.550049, 1069.839966, 10.483100, 100, 0, 0),
+(20350, 0, 2, 1829.250000, 1075.329956, 11.507100, 100, 0, 0),
+(20350, 0, 3, 1840.349976, 1076.959961, 13.023900, 100, 0, 0),
+(20350, 0, 4, 1854.489990, 1072.280029, 15.144400, 100, 0, 0),
+(20350, 0, 5, 1864.520020, 1065.260010, 15.909600, 100, 0, 0),
+(20350, 0, 6, 1883.530029, 1056.920044, 18.170401, 100, 0, 0),
+(20350, 0, 7, 1896.489990, 1052.839966, 17.920401, 100, 0, 0),
+(20350, 0, 8, 1917.880005, 1051.479980, 19.089800, 100, 0, 0),
+(20350, 0, 9, 1930.250000, 1051.689941, 19.907200, 100, 0, 0),
+(20350, 0, 10, 1947.849976, 1045.349976, 21.082001, 100, 0, 0),
+(20350, 0, 11, 1958.849976, 1035.160034, 23.207001, 100, 0, 0),
+(20350, 0, 12, 1969.439941, 1028.369995, 24.457800, 100, 0, 0),
+(20350, 0, 13, 1980.300049, 1028.689941, 25.294399, 100, 0, 0),
+(20350, 0, 14, 1969.439941, 1028.369995, 24.457800, 100, 0, 0),
+(20350, 0, 15, 1958.859985, 1035.160034, 23.175900, 100, 0, 0),
+(20350, 0, 16, 1947.859985, 1045.349976, 20.957001, 100, 0, 0),
+(20350, 0, 17, 1930.250000, 1051.689941, 19.907200, 100, 0, 0),
+(20350, 0, 18, 1917.880005, 1051.479980, 19.089800, 100, 0, 0),
+(20350, 0, 19, 1896.489990, 1052.839966, 17.920401, 100, 0, 0),
+(20350, 0, 20, 1883.530029, 1056.920044, 18.170401, 100, 0, 0),
+(20350, 0, 21, 1864.520020, 1065.260010, 15.909600, 100, 0, 0),
+(20350, 0, 22, 1854.489990, 1072.280029, 15.144400, 100, 0, 0),
+(20350, 0, 23, 1840.349976, 1076.959961, 13.023900, 100, 0, 0),
+(20350, 0, 24, 1829.250000, 1075.329956, 11.507100, 100, 0, 0),
+(20350, 0, 25, 1816.550049, 1069.839966, 10.483100, 100, 0, 0),
+(20350, 0, 26, 1802.400024, 1061.439941, 8.593270, 100, 0, 0),
+(20350, 0, 27, 1785.819946, 1057.319946, 7.469380, 100, 0, 0),
+(20350, 0, 28, 1777.660034, 1058.589966, 7.100850, 100, 0, 0),
+(20350, 0, 29, 1785.819946, 1057.319946, 7.469380, 100, 0, 0),
+(20350, 0, 30, 1802.400024, 1061.439941, 8.593270, 100, 0, 0),
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(18092, 0, 0, 0, 0, 0, 0, '19817'), -- Tarren Mill Guardsman
-(18096, 0, 0, 0, 0, 0, 0, '19818'), -- Epoch Hunter
-(18170, 0, 0, 0, 0, 0, 0, '19817'), -- Infinite Slayer
-(18887, 0, 0, 0, 0, 0, 0, '33071'), -- Taretha
-(20342, 0, 0, 1, 16, 379, 0, NULL), -- Hal McAllister
-(20344, 0, 0, 1, 16, 379, 0, NULL), -- Nat Pagle
-(20345, 0, 5, 1, 16, 0, 0, NULL), -- Commander Mograine
-(20355, 0, 3, 1, 16, 0, 0, NULL), -- Stalvan Mistmantle
-(20419, 0, 0, 1, 16, 233, 0, NULL), -- Zixil
-(20420, 0, 7, 1, 16, 0, 0, NULL), -- Overwatch Mark 0
-(20422, 0, 0, 1, 16, 133, 0, NULL), -- Kirin Tor Mage
-(28132, 2410, 0, 1, 16, 0, 0, NULL); -- Don Carlos
+-- Herod the Bully
+(20360, 0, 1, 1870.849976, 1033.079956, 16.061300, 100, 0, 0),
+(20360, 0, 2, 1869.479980, 1041.589966, 17.003700, 100, 0, 0),
+(20360, 0, 3, 1868.719971, 1047.939941, 16.896999, 100, 0, 0),
+(20360, 0, 4, 1867.369995, 1055.000000, 16.089100, 100, 0, 0),
+(20360, 0, 5, 1855.119995, 1067.650024, 15.293400, 100, 0, 0),
+(20360, 0, 6, 1846.619995, 1071.290039, 14.550600, 100, 0, 0),
+(20360, 0, 7, 1834.329956, 1075.530029, 12.168400, 100, 0, 0),
+(20360, 0, 8, 1822.599976, 1073.939941, 11.185000, 100, 0, 0),
+(20360, 0, 9, 1801.300049, 1067.010010, 8.882010, 100, 0, 0),
+(20360, 0, 10, 1797.150024, 1063.420044, 8.314230, 100, 0, 0),
+(20360, 0, 12, 1788.030029, 1061.689941, 7.934350, 100, 0, 0),
+(20360, 0, 13, 1775.369995, 1064.130005, 7.084130, 100, 0, 0),
+(20360, 0, 14, 1763.969971, 1068.729980, 6.896570, 100, 0, 0),
+(20360, 0, 15, 1775.369995, 1064.130005, 7.084130, 100, 0, 0),
+(20360, 0, 16, 1788.030029, 1061.689941, 7.934350, 100, 0, 0),
+(20360, 0, 17, 1797.150024, 1063.420044, 8.314230, 100, 0, 0),
+(20360, 0, 18, 1801.300049, 1067.010010, 8.882010, 100, 0, 0),
+(20360, 0, 19, 1822.599976, 1073.939941, 11.185000, 100, 0, 0),
+(20360, 0, 20, 1834.280029, 1075.550049, 12.219900, 100, 0, 0),
+(20360, 0, 21, 1846.619995, 1071.290039, 14.550600, 100, 0, 0),
+(20360, 0, 22, 1855.119995, 1067.650024, 15.293400, 100, 0, 0),
+(20360, 0, 23, 1867.369995, 1055.000000, 16.089100, 100, 0, 0),
+(20360, 0, 24, 1868.719971, 1047.939941, 16.896999, 100, 0, 0),
+(20360, 0, 25, 1869.479980, 1041.589966, 17.003700, 100, 0, 0),
+(20360, 0, 26, 1869.479980, 1041.589966, 17.003700, 100, 0, 0),
+(20360, 0, 27, 1869.479980, 1041.589966, 16.795401, 100, 0, 0),
+(20360, 0, 28, 1869.640015, 1040.599976, 16.545401, 100, 0, 0),
+(20360, 0, 29, 1869.800049, 1039.609985, 17.170401, 100, 0, 0),
+(20360, 0, 30, 1870.119995, 1037.640015, 16.920401, 100, 0, 0),
+(20360, 0, 31, 1870.430054, 1035.660034, 16.670401, 100, 0, 0),
+(20360, 0, 32, 1870.589966, 1034.680054, 16.295401, 100, 0, 0),
+(20360, 0, 33, 1870.750000, 1033.689941, 16.045401, 100, 0, 0),
+(20360, 0, 34, 1870.849976, 1033.079956, 16.061300, 100, 0, 0),
+(20360, 0, 35, 1874.089966, 1021.830017, 15.740200, 100, 0, 0),
+(20360, 0, 36, 1883.819946, 1012.700012, 15.276500, 100, 0, 0),
+(20360, 0, 37, 1893.510010, 1004.200012, 15.368600, 100, 0, 0),
+(20360, 0, 38, 1883.819946, 1012.700012, 15.276500, 100, 0, 0),
+(20360, 0, 39, 1874.089966, 1021.830017, 15.740200, 100, 0, 0);
+
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+361, 0, 3, 0, 0, 0, NULL), -- creature_spawn_entry
+(@CGUID+401, 0, 3, 0, 0, 0, NULL), -- creature_spawn_entry
+(@CGUID+436, 0, 1, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+437, 0, 1, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+438, 0, 1, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+439, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+441, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+442, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+443, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+445, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+447, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+449, 0, 1, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+455, 0, 3, 0, 0, 0, NULL), -- Orc Prisoner
+(@CGUID+456, 0, 1, 0, 0, 0, NULL); -- Orc Prisoner
+
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(18092, 0, 0, 0, 0, 0, '19817'), -- Tarren Mill Guardsman
+(18096, 0, 0, 0, 0, 0, '19818'), -- Epoch Hunter
+(18170, 0, 0, 0, 0, 0, '19817'), -- Infinite Slayer
+(18887, 0, 0, 0, 0, 0, '33071'), -- Taretha
+(20342, 0, 0, 1, 379, 0, NULL), -- Hal McAllister
+(20344, 0, 0, 1, 379, 0, NULL), -- Nat Pagle
+(20345, 0, 5, 1, 0, 0, NULL), -- Commander Mograine
+(20355, 0, 3, 1, 0, 0, NULL), -- Stalvan Mistmantle
+(20419, 0, 0, 1, 233, 0, NULL), -- Zixil
+(20420, 0, 7, 1, 0, 0, NULL), -- Overwatch Mark 0
+(20422, 0, 0, 1, 133, 0, NULL), -- Kirin Tor Mage
+(28132, 2410, 0, 1, 0, 0, NULL); -- Don Carlos
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+327, @CGUID+326, 3), -- Lordaeron Watchman -> Lordaeron Watchman
@@ -1882,6 +1953,8 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+424, @CGUID+379, 515), -- Durnholde Tracking Hound -> Durnholde Sentry
 
 (@CGUID+471, @CGUID+470, 515), -- Dalaran Sorceress -> Aged Dalaran Wizard
+
+(@CGUID+489, @CGUID+486, 512), -- Helcular -> Kel'thuzad
 
 (@CGUID+601, @CGUID+602, 515), -- Tarren Mill Lookout -> Tarren Mill Guardsman
 (@CGUID+600, @CGUID+602, 515), -- Tarren Mill Protector -> Tarren Mill Guardsman
@@ -2393,15 +2466,15 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+483, 20347, 560, 3, 1814.58, 1032.03, 11.0651, 0.105974, 86400, 86400, 0, 0, 0, 0), -- Abbendis
 (@CGUID+484, 20348, 560, 3, 1819.16, 1032.94, 11.0649, 3.12936, 86400, 86400, 0, 0, 0, 0), -- Fairbanks
 (@CGUID+485, 20349, 560, 3, 1815.4, 1031.36, 11.0651, 0.0117269, 86400, 86400, 0, 0, 0, 0), -- Tirion Fordring
-(@CGUID+486, 20350, 560, 3, 1947.49, 1047.74, 20.7643, 2.867, 86400, 86400, 0, 0, 0, 0), -- Kel'Thuzad
+(@CGUID+486, 20350, 560, 3, 1802.396, 1061.443, 8.593266, 0.2443336, 86400, 86400, 0, 0, 0, 2), -- Kel'Thuzad
 (@CGUID+487, 20351, 560, 3, 1726.5, 1012.83, 1.09859, 2.61729, 86400, 86400, 0, 0, 0, 0), -- Captain Sanders
 (@CGUID+488, 20352, 560, 3, 1816.63, 1027.57, 11.0653, 1.51576, 86400, 86400, 0, 0, 0, 0), -- Arcanist Doan
-(@CGUID+489, 20353, 560, 3, 1947.27, 1046.33, 20.8415, 2.69814, 86400, 86400, 0, 0, 0, 0), -- Helcular
+(@CGUID+489, 20353, 560, 3, 1801.912, 1063.384, 8.660282, 0.2440962, 86400, 86400, 0, 0, 0, 0), -- Helcular
 (@CGUID+490, 20354, 560, 3, 1789.88, 1123.93, 13.3555, 6.25839, 86400, 86400, 0, 0, 0, 0), -- Nathanos Marris
 (@CGUID+491, 20355, 560, 3, 1804.99, 1041.48, 19.4658, 4.54112, 86400, 86400, 0, 0, 0, 0), -- Stalvan Mistmantle
 (@CGUID+492, 20357, 560, 3, 1821.21, 1055.1, 11.296, 2.61274, 86400, 86400, 0, 0, 0, 0), -- Sally Whitemane
 (@CGUID+493, 20358, 560, 3, 1819.38, 1056.91, 11.2595, 5.33572, 86400, 86400, 0, 0, 0, 0), -- Renault Mograine
-(@CGUID+494, 20360, 560, 3, 1781.63, 1062.78, 7.58105, 3.17021, 86400, 86400, 0, 0, 0, 0), -- Herod the Bully
+(@CGUID+494, 20360, 560, 3, 1874.092, 1021.827, 15.74021, 2.388475, 86400, 86400, 0, 0, 0, 2), -- Herod the Bully
 (@CGUID+495, 20361, 560, 3, 1820.17, 1039.49, 18.546, 3.83779, 86400, 86400, 0, 0, 0, 0), -- Taelan
 (@CGUID+496, 20363, 560, 3, 1937.68, 986.571, 21.6888, 5.49948, 86400, 86400, 0, 0, 0, 0), -- Caretaker Smithers
 (@CGUID+497, 20365, 560, 3, 1876.32, 1087.69, 17.7383, 4.51089, 86400, 86400, 0, 0, 0, 0), -- Bartolo Ginsetti
@@ -2842,37 +2915,29 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (1784801,1784802,1784803,1809201,1809301,1809401);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(1784801,0,0,0,0,0,0,0,0,2000020114,0,0,0,0,0,0,0,'Lt. Drake - say 1'),
+(1784801,0,0,0,0,0,0,0,0,15737,0,0,0,0,0,0,0,'Lt. Drake - say 1'),
 (1784802,0,20,2,1,0,0,0,0,0,0,0,0,0,0,0,0,'Lt. Drake - switch to path 1'),
 (1784802,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Lt. Drake - run off'),
-(1784803,0,2,46,32832,0,0,0,0,0,0,0,0,0,0,0,0,'Lt. Drake - become attackable'),
+(1784803,0,48,256,0,0,0,0,0,0,0,0,0,0,0,0,0,'Lt. Drake - Remove UNIT_FLAG_IMMUNE_TO_PLAYER'),
 
 (1809201, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Pause Waypoints'),
 (1809201, 0, 15, 33133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Cast Transform'),
 (1809201, 1000, 44, 18170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Morph to Infinite Slayer'),
-(1809201, 1000, 5, 46, 768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Remove Unit Flag IMMUNE_TO_PLAYER and IMMUNE_TO_NPC'),
+(1809201, 1000, 48, 256+512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Remove UNIT_FLAG_IMMUNE_TO_PLAYER and UNIT_FLAG_IMMUNE_TO_NPC'),
 (1809201, 2000, 26, 0, 0, 0, 17876, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Guardsman - Attack Thrall'),
 
 (1809301, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Pause Waypoints'),
 (1809301, 0, 15, 33133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Cast Transform'),
 (1809301, 1000, 44, 18172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Morph to Infinite Saboteor'),
-(1809301, 1000, 5, 46, 768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Remove Unit Flag IMMUNE_TO_PLAYER and IMMUNE_TO_NPC'),
-(1809301, 2000, 0, 0, 0, 0, 0, 0, 0, 2000020110, 2000020111, 2000020112, 2000020113, 0, 0, 0, 0, 'Tarren Mill Protector - Random Say'),
+(1809301, 1000, 48, 256+512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Remove UNIT_FLAG_IMMUNE_TO_PLAYER and UNIT_FLAG_IMMUNE_TO_NPC'),
+(1809301, 2000, 0, 0, 0, 0, 0, 0, 0, 19537, 19536, 19538, 19534, 0, 0, 0, 0, 'Tarren Mill Protector - Random Say'),
 (1809301, 2000, 26, 0, 0, 0, 17876, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Protector - Attack Thrall'),
 
 (1809401, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Pause Waypoints'),
 (1809401, 0, 15, 33133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Cast Transform'),
 (1809401, 1000, 44, 18171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Morph to Infinite Defiler'),
-(1809401, 1000, 5, 46, 768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Remove Unit Flag IMMUNE_TO_PLAYER and IMMUNE_TO_NPC'),
+(1809401, 1000, 48, 256+512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Remove UNIT_FLAG_IMMUNE_TO_PLAYER and UNIT_FLAG_IMMUNE_TO_NPC'),
 (1809401, 2000, 26, 0, 0, 0, 17876, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tarren Mill Lookout - Attack Thrall');
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020110,2000020111,2000020112,2000020113,2000020114);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000020110, 'All that you know... will be undone.', 0, 0, 0, 0, 19537, ''),
-(2000020111, 'We have all the time in the world....', 0, 0, 0, 0, 19536, ''),
-(2000020112, 'You cannot escape us!', 0, 0, 0, 0, 19538, ''),
-(2000020113, 'Do not think you can win!', 0, 0, 0, 0, 19534, ''),
-(2000020114, 'You there, fetch water quickly! Get these flames out before they spread to the rest of the keep! Hurry, damn you!', 10428, 1, 0, 25, 15737, '17848');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

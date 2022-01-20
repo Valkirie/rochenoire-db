@@ -442,51 +442,51 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (16807, 0, 3, 184.7897, 290.3699, -8.18139, 100, 0, 0),
 (16807, 0, 4, 178.5562, 288.1734, -7.933493, 100, 0, 0);
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+52, 0, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
-(@CGUID+53, 0, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
-(@CGUID+54, 0, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
-(@CGUID+55, 0, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
-(@CGUID+63, 0, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
-(@CGUID+64, 0, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
-(@CGUID+65, 0, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
-(@CGUID+68, 0, 0, 0, 0, 0, 0, '16093'), -- Shadowmoon Acolyte
-(@CGUID+70, 0, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
-(@CGUID+71, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+72, 0, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
-(@CGUID+79, 0, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
-(@CGUID+80, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+81, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+132, 0, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
-(@CGUID+133, 0, 0, 0, 0, 333, 0, NULL), -- Shattered Hand Heathen
-(@CGUID+265, 0, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
-(@CGUID+266, 0, 0, 0, 0, 389, 0, NULL), -- Shattered Hand Savage
-(@CGUID+267, 0, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
-(@CGUID+274, 0, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
-(@CGUID+275, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+276, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+277, 0, 0, 2, 0, 214, 0, NULL), -- Shattered Hand Sharpshooter
-(@CGUID+278, 0, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
-(@CGUID+279, 0, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
-(@CGUID+280, 0, 0, 0, 0, 389, 0, NULL), -- Shattered Hand Savage
-(@CGUID+281, 0, 0, 0, 0, 389, 0, NULL); -- Shattered Hand Savage
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+52, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
+(@CGUID+53, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
+(@CGUID+54, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
+(@CGUID+55, 0, 0, 0, 333, 0, '18950'), -- Shattered Hand Sentry
+(@CGUID+63, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
+(@CGUID+64, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
+(@CGUID+65, 0, 0, 0, 0, 0, '8876 16093'), -- Shattered Hand Brawler
+(@CGUID+68, 0, 0, 0, 0, 0, '16093'), -- Shadowmoon Acolyte
+(@CGUID+70, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
+(@CGUID+71, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+72, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
+(@CGUID+79, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
+(@CGUID+80, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+81, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+132, 0, 0, 0, 333, 0, NULL), -- creature_spawn_entry
+(@CGUID+133, 0, 0, 0, 333, 0, NULL), -- Shattered Hand Heathen
+(@CGUID+265, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
+(@CGUID+266, 0, 0, 0, 389, 0, NULL), -- Shattered Hand Savage
+(@CGUID+267, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
+(@CGUID+274, 0, 0, 0, 389, 0, NULL), -- creature_spawn_entry
+(@CGUID+275, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+276, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+277, 0, 0, 2, 214, 0, NULL), -- Shattered Hand Sharpshooter
+(@CGUID+278, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
+(@CGUID+279, 0, 0, 0, 375, 0, NULL), -- Shattered Hand Reaver
+(@CGUID+280, 0, 0, 0, 389, 0, NULL), -- Shattered Hand Savage
+(@CGUID+281, 0, 0, 0, 389, 0, NULL); -- Shattered Hand Savage
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(16507, 0, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Sentry
-(16593, 0, 0, 1, 16, 0, 0, '8876'), -- Shattered Hand Brawler
-(16700, 0, 0, 0, 0, 0, 0, '30472'), -- Shattered Hand Legionnaire
-(16704, 0, 0, 2, 0, 0, 0, NULL), -- Shattered Hand Sharpshooter
-(16808, 0, 0, 0, 0, 0, 0, '19818'), -- Warchief Kargath Bladefist -- stealth detect?
-(17462, 0, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Zealot
-(17464, 0, 0, 0, 0, 389, 0, '19818'), -- Shattered Hand Gladiator
-(17471, 0, 0, 0, 0, 0, 0, NULL), -- Lesser Shadow Fissure
-(17578, 0, 0, 0, 0, 0, 0, '7056'), -- Training Dummy
-(17669, 0, 0, 0, 0, 0, 0, '18950'), -- Rabid Warhound
-(17671, 0, 0, 0, 0, 333, 0, '12782 18950'), -- Shattered Hand Champion
-(17693, 0, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Scout
-(17695, 0, 0, 1, 16, 0, 0, '30991'), -- Shattered Hand Assassin
-(18370, 0, 0, 0, 0, 0, 0, NULL), -- Wild Shadow Fissure
-(20923, 0, 0, 0, 0, 0, 0, '18950'); -- Blood Guard Porung
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(16507, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Sentry
+(16593, 0, 0, 1, 0, 0, '8876'), -- Shattered Hand Brawler
+(16700, 0, 0, 0, 0, 0, '30472'), -- Shattered Hand Legionnaire
+(16704, 0, 0, 2, 0, 0, NULL), -- Shattered Hand Sharpshooter
+(16808, 0, 0, 0, 0, 0, '19818'), -- Warchief Kargath Bladefist -- stealth detect?
+(17462, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Zealot
+(17464, 0, 0, 0, 389, 0, '19818'), -- Shattered Hand Gladiator
+(17471, 0, 0, 0, 0, 0, NULL), -- Lesser Shadow Fissure
+(17578, 0, 0, 0, 0, 0, '7056'), -- Training Dummy
+(17669, 0, 0, 0, 0, 0, '18950'), -- Rabid Warhound
+(17671, 0, 0, 0, 333, 0, '12782 18950'), -- Shattered Hand Champion
+(17693, 0, 0, 0, 0, 0, '18950'), -- Shattered Hand Scout
+(17695, 0, 0, 1, 0, 0, '30991'), -- Shattered Hand Assassin
+(18370, 0, 0, 0, 0, 0, NULL), -- Wild Shadow Fissure
+(20923, 0, 0, 0, 0, 0, '18950'); -- Blood Guard Porung
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 -- Entrance - Shattered Hand Legionnaire #1
@@ -639,6 +639,7 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 
 REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (16809, 540, 16808, 1, 0), -- Warbringer O'mrogg -> Warchief Kargath Bladefist
+(17693, 540, 17427, 1, 0), -- Shattered Hand Scout -> Shattered Hand Archer				-- Abuse Prevention (void Aggro, npc_Shattered_Hand_Scout)
 (17427, 540, 17427, 3, 0), -- Shattered Hand Archer -> Shattered Hand Archer
 (17461, 540, 17427, 3, 0), -- Shattered Hand Blood Guard -> Shattered Hand Archer
 (20923, 540, 17427, 3, 0); -- Blood Guard Porung -> Shattered Hand Archer
@@ -1158,28 +1159,13 @@ INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipmen
 -- DBSCRIPTS
 -- =========
 
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020025,2000020026,2000020027,2000020028,2000020029,2000020030,2000020031,2000020032,2000020033,2000020034);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000020025,'Show them no quarter! Form up!',10191,1,0,15,16350,'Shattered Hand Legionnaire'),
-(2000020026,'Form ranks and make the intruders pay!',10190,1,0,15,17461,'Shattered Hand Legionnaire'),
-(2000020027,'Get ready! This shouldn''t take long...',10189,1,0,15,16349,'Shattered Hand Legionnaire'),
-(2000020028,'Form up! Let''s make quick work of them!',10188,1,0,15,16347,'Shattered Hand Legionnaire'),
-(2000020029,'Line up and crush these fools!',10187,1,0,15,16346,'Shattered Hand Legionnaire'),
-
-(2000020030,'Power to the Fel Horde!',0,0,0,5,12685,'Shattered Hand Legionnaire'),
-(2000020031,'Break their bones!',0,0,0,5,12686,'Shattered Hand Legionnaire'),
-(2000020032,'Know your master, you worthless mutts!',0,0,0,25,12687,'Shattered Hand Legionnaire'),
-
-(2000020033,'Serve the Fel Horde!',0,0,0,5,12684,'Shattered Hand Legionnaire'),
-(2000020034,'We''ll drink their blood and feast on their bones!',0,0,0,15,12683,'Shattered Hand Legionnaire');
-
 DELETE FROM dbscripts_on_relay WHERE id IN (10113,10114,10115,10116,10117,10118,10119,10120,10198,10199);
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (10113,0,0,0,10051,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - random yell'),
 (10113,0,0,35,5,50,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - send Custom AI Event A'),
 
 (10114,0,0,31,17420,6,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - Search for Heaven'),
-(10114,1,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - pause waypoints'),
+(10114,0,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - pause waypoints'),
 (10114,3000,0,37,0,0,2,17420,20,2,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - move to Heathen'),
 (10114,4000,0,36,0,0,0,17420,20,0,0,0,0,0,0,0,0,0,'Shattered Hand Heathen - face Legionnaire'),
 (10114,4000,0,36,0,0,0,17420,5,1,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - face Heathen'),
@@ -1191,7 +1177,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (10114,13000,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - unpause waypoints'),
 
 (10198,0,0,31,16523,6,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - Search for Savage'),
-(10198,1,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - pause waypoints'),
+(10198,0,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - pause waypoints'),
 (10198,3000,0,37,0,0,2,16523,20,2,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - move to Savage'),
 (10198,4000,0,36,0,0,0,16523,20,0,0,0,0,0,0,0,0,0,'Shattered Hand Savage - face Legionnaire'),
 (10198,4000,0,36,0,0,0,16523,5,1,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - face Savage'),
@@ -1205,7 +1191,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (10115,5000,0,45,0,10052,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - 50% force bow, 50% force cheer'),
 
 (10116,0,0,31,17420,5,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - Search for Heaven'),
-(10116,1,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - pause waypoints'),
+(10116,0,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - pause waypoints'),
 (10116,3000,0,37,0,0,2,17420,20,2,0,0,0,0,0,0,0,0,'Legionnaire - move to Heathen'),
 (10116,5000,0,36,0,0,0,17420,3,0,0,0,0,0,0,0,0,0,'Heathen - face Legionnaire'),
 (10116,5000,0,36,0,0,0,17694,3,0,0,0,0,0,0,0,0,0,'Darkcaster - face Legionnaire'),
@@ -1216,7 +1202,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (10116,14000,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - unpause waypoints'),
 
 (10199,0,0,31,16523,5,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - Search for Savage'),
-(10199,1,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - pause waypoints'),
+(10199,0,1,32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - pause waypoints'),
 (10199,3000,0,37,0,0,2,16523,20,2,0,0,0,0,0,0,0,0,'Legionnaire - move to Savage'),
 (10199,5000,0,36,0,0,0,16523,3,0,0,0,0,0,0,0,0,0,'Savage - face Legionnaire'),
 (10199,5000,0,36,0,0,0,17694,3,0,0,0,0,0,0,0,0,0,'Darkcaster - face Legionnaire'),
@@ -1235,7 +1221,7 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (10117,2000,1,28,8,0,0,17694,5,0,0,0,0,0,0,0,0,0,'Darkcaster - Kneel'),
 (10117,2000,1,28,8,0,0,16594,5,0,0,0,0,0,0,0,0,0,'Acolyte - Kneel'),
 (10117,2000,1,28,8,0,0,16593,5,0,0,0,0,0,0,0,0,0,'Brawler - Kneel'),
-(10117,2000,0,0,0,0,0,0,0,0,2000020032,0,0,0,0,0,0,0,'Legionnaire - say'),
+(10117,2000,0,0,0,0,0,0,0,0,12687,0,0,0,0,0,0,0,'Legionnaire - say'),
 (10117,5000,0,1,11,0,0,0,0,0,0,0,0,0,0,0,0,0,'Legionnaire - Laugh'),
 
 (10118,0,0,31,17420,5,0,0,0,0,0,0,0,0,0,0,0,0,'Terminate if Heathen not in range'),
@@ -1247,12 +1233,12 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `priority`, `command`, `datalon
 (10118,2000,0,1,113,0,0,17694,5,0,0,0,0,0,0,0,0,0,'Darkcaster - Salute'),
 (10118,2000,0,1,113,0,0,16594,5,0,0,0,0,0,0,0,0,0,'Acolyte - Salute'),
 (10118,2000,0,1,113,0,0,16593,5,0,0,0,0,0,0,0,0,0,'Brawler - Salute'),
-(10118,4000,0,0,0,0,0,0,0,0,2000020030,2000020031,0,0,0,0,0,0,'Legionnaire - say'),
+(10118,4000,0,0,0,0,0,0,0,0,12685,12686,0,0,0,0,0,0,'Legionnaire - say'),
 
-(10119,0,0,0,0,0,0,0,0,0,2000020033,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - say'),
+(10119,0,0,0,0,0,0,0,0,0,12684,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - say'),
 (10119,0,0,35,7,40,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - send Custom AI Event C'),
 
-(10120,0,0,0,0,0,0,0,0,0,2000020034,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - say'),
+(10120,0,0,0,0,0,0,0,0,0,12683,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - say'),
 (10120,0,0,35,8,40,0,0,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Legionnaire - send Custom AI Event D');
 
 DELETE FROM dbscript_random_templates WHERE id IN (10050,10051,10052,10053,10054);
@@ -1262,11 +1248,11 @@ INSERT INTO dbscript_random_templates (id, type, target_id, chance, comments) VA
 (10050, 1, 10198, 10, 'Shattered Hand Legionnaire - approach ally Savage'),
 (10050, 1, 0, 70, 'Shattered Hand Legionnaire - nothing'),
 
-(10051, 0, 2000020025, 0, 'Shattered Hand Legionnaire - random yell 1'),
-(10051, 0, 2000020026, 0, 'Shattered Hand Legionnaire - random yell 2'),
-(10051, 0, 2000020027, 0, 'Shattered Hand Legionnaire - random yell 3'),
-(10051, 0, 2000020028, 0, 'Shattered Hand Legionnaire - random yell 4'),
-(10051, 0, 2000020029, 0, 'Shattered Hand Legionnaire - random yell 5'),
+(10051, 0, 16350, 0, 'Shattered Hand Legionnaire - random yell 1'),
+(10051, 0, 17461, 0, 'Shattered Hand Legionnaire - random yell 2'),
+(10051, 0, 16349, 0, 'Shattered Hand Legionnaire - random yell 3'),
+(10051, 0, 16347, 0, 'Shattered Hand Legionnaire - random yell 4'),
+(10051, 0, 16346, 0, 'Shattered Hand Legionnaire - random yell 5'),
 
 (10052, 1, 10119, 0, 'Shattered Hand Legionnaire - force bow'),
 (10052, 1, 10120, 0, 'Shattered Hand Legionnaire - force cheer'),

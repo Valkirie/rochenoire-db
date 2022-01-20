@@ -117,17 +117,18 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+398, 8, 197.166, -0.002156, 115.708, 0, 0, 0),
 (@CGUID+398, 9, 172.25, -0.72485, 115.708, 0, 0, 0);
 
-DELETE FROM creature_movement_template WHERE entry IN (11551);
+DELETE FROM creature_movement_template WHERE entry IN (11551,14695);
 DELETE FROM creature_movement_template WHERE entry IN (14500) AND `pathId`=0; -- Also has movement path in Dire Maul, map 429
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
-(11551, 0, 1, 206.346, 80.7189, 104.244, 100, 0, 0),
-(11551, 0, 2, 221.189, 86.5182, 104.715, 100, 0, 0),
-(11551, 0, 3, 207.384, 91.5904, 104.244, 100, 0, 0),
-(11551, 0, 4, 199.815, 104.765, 104.715, 100, 0, 0),
-(11551, 0, 5, 192.953, 90.7216, 104.244, 100, 0, 0),
-(11551, 0, 6, 178.803, 86.621, 104.716, 100, 0, 0),
-(11551, 0, 7, 192.998, 81.0231, 104.244, 100, 0, 0),
-(11551, 0, 8, 199.444, 69.7478, 104.716, 100, 0, 0),
+-- Necrofiend 11551 - DoRespawnEntranceRoom()
+(11551, 0, 1, 206.34576, 80.71886, 104.24367, 100, 0, 0),
+(11551, 0, 2, 221.18945, 86.518196, 104.71484, 100, 0, 0),
+(11551, 0, 3, 207.38437, 91.59038, 104.24367, 100, 0, 0),
+(11551, 0, 4, 199.815, 104.76532, 104.71487, 100, 0, 0),
+(11551, 0, 5, 192.9527, 90.72162, 104.24368, 100, 0, 0),
+(11551, 0, 6, 178.8029, 86.62103, 104.716156, 100, 0, 0),
+(11551, 0, 7, 192.99811, 81.023056, 104.24368, 100, 0, 0),
+(11551, 0, 8, 199.44392, 69.74783, 104.716034, 100, 0, 0),
 -- movement for J'eevee during q.7629 Imp Delivery
 (14500, 0, 1, 38.784, 160.639, 83.545, 100, 0, 0),
 (14500, 0, 2, 36.804, 160.705, 83.545, 100, 3000, 1450001),
@@ -140,96 +141,113 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (14500, 0, 9, 44.64, 154.405, 83.545, 100, 0, 0),
 (14500, 0, 10, 33.498, 156.046, 83.545, 100, 0, 0),
 (14500, 0, 11, 28.269, 160.792, 83.545, 100, 4000, 0),
-(14500, 0, 12, 33.294, 160.895, 83.545, 100, 10000, 1450003);
+(14500, 0, 12, 33.294, 160.895, 83.545, 100, 10000, 1450003),
+-- Lord Blackwood
+(14695, 0, 1, 248.659, 153.031, 109.788, 100, 0, 0),
+(14695, 0, 2, 200.116, 150.961, 109.909, 100, 0, 0),
+(14695, 0, 3, 199.948, 127.819, 109.922, 100, 0, 0),
+(14695, 0, 4, 200.223, 151.043, 109.91, 100, 0, 0),
+(14695, 0, 5, 174.822, 152.469, 109.696, 100, 0, 0),
+(14695, 0, 6, 199.917, 151.078, 109.908, 100, 0, 0),
+(14695, 0, 7, 224.709, 133.206, 109.722, 100, 0, 0),
+(14695, 0, 8, 200.7, 151.368, 109.915, 100, 0, 0),
+(14695, 0, 9, 222.267, 166.311, 109.784, 100, 0, 0),
+(14695, 0, 10, 222.267, 166.311, 109.784, 100, 0, 0),
+(14695, 0, 11, 200.7, 151.368, 109.915, 100, 0, 0),
+(14695, 0, 12, 224.709, 133.206, 109.722, 100, 0, 0),
+(14695, 0, 13, 199.917, 151.078, 109.908, 100, 0, 0),
+(14695, 0, 14, 174.822, 152.469, 109.696, 100, 0, 0),
+(14695, 0, 15, 200.223, 151.043, 109.91, 100, 0, 0),
+(14695, 0, 16, 199.948, 127.819, 109.922, 100, 0, 0),
+(14695, 0, 17, 200.116, 150.961, 109.909, 100, 0, 0);
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+61, 0, 0, 1, 16, 0, 0, '12380'), -- Scholomance Adept
-(@CGUID+73, 0, 0, 1, 16, 0, 0, '12380'), -- Scholomance Adept
-(@CGUID+113, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+114, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+115, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+116, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+117, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+118, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+120, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+121, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+122, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+123, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+125, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+126, 0, 0, 1, 16, 0, 0, '12380'), -- Scholomance Student
-(@CGUID+127, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+128, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+129, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+130, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+131, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+133, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+134, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+135, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+137, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+138, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+139, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+140, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+141, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+142, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Student
-(@CGUID+148, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Necrolyte
-(@CGUID+303, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+304, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+305, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+306, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+307, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+308, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+309, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+310, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+311, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+312, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+313, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+314, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+315, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+316, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+317, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+318, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+319, 0, 0, 1, 16, 0, 0, '12627'), -- Diseased Ghoul
-(@CGUID+355, 0, 0, 1, 16, 0, 0, '17467'), -- Lord Alexei Barov
-(@CGUID+399, 0, 0, 1, 16, 0, 0, NULL); -- Kormok Trigger
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+61, 0, 0, 1, 0, 0, '12380'), -- Scholomance Adept
+(@CGUID+73, 0, 0, 1, 0, 0, '12380'), -- Scholomance Adept
+(@CGUID+113, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+114, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+115, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+116, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+117, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+118, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+120, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+121, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+122, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+123, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+125, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+126, 0, 0, 1, 0, 0, '12380'), -- Scholomance Student
+(@CGUID+127, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+128, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+129, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+130, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+131, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+133, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+134, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+135, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+137, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+138, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+139, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+140, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+141, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+142, 0, 0, 1, 0, 0, NULL), -- Scholomance Student
+(@CGUID+148, 0, 0, 1, 0, 0, NULL), -- Scholomance Necrolyte
+(@CGUID+303, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+304, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+305, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+306, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+307, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+308, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+309, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+310, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+311, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+312, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+313, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+314, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+315, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+316, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+317, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+318, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+319, 0, 0, 1, 0, 0, '12627'), -- Diseased Ghoul
+(@CGUID+355, 0, 0, 1, 0, 0, '17467'); -- Lord Alexei Barov
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(10432, 0, 0, 1, 16, 0, 0, NULL), -- Vectus
-(10433, 0, 0, 1, 16, 0, 0, NULL), -- Marduk Blackpool
-(10469, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Adept
-(10470, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Neophyte
-(10471, 0, 0, 1, 16, 0, 0, '16592'), -- Scholomance Acolyte
-(10472, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Occultist
-(10475, 0, 1, 1, 16, 0, 0, NULL), -- Scholomance Student
-(10476, 0, 0, 1, 16, 0, 0, '17151'), -- Scholomance Necrolyte
-(10477, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Necromancer
-(10478, 0, 0, 1, 16, 0, 0, NULL), -- Splintered Skeleton
-(10480, 0, 0, 1, 16, 0, 0, NULL), -- Unstable Corpse
-(10481, 0, 0, 1, 16, 0, 0, NULL), -- Reanimated Corpse
-(10485, 0, 0, 1, 16, 0, 0, NULL), -- Risen Aberration
-(10486, 0, 0, 1, 16, 0, 0, NULL), -- Risen Warrior
-(10487, 0, 0, 1, 16, 0, 0, NULL), -- Risen Protector
-(10488, 0, 0, 1, 16, 0, 0, '8876'), -- Risen Construct
-(10489, 0, 0, 1, 16, 0, 0, NULL), -- Risen Guard
-(10491, 0, 0, 1, 16, 0, 0, NULL), -- Risen Bonewarder
-(10495, 0, 0, 1, 16, 0, 0, NULL), -- Diseased Ghoul
-(10498, 0, 0, 1, 16, 0, 0, NULL), -- Spectral Tutor
-(10499, 0, 0, 1, 16, 0, 0, NULL), -- Spectral Researcher
-(10500, 0, 0, 1, 16, 0, 0, NULL), -- Spectral Teacher
-(10502, 0, 0, 1, 16, 0, 0, NULL), -- Lady Illucia Barov
-(10503, 0, 0, 1, 16, 0, 0, NULL), -- Jandice Barov
-(10504, 0, 0, 0, 0, 0, 0, '17467'), -- Lord Alexei Barov
-(10505, 0, 0, 1, 16, 0, 0, NULL), -- Instructor Malicia
-(10507, 0, 0, 1, 16, 0, 0, NULL), -- The Ravenian
-(10508, 0, 0, 1, 16, 0, 0, '18100'), -- Ras Frostwhisper
-(10678, 0, 0, 1, 16, 0, 0, NULL), -- Plagued Hatchling
-(10901, 0, 0, 1, 16, 0, 0, NULL), -- Lorekeeper Polkelt
-(11257, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Handler
-(11261, 0, 0, 1, 16, 69, 0, NULL), -- Doctor Theolen Krastinov
-(11551, 0, 0, 1, 16, 0, 0, '10022'), -- Necrofiend
-(11582, 0, 0, 1, 16, 0, 0, NULL), -- Scholomance Dark Summoner
-(11622, 0, 0, 1, 16, 0, 0, NULL), -- Rattlegore
-(14861, 0, 0, 1, 16, 0, 0, NULL), -- Blood Steward of Kirtonos
-(16047, 0, 0, 1, 0, 0, 0, NULL); -- Kormok Trigger
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(10432, 0, 0, 1, 0, 0, NULL), -- Vectus
+(10433, 0, 0, 1, 0, 0, NULL), -- Marduk Blackpool
+(10469, 0, 0, 1, 0, 0, NULL), -- Scholomance Adept
+(10470, 0, 0, 1, 0, 0, NULL), -- Scholomance Neophyte
+(10471, 0, 0, 1, 0, 0, '16592'), -- Scholomance Acolyte
+(10472, 0, 0, 1, 0, 0, NULL), -- Scholomance Occultist
+(10475, 0, 1, 1, 0, 0, NULL), -- Scholomance Student
+(10476, 0, 0, 1, 0, 0, '17151'), -- Scholomance Necrolyte
+(10477, 0, 0, 1, 0, 0, NULL), -- Scholomance Necromancer
+(10478, 0, 0, 1, 0, 0, NULL), -- Splintered Skeleton
+(10480, 0, 0, 1, 0, 0, NULL), -- Unstable Corpse
+(10481, 0, 0, 1, 0, 0, NULL), -- Reanimated Corpse
+(10485, 0, 0, 1, 0, 0, NULL), -- Risen Aberration
+(10486, 0, 0, 1, 0, 0, NULL), -- Risen Warrior
+(10487, 0, 0, 1, 0, 0, NULL), -- Risen Protector
+(10488, 0, 0, 1, 0, 0, '8876'), -- Risen Construct
+(10489, 0, 0, 1, 0, 0, NULL), -- Risen Guard
+(10491, 0, 0, 1, 0, 0, NULL), -- Risen Bonewarder
+(10495, 0, 0, 1, 0, 0, NULL), -- Diseased Ghoul
+(10498, 0, 0, 1, 0, 0, NULL), -- Spectral Tutor
+(10499, 0, 0, 1, 0, 0, NULL), -- Spectral Researcher
+(10500, 0, 0, 1, 0, 0, NULL), -- Spectral Teacher
+(10502, 0, 0, 1, 0, 0, NULL), -- Lady Illucia Barov
+(10503, 0, 0, 1, 0, 0, NULL), -- Jandice Barov
+(10504, 0, 0, 0, 0, 0, '17467'), -- Lord Alexei Barov
+(10505, 0, 0, 1, 0, 0, NULL), -- Instructor Malicia
+(10507, 0, 0, 1, 0, 0, NULL), -- The Ravenian
+(10508, 0, 0, 1, 0, 0, '18100'), -- Ras Frostwhisper
+(10678, 0, 0, 1, 0, 0, NULL), -- Plagued Hatchling
+(10901, 0, 0, 1, 0, 0, NULL), -- Lorekeeper Polkelt
+(11257, 0, 0, 1, 0, 0, NULL), -- Scholomance Handler
+(11261, 0, 0, 1, 69, 0, NULL), -- Doctor Theolen Krastinov
+(11551, 0, 0, 1, 0, 0, '10022'), -- Necrofiend
+(11582, 0, 0, 1, 0, 0, NULL), -- Scholomance Dark Summoner
+(11622, 0, 0, 1, 0, 0, NULL), -- Rattlegore
+(14861, 0, 0, 1, 0, 0, NULL), -- Blood Steward of Kirtonos
+(16047, 0, 0, 1, 0, 0, NULL); -- Kormok Trigger
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+289, @CGUID+355, 7), -- Risen Guard -> Lord Alexei Barov
@@ -238,6 +256,16 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (10433, 289, 10432, 1, 0), -- Marduk Blackpool -> Vectus
 (10475, 289, 10433, 1, 0); -- Scholomance Student -> Marduk Blackpool
+
+INSERT INTO `creature_spawn_entry` (`guid`, `entry`) VALUES
+(@CGUID+215, 10481), (@CGUID+215, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+216, 10481), (@CGUID+216, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+217, 10481), (@CGUID+217, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+218, 10481), (@CGUID+218, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+219, 10481), (@CGUID+219, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+220, 10481), (@CGUID+220, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+221, 10481), (@CGUID+221, 10495), -- Reanimated Corpse, Diseased Ghoul
+(@CGUID+222, 10481), (@CGUID+222, 10495); -- Reanimated Corpse, Diseased Ghoul
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `DeathState`, `MovementType`) VALUES
 (@CGUID+1, 2110, 289, 197.831, -30.3793, 95.3396, 1.65806, 7200, 7200, 0, 0, 0, 0), -- Black Rat
@@ -454,14 +482,14 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+212, 10481, 289, 277.144, 149.866, 95.9059, 1.11701, 7200, 7200, 0, 0, 0, 0), -- Reanimated Corpse
 (@CGUID+213, 10481, 289, 241.345, 4.23123, 84.9242, 5.06145, 7200, 7200, 0, 0, 0, 0), -- Reanimated Corpse
 (@CGUID+214, 10481, 289, 251.031, 7.45606, 85.1254, 1.44862, 7200, 7200, 0, 0, 0, 0), -- Reanimated Corpse
-(@CGUID+215, 10481, 289, 191.343, 83.4603, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+216, 10481, 289, 211.313, 88.8732, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+217, 10481, 289, 179.126, 94.6681, 104.8, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+218, 10481, 289, 185.034, 80.1398, 104.799, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+219, 10481, 289, 215.996, 91.7486, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+220, 10481, 289, 196.721, 91.9017, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+221, 10481, 289, 222.002, 82.2615, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
-(@CGUID+222, 10481, 289, 197.559, 79.5891, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Reanimated Corpse
+(@CGUID+215, 0, 289, 191.343, 83.4603, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+216, 0, 289, 211.313, 88.8732, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+217, 0, 289, 179.126, 94.6681, 104.8, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+218, 0, 289, 185.034, 80.1398, 104.799, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+219, 0, 289, 215.996, 91.7486, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+220, 0, 289, 196.721, 91.9017, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+221, 0, 289, 222.002, 82.2615, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
+(@CGUID+222, 0, 289, 197.559, 79.5891, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- creature_spawn_entry
 (@CGUID+223, 10485, 289, 249.692, 98.6988, 95.9062, 2.74121, 7200, 7200, 5, 0, 0, 1), -- Risen Aberration
 (@CGUID+224, 10485, 289, 257.031, 101.056, 95.9061, 5.5676, 7200, 7200, 0, 0, 0, 0), -- Risen Aberration
 (@CGUID+225, 10485, 289, 256.427, 124.66, 95.9059, 4.32302, 7200, 7200, 5, 0, 0, 1), -- Risen Aberration
@@ -560,21 +588,14 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+318, 10495, 289, 272.368, 114.152, 95.9059, 4.41568, 7200, 7200, 0, 0, 0, 0), -- Diseased Ghoul
 (@CGUID+319, 10495, 289, 269.97, 139.975, 95.9059, 6.19592, 7200, 7200, 0, 0, 0, 0), -- Diseased Ghoul
 (@CGUID+320, 10495, 289, 191.688, 90.8574, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+321, 10495, 289, 191.343, 83.4603, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+322, 10495, 289, 206.582, 85.9061, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+323, 10495, 289, 211.313, 88.8732, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+324, 10495, 289, 187.086, 92.537, 104.767, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+325, 10495, 289, 179.126, 94.6681, 104.8, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+326, 10495, 289, 179.885, 73.8904, 104.799, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+327, 10495, 289, 185.034, 80.1398, 104.799, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+328, 10495, 289, 217.536, 99.4131, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+329, 10495, 289, 215.996, 91.7486, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+330, 10495, 289, 197.118, 98.0816, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+331, 10495, 289, 196.721, 91.9017, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+332, 10495, 289, 215.633, 79.811, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+333, 10495, 289, 222.002, 82.2615, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+334, 10495, 289, 203.869, 80.8282, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
-(@CGUID+335, 10495, 289, 197.559, 79.5891, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+321, 10495, 289, 206.582, 85.9061, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+322, 10495, 289, 187.086, 92.537, 104.767, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+323, 10495, 289, 179.885, 73.8904, 104.799, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+324, 10495, 289, 217.536, 99.4131, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+325, 10495, 289, 197.118, 98.0816, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+326, 10495, 289, 215.633, 79.811, 104.798, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+(@CGUID+327, 10495, 289, 203.869, 80.8282, 104.327, 0, 7200, 7200, 3, 0, 0, 1), -- Diseased Ghoul
+-- 328 - 335
 (@CGUID+336, 10498, 289, 171.983, 172.568, 109.667, 5.74213, 7200, 7200, 0, 0, 0, 0), -- Spectral Tutor
 (@CGUID+337, 10498, 289, 276.712, 153.875, 109.869, 3.14159, 7200, 7200, 0, 0, 0, 0), -- Spectral Tutor
 (@CGUID+338, 10498, 289, 187.714, 173.996, 109.791, 4.64258, 7200, 7200, 0, 0, 0, 0), -- Spectral Tutor
@@ -627,8 +648,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+385, 11257, 289, 129.537, 166.542, 109.543, 4.11946, 7200, 7200, 5, 0, 0, 1), -- Scholomance Handler
 (@CGUID+386, 11257, 289, 112.373, 178.641, 109.518, 1.13787, 7200, 7200, 5, 0, 0, 1), -- Scholomance Handler
 (@CGUID+387, 11261, 289, 182.246, -95.4371, 85.3117, 4.72984, 43200, 43200, 0, 0, 0, 0), -- Doctor Theolen Krastinov
-(@CGUID+388, 11551, 289, 247.555, 91.3432, 110.055, 3.16881, 7200, 7200, 5, 0, 0, 2), -- Necrofiend
-(@CGUID+389, 11551, 289, 219.244, 134.258, 109.723, 6.26573, 7200, 7200, 5, 0, 0, 2), -- Necrofiend
+(@CGUID+388, 11551, 289, 247.555, 91.3432, 110.055, 3.16881, 7200, 7200, 0, 0, 0, 2), -- Necrofiend
+(@CGUID+389, 11551, 289, 219.244, 134.258, 109.723, 6.26573, 7200, 7200, 0, 0, 0, 2), -- Necrofiend
 (@CGUID+390, 11551, 289, 209.233, 73.2819, 104.798, 0, 7200, 7200, 0, 0, 0, 2), -- Necrofiend
 (@CGUID+391, 11582, 289, 279.979, 78.9085, 109.842, 2.44346, 7200, 7200, 0, 0, 0, 0), -- Scholomance Dark Summoner
 (@CGUID+392, 11582, 289, 249.179, 99.3561, 109.806, 2.68781, 7200, 7200, 0, 0, 0, 0), -- Scholomance Dark Summoner
@@ -638,7 +659,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+396, 11582, 289, 243.487, 80.5749, 110.055, 0, 7200, 7200, 0, 0, 0, 0), -- Scholomance Dark Summoner
 (@CGUID+397, 11622, 289, 137.145, 171.676, 95.9664, 3.28122, 43200, 43200, 0, 0, 0, 0), -- Rattlegore
 (@CGUID+398, 14861, 289, 164.891, -1.12663, 115.791, 0.117518, 7200, 7200, 5, 0, 0, 2), -- Blood Steward of Kirtonos
-(@CGUID+399, 16047, 289, -24.898, 141.2418, 84.04675, 0.8901179, 7200, 7200, 0, 0, 0, 0); -- Kormok Trigger
+(@CGUID+399, 16047, 289, -24.898, 141.2418, 84.04675, 0.8901179, 7200, 7200, 0, 0, 0, 0), -- Kormok Trigger
+(@CGUID+400, 14695, 289, 200.201, 150.839, 109.879, 5.06145, 604800, 604800, 0, 0, 0, 2); -- Lord Blackwood
 
 -- ===========
 -- GAMEOBJECTS
@@ -687,7 +709,7 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 (@OGUID+46, 176547, 289, 165.317, -81.145, 85.2284, 3.00197, 0, 0, 0.997564, 0.069757, -30, -30, 100, 1), -- Lucien Remains Ablaze
 (@OGUID+47, 176561, 289, 182.53, -100.098, 85.2284, 1.58825, 0, 0, 0.71325, 0.700909, 7200, 7200, 100, 1), -- Krastinov's Work Bench
 (@OGUID+48, 176944, 289, 167.378, 98.986, 104.727, 0.034907, 0, 0, 0.017452, 0.999848, 7200, 7200, 100, 1), -- Old Treasure Chest
-(@OGUID+49, 177370, 289, 57.4802, 142.856, 83.4796, -3.12414, 0, 0, 0.999962, -0.008727, 7200, 7200, 100, 1), -- Door
+(@OGUID+49, 177370, 289, 57.4802, 142.856, 83.4796, -3.12414, 0, 0, 0.999962, -0.008727, 7200, 7200, 255, 1), -- Door
 (@OGUID+50, 177371, 289, 204.326, 0.011124, 76.1678, -1.55334, 0, 0, -0.700909, 0.713251, 7200, 7200, 100, 0), -- Gate
 (@OGUID+51, 177372, 289, 159.746, -0.767021, 76.1678, -1.55334, 0, 0, -0.700909, 0.713251, 7200, 7200, 100, 0), -- Gate
 (@OGUID+52, 177373, 289, 181.054, -21.3466, 76.1317, 0.017453, 0, 0, 0.008727, 0.999962, 7200, 7200, 100, 0), -- Gate
@@ -717,7 +739,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 -- EVENTS
 -- ======
 
--- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
+(@CGUID+400, 89);
 
 -- INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipment_id`, `spell_start`, `spell_end`, `event`) VALUES
 
@@ -730,39 +753,10 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 -- =======
 
 -- INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
-
-INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
-(@PGUID+1, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+2, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+3, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+4, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+5, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+6, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+7, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@PGUID+8, 1, 'Scholomance - Diseased Ghould / Reanimated Corpse');
-
-INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(@CGUID+215, @PGUID+1, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+321, @PGUID+1, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+216, @PGUID+2, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+323, @PGUID+2, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+217, @PGUID+3, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+325, @PGUID+3, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+218, @PGUID+4, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+327, @PGUID+4, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+219, @PGUID+5, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+329, @PGUID+5, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+220, @PGUID+6, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+331, @PGUID+6, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+221, @PGUID+7, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+333, @PGUID+7, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+222, @PGUID+8, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse'),
-(@CGUID+335, @PGUID+8, 0, 'Scholomance - Diseased Ghould / Reanimated Corpse');
-
+-- INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+-- INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 -- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
-
 -- INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-
 -- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
 -- =========
@@ -772,17 +766,17 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1043201);
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1450001,1450002,1450003);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(1043201, 1000, 0, 0, 0, 0, 0, 0, 0, 2000005027, 0, 0, 0, 0, 0, 0, 0, ''),
-(1043201, 10000, 0, 0, 0, 0, 0, 0, 0, 2000005028, 0, 0, 0, 0, 0, 0, 0, ''),
-(1043201, 20000, 0, 0, 0, 0, 0, 0, 0, 2000005029, 0, 0, 0, 0, 0, 0, 0, ''),
-(1450001, 0, 0, 0, 0, 0, 0, 0, 0, 2000007714, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2 on reach wp 2 (Scholomance)'),
-(1450002, 0, 0, 0, 0, 0, 0, 0, 0, 2000007715, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3 on reach wp 7 (Scholomance)'),
-(1450003, 4000, 0, 0, 0, 0, 0, 0, 0, 2000007716, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4 on reach wp 12 (Scholomance)'),
+(1043201, 1000, 0, 0, 0, 0, 0, 0, 0, 7194, 0, 0, 0, 0, 0, 0, 0, ''),
+(1043201, 10000, 0, 0, 0, 0, 0, 0, 0, 7193, 0, 0, 0, 0, 0, 0, 0, ''),
+(1043201, 20000, 0, 0, 0, 0, 0, 0, 0, 7191, 0, 0, 0, 0, 0, 0, 0, ''),
+(1450001, 0, 0, 0, 0, 0, 0, 0, 0, 9770, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2 on reach wp 2 (Scholomance)'),
+(1450002, 0, 0, 0, 0, 0, 0, 0, 0, 9771, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3 on reach wp 7 (Scholomance)'),
+(1450003, 4000, 0, 0, 0, 0, 0, 0, 0, 9742, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4 on reach wp 12 (Scholomance)'),
 (1450003, 7000, 15, 41232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast teleport on reach wp 12 (Scholomance)'),
 (1450003, 8000, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee despawn self on reach wp 12 (Scholomance)');
 
 INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(10503, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000612, 0, 0, 0, 0, 0, 0, 0, ''),
+(10503, 1000, 0, 0, 0, 0, 0, 0, 0, 11408, 0, 0, 0, 0, 0, 0, 0, ''),
 (10503, 1000, 15, 26096, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Jandice Barov - Summon Journal of Jandice Barov on Death');
 
 INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -790,7 +784,10 @@ INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalo
 (@OGUID+9, 0, 12, @OGUID+10, 600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (@OGUID+9, 5000, 10, 10506, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 309.65, 93.47, 101.66, 0.03, '');
 
--- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 175617;
+INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(175617,5000,11,@OGUID+49,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Open Door (177370)');
+
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM dbscripts_on_event WHERE id IN (5438,5439,8438);
@@ -799,7 +796,7 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 (5439, 1000, 9, @OGUID+45, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
 -- q.7269 Imp Delivery
 (8438, 0, 10, 14500, 180000, 0, 0, 0, 0, 0, 0, 0, 0, 38.4345, 156.93, 83.545, 1.40746, 'Spawn J''eevee (Scholomance)'),
-(8438, 1000, 0, 0, 0, 0, 14500, 40, 0, 2000007713, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1 (Scholomance)'),
+(8438, 1000, 0, 0, 0, 0, 14500, 40, 0, 9769, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1 (Scholomance)'),
 (8438, 3000, 20, 2, 0, 0, 14500, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee set waypoint movement (Scholomance)'),
 (8438, 40000, 8, 14500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee give quest credit (Scholomance)');
 
@@ -807,18 +804,6 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-
-DELETE FROM dbscript_string WHERE entry IN (2000005027,2000005028,2000005029,2000000612,2000007713,2000007714,2000007715,2000007716);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000005027, 'The Lich King''s forces are building.  It is imperative that our timetable supports his plans.', 0, 0, 0, 0, 7194, NULL), 
-(2000005028, 'Tomorrow we will begin training of our promising dragons, so don''t forget your chew toys.', 0, 0, 0, 0, 7193, NULL),
-(2000005029, 'Our oldest clutch of dragons are still far from maturity, but with patience and study, we are confident the dragonflight will soon be ready.', 0, 0, 0, 0, 7191, NULL),
-(2000000612, '%s loosens her grasp on the journal she had been clutching.', 0, 2, 0, 0, 11408, NULL),
-(2000007713, 'Ah, here we are!  Well let''s get to work, shall we...?', 0, 0, 0, 0, 9769, 'J''eevee say 1 (Scholomance)'),
-(2000007714, 'Oh, right!  Over here now...', 0, 0, 0, 0, 9770, 'J''eevee say 2 (Scholomance)'),
-(2000007715, 'And now... the final step!', 0, 0, 0, 0, 9771, 'J''eevee say 3 (Scholomance)'),
-(2000007716, 'I''m finished.  The parchment is made.  Now, return to Gorzeeki...', 0, 0, 0, 0, 9742, 'J''eevee say 4 (Scholomance)');
-
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

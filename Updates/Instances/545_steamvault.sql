@@ -4,7 +4,6 @@ DBScriptName: instance_steam_vault
 DB%Complete: 90
 DBComment:
 * Dreghood Slave Post RP Event - Movement
-@CGUID+177 stops at point 2 instead of 3 due to unknown reasons
 EndDBScriptData */
 
 SET @CGUID := 5450000; -- creatures
@@ -16,18 +15,25 @@ SET @PGUID := 48400; -- pools
 -- =========
 
 INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
-(@CGUID+32, 1, -78.2618, -233.397, -19.0738, 100, 0, 0),
-(@CGUID+32, 2, -62.7014, -220.65, -18.573, 100, 0, 0),
-(@CGUID+32, 3, -46.1952, -214.954, -18.5513, 100, 5000, 0),
-(@CGUID+32, 4, -62.7014, -220.65, -18.573, 100, 0, 0),
-(@CGUID+32, 5, -78.2618, -233.397, -19.0738, 100, 0, 0),
-(@CGUID+32, 6, -90.451, -257.779, -11.7885, 100, 0, 0),
-(@CGUID+32, 7, -90.472, -265.172, -9.5625, 100, 0, 0),
-(@CGUID+32, 8, -91.9829, -255.49, -12.5682, 100, 0, 0),
-(@CGUID+34, 1, -91.3785, -333.891, -7.7673, 100, 0, 0),
-(@CGUID+34, 2, -89.9023, -288.181, -7.7673, 100, 0, 0),
-(@CGUID+34, 3, -91.3785, -333.891, -7.7673, 100, 0, 0),
-(@CGUID+34, 4, -92.2922, -377.931, -7.7673, 100, 0, 0),
+(@CGUID+32, 1, -85.73293, -247.0557, -15.41864, 100, 0, 0),
+(@CGUID+32, 2, -74.37394, -230.1419, -18.92191, 100, 0, 0),
+(@CGUID+32, 3, -62.47641, -221.9874, -18.4585, 100, 0, 0),
+(@CGUID+32, 4, -40.76003, -213.2235, -18.4988, 100, 0, 0),
+(@CGUID+32, 5, -62.77602, -221.3983, -18.51592, 100, 0, 0),
+(@CGUID+32, 6, -74.92898, -229.5778, -18.90972, 100, 0, 0),
+(@CGUID+32, 7, -86.67896, -246.6438, -15.46668, 100, 0, 0),
+(@CGUID+32, 8, -90.98924, -265.709, -9.550582, 100, 0, 0),
+(@CGUID+34, 01, -91.39205, -357.8756, -7.767337, 100, 0, 0),
+(@CGUID+34, 02, -94.1074, -345.1623, -7.767337, 100, 0, 0),
+(@CGUID+34, 03, -93.58572, -326.2485, -7.767337, 100, 0, 0),
+(@CGUID+34, 04, -93.20531, -311.0513, -7.767337, 100, 0, 0),
+(@CGUID+34, 05, -93.59978, -296.3232, -7.767337, 100, 0, 0),
+(@CGUID+34, 06, -83.39314, -293.8334, -7.767337, 100, 0, 0),
+(@CGUID+34, 07, -73.73996, -310.9025, -7.767337, 100, 0, 0),
+(@CGUID+34, 08, -70.75201, -327.9694, -7.767337, 100, 0, 0),
+(@CGUID+34, 09, -65.85062, -344.1786, -7.767337, 100, 0, 0),
+(@CGUID+34, 10, -70.46632, -361.6269, -7.767341, 100, 0, 0),
+(@CGUID+34, 11, -81.76927, -369.3231, -7.767337, 100, 0, 0),
 (@CGUID+75, 1, 13.542, -115.249, -22.0705, 100, 0, 0),
 (@CGUID+75, 2, -32.8072, -95.2656, -21.5533, 100, 0, 0),
 (@CGUID+93, 1, -26.5788, -191.547, -20.4898, 0, 0, 0),
@@ -178,43 +184,43 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 -- INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+20, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+23, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+24, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+25, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+26, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+27, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+28, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+29, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+30, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+31, 0, 0, 1, 16, 173, 0, NULL), -- Coilfang Engineer
-(@CGUID+45, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+46, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+47, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+49, 0, 0, 0, 16, 30, 0, NULL), -- Dreghood Slave
-(@CGUID+50, 0, 0, 0, 16, 30, 0, NULL), -- Dreghood Slave
-(@CGUID+51, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+52, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+53, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+54, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+55, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+56, 0, 0, 0, 16, 378, 0, NULL), -- Dreghood Slave
-(@CGUID+57, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+58, 0, 0, 1, 16, 173, 0, NULL), -- Dreghood Slave
-(@CGUID+59, 0, 0, 0, 16, 378, 0, NULL), -- Dreghood Slave
-(@CGUID+121, 0, 0, 0, 16, 69, 0, NULL), -- Steamrigger Mechanic
-(@CGUID+122, 0, 0, 0, 16, 69, 0, NULL), -- Steamrigger Mechanic
-(@CGUID+123, 0, 0, 0, 16, 69, 0, NULL), -- Steamrigger Mechanic
-(@CGUID+174, 0, 0, 1, 16, 375, 0, NULL), -- Coilfang Sorceress
-(@CGUID+175, 0, 0, 1, 16, 375, 0, NULL), -- Coilfang Oracle
-(@CGUID+176, 0, 0, 1, 16, 375, 0, NULL), -- Coilfang Myrmidon
-(@CGUID+177, 0, 0, 1, 16, 375, 0, NULL); -- Coilfang Myrmidon
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+20, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+23, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+24, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+25, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+26, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+27, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+28, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+29, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+30, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+31, 0, 0, 1, 173, 0, NULL), -- Coilfang Engineer
+(@CGUID+45, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+46, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+47, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+49, 0, 0, 0, 30, 0, NULL), -- Dreghood Slave
+(@CGUID+50, 0, 0, 0, 30, 0, NULL), -- Dreghood Slave
+(@CGUID+51, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+52, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+53, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+54, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+55, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+56, 0, 0, 0, 378, 0, NULL), -- Dreghood Slave
+(@CGUID+57, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+58, 0, 0, 1, 173, 0, NULL), -- Dreghood Slave
+(@CGUID+59, 0, 0, 0, 378, 0, NULL), -- Dreghood Slave
+(@CGUID+121, 0, 0, 0, 69, 0, NULL), -- Steamrigger Mechanic
+(@CGUID+122, 0, 0, 0, 69, 0, NULL), -- Steamrigger Mechanic
+(@CGUID+123, 0, 0, 0, 69, 0, NULL), -- Steamrigger Mechanic
+(@CGUID+174, 0, 0, 1, 375, 0, NULL), -- Coilfang Sorceress
+(@CGUID+175, 0, 0, 1, 375, 0, NULL), -- Coilfang Oracle
+(@CGUID+176, 0, 0, 1, 375, 0, NULL), -- Coilfang Myrmidon
+(@CGUID+177, 0, 0, 1, 375, 0, NULL); -- Coilfang Myrmidon
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(17796, 0, 0, 1, 16, 0, 0, '18950'), -- Mekgineer Steamrigger
-(17797, 0, 0, 1, 16, 0, 0, '18950'), -- Hydromancer Thespia
-(21694, 0, 0, 0, 0, 0, 0, '18950'); -- Bog Overlord
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(17796, 0, 0, 1, 0, 0, '18950'), -- Mekgineer Steamrigger
+(17797, 0, 0, 1, 0, 0, '18950'), -- Hydromancer Thespia
+(21694, 0, 0, 0, 0, 0, '18950'); -- Bog Overlord
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+90, @CGUID+91, 1155), -- Coilfang Warrior -> Coilfang Warrior
@@ -541,24 +547,27 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+36, 184126, 545, 3, -332.35, -117.1587, -6.707662, 0.2617982, 0, 0, 0.1305256, 0.9914449, 0, 0, 0, 1), -- Main Chambers Access Panel
 (@OGUID+37, 184201, 545, 1, -23.97297, 5.327147, -3.875418, 0.05161286, 0, 0, 0.02580357, 0.999667, 0, 0, 0, 0), -- Instance_Portal_Difficulty_0
 (@OGUID+38, 184202, 545, 2, -23.97297, 5.327147, -3.875418, 0.05161286, 0, 0, 0.02580357, 0.999667, 0, 0, 0, 0), -- Instance_Portal_Difficulty_1
-(@OGUID+39, 184940, 545, 3, 39.4951, -244.041, -22.8052, -2.00713, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+40, 184941, 545, 3, 39.4951, -244.041, -22.8052, -2.00713, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+41, 184940, 545, 3, -153.1877, -275.2578, -7.775092, 2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+42, 184941, 545, 3, -153.1877, -275.2578, -7.775092, 2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+43, 184940, 545, 3, 61.67565, -128.6761, -22.71641, 2.705255, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+44, 184941, 545, 3, 61.67565, -128.6761, -22.71641, 2.705255, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+45, 184940, 545, 3, 4.36841, -259.654, -21.6164, 0, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+46, 184941, 545, 3, 4.36841, -259.654, -21.6164, 0, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+47, 184940, 545, 3, -54.5296, -320.9142, -7.767337, -2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+48, 184941, 545, 3, -54.5296, -320.9142, -7.767337, -2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+49, 184940, 545, 3, 4.538191, -156.8739, -22.02836, -0.4886912, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+50, 184941, 545, 3, 4.538191, -156.8739, -22.02836, -0.4886912, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+51, 184940, 545, 3, -46.641113, -368.036835, -7.767333, 2.676338, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+52, 184941, 545, 3, -46.641113, -368.036835, -7.767333, 2.676338, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+39, 0, 545, 3, 61.67565, -128.6761, -22.71641, 2.705255, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+40, 0, 545, 3, 4.538191, -156.8739, -22.02836, -0.4886912, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+41, 0, 545, 3, 39.4951, -244.041, -22.8052, -2.00713, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+42, 0, 545, 3, 4.36841, -259.654, -21.6164, 0, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+43, 0, 545, 3, -54.5296, -320.9142, -7.767337, -2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+44, 0, 545, 3, -46.641113, -368.036835, -7.767333, 2.676338, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+45, 0, 545, 3, -153.1877, -275.2578, -7.775092, 2.897245, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest, Solid Adamantite Chest
+-- 46 - 52
 (@OGUID+53, 181278, 545, 3, -271.3181, -206.7492, -67.64107, 0.9424766, 0, 0, 0.45399, 0.8910068, 86400, 86400, 100, 1), -- Ancient Lichen
 (@OGUID+54, 181278, 545, 3, -354.5131, -136.0246, -7.755558, 2.844883, 0, 0, 0.9890156, 0.1478114, 86400, 86400, 100, 1), -- Ancient Lichen
 (@OGUID+55, 181278, 545, 3, -238.2517, -133.8857, -65.16281, 0.1745321, 0, 0, 0.08715534, 0.9961947, 86400, 86400, 100, 1), -- Ancient Lichen
 (@OGUID+56, 181278, 545, 3, -15.03267, -312.0513, -62.49138, 4.502952, 0, 0, -0.7771454, 0.6293211, 86400, 86400, 100, 1); -- Ancient Lichen
+
+INSERT INTO gameobject_spawn_entry (guid, entry) VALUES
+(@OGUID+39, 184940), (@OGUID+39, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+40, 184940), (@OGUID+40, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+41, 184940), (@OGUID+41, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+42, 184940), (@OGUID+42, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+43, 184940), (@OGUID+43, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+44, 184940), (@OGUID+44, 184941), -- Bound Adamantite Chest, Solid Adamantite Chest
+(@OGUID+45, 184940), (@OGUID+45, 184941); -- Bound Adamantite Chest, Solid Adamantite Chest
 
 -- ======
 -- EVENTS
@@ -576,14 +585,7 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 (@PGUID+26, @PGUID+25, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #1'),
 (@PGUID+27, @PGUID+25, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #2'),
 (@PGUID+28, @PGUID+25, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #3'),
-(@PGUID+29, @PGUID+25, 0, 'Adamantite Deposit / Khorium Vein - #4'),
-(@PGUID+41, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #1'),
-(@PGUID+42, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #2'),
-(@PGUID+43, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #3'),
-(@PGUID+44, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #4'),
-(@PGUID+45, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #5'),
-(@PGUID+46, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #6'),
-(@PGUID+47, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest #7');
+(@PGUID+29, @PGUID+25, 0, 'Adamantite Deposit / Khorium Vein - #4');
 
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+20, 1, 'Steamvault - Swamp Gas (17378)'),
@@ -596,14 +598,8 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+27, 1, 'Steamvault - Adamantite Deposit / Rich Adamantite Deposit #2'),
 (@PGUID+28, 1, 'Steamvault - Adamantite Deposit / Rich Adamantite Deposit #3'),
 (@PGUID+29, 1, 'Steamvault - Adamantite Deposit / Khorium Vein #4'),
-(@PGUID+40, 2, 'Steamvault - Master Chest Pool'),
-(@PGUID+41, 1, 'Steamvault - Bound / Solid Adamantite Chest #1'),
-(@PGUID+42, 1, 'Steamvault - Bound / Solid Adamantite Chest #2'),
-(@PGUID+43, 1, 'Steamvault - Bound / Solid Adamantite Chest #3'),
-(@PGUID+44, 1, 'Steamvault - Bound / Solid Adamantite Chest #4'),
-(@PGUID+45, 1, 'Steamvault - Bound / Solid Adamantite Chest #5'),
-(@PGUID+46, 1, 'Steamvault - Bound / Solid Adamantite Chest #6'),
-(@PGUID+47, 1, 'Steamvault - Bound / Solid Adamantite Chest #7');
+(@PGUID+40, 1, 'Steamvault - Master Chest Pool First Boss'),
+(@PGUID+41, 1, 'Steamvault - Master Chest Pool Second Boss');
 
 INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 (@CGUID+6, @PGUID+20, 0, 'Steamvault - Crab (6827)'),
@@ -648,20 +644,13 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+33, @PGUID+28, 0, 'Steamvault - Rich Adamantite Deposit (181569) - #3'),
 (@OGUID+28, @PGUID+29, 0, 'Steamvault - Adamantite Deposit (181556) - #4'),
 (@OGUID+16, @PGUID+29, 20, 'Steamvault - Khorium Vein (181557) - #4'),
-(@OGUID+39, @PGUID+41, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+40, @PGUID+41, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+41, @PGUID+42, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+42, @PGUID+42, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+43, @PGUID+43, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+44, @PGUID+43, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+45, @PGUID+44, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+46, @PGUID+44, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+47, @PGUID+45, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+48, @PGUID+45, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+49, @PGUID+46, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+50, @PGUID+46, 0, 'Steamvault - Solid Adamantite Chest (184941)'),
-(@OGUID+51, @PGUID+47, 0, 'Steamvault - Bound Adamantite Chest (184940)'),
-(@OGUID+52, @PGUID+47, 0, 'Steamvault - Solid Adamantite Chest (184941)');
+(@OGUID+39, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+40, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+41, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+42, @PGUID+40, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+43, @PGUID+41, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+44, @PGUID+41, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)'),
+(@OGUID+45, @PGUID+41, 0, 'Steamvault - Bound / Solid Adamantite Chest (184940,184941)');
 
 -- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
@@ -675,9 +664,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 
 DELETE FROM `dbscripts_on_go_template_use` WHERE `id` IN (184125,184126);
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(184125, 0, 0, 0, 0, 0, 0, 0, 0, 2000020037, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184125 go template use'),
-(184126, 0, 0, 0, 0, 0, 0, 0, 0, 2000020037, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'),
-(184126, 0, 0, 0, 0, 0, 0, 0, 0, 2000020038, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'), -- should be conditioned to whichever go is activated last
+(184125, 0, 0, 0, 0, 0, 0, 0, 0, 18599, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184125 go template use'),
+(184126, 0, 0, 0, 0, 0, 0, 0, 0, 18599, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'),
+(184126, 0, 0, 0, 0, 0, 0, 0, 0, 18600, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'), -- should be conditioned to whichever go is activated last
 (184126, 12000, 20, 2, 0, 0, 17722, @CGUID+174, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Sorceress 17722 - Change MovementType to 2 on 2000020038'),
 (184126, 12000, 20, 2, 0, 0, 17803, @CGUID+175, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Oracle 17803 - Change MovementType to 2 on 2000020038'),
 (184126, 12000, 20, 2, 0, 0, 17800, @CGUID+177, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Myrmidon 17800 - Change MovementType to 2 on 2000020038'),
@@ -689,12 +678,6 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020037,2000020038);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000020037, 'You hear a faint echo....', 0, 2, 0, 0, 18599, NULL),
-(2000020038, 'You hear a loud rumble of metal grinding on stone...', 0, 2, 0, 0, 18600, NULL);
-
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

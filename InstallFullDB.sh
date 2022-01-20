@@ -7,7 +7,7 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE_ZIP="TBCDB_1.8.0_VengeanceStrikesBack.sql.gz"
+FULLDB_FILE_ZIP="TBCDB_1.9.0_TheLastVengeance.sql.gz"
 FULLDB_FILE=${FULLDB_FILE_ZIP%.gz}
 DB_TITLE="v1.8 'Vengeance Strikes Back'"
 NEXT_MILESTONES="0.12.4 0.13"
@@ -27,6 +27,7 @@ USERNAME=""
 PASSWORD=""
 MYSQL=""
 CORE_PATH=""
+LOCALES="YES"
 DEV_UPDATES="NO"
 FORCE_WAIT="YES"
 
@@ -72,9 +73,17 @@ MYSQL="mysql"
 ## Define if you want to wait a bit before applying the full database
 FORCE_WAIT="YES"
 
+## Define if the 'locales' directory for processing localization/multi-language SQL files needs to be used
+##   Set the variable to "YES" to use the locales directory
+LOCALES="YES"
+
 ## Define if the 'dev' directory for processing development SQL files needs to be used
 ##   Set the variable to "YES" to use the dev directory
 DEV_UPDATES="NO"
+
+## Define if AHBot SQL updates need to be applied (by default, assume the core is built without AHBot)
+## Requires CORE_PATH to be set to a proper value. Set the variable to "YES" to import SQL updates.
+AHBOT="NO"
 
 # Enjoy using the tool
 EOF
@@ -311,6 +320,25 @@ then
   echo "  CORE UPDATE FOUND BUT ALREADY IN DB: $UPD_FOUND"
   echo
   echo
+  
+  # Apply optional AHBot commands documentation
+  if [ "$AHBOT" == "YES" ]
+  then
+	  echo "> Trying to apply $CORE_PATH/sql/base/ahbot ..."
+	  for f in "$CORE_PATH/sql/base/ahbot/"*.sql
+	  do
+		echo "    Appending AHBot SQL file `basename $f` to database $DATABASE"
+		$MYSQL_COMMAND < $f
+		if [[ $? != 0 ]]
+		then
+		  echo "ERROR: cannot apply $f"
+		  exit 1
+		fi
+	  done
+	  echo "  AHBot SQL files successfully applied"
+	  echo
+	  echo  
+  fi
 
   # Apply dbc folder
   echo "> Trying to apply $CORE_PATH/sql/base/dbc/original_data ..."
@@ -389,6 +417,30 @@ fi
 echo "  CMaNGOS custom updates successfully applied"
 echo
 echo
+
+#
+#    LOCALES
+#
+if [ "$LOCALES" == "YES" ]
+then
+  echo "> Trying to apply locales data..."
+  for UPDATEFILE in ${ADDITIONAL_PATH}locales/*.sql
+  do
+    if [ -e "$UPDATEFILE" ]
+    then
+        for UPDATE in ${ADDITIONAL_PATH}locales/*.sql
+        do
+            echo "    process update $UPDATE"
+            $MYSQL_COMMAND < $UPDATE
+            [[ $? != 0 ]] && exit 1
+        done
+        echo "  Locales data applied"
+    else
+        echo "  No locales data to process"
+    fi
+    break
+  done
+fi
 
 #
 #    DEVELOPERS UPDATES

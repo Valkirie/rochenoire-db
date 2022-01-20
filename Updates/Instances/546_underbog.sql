@@ -488,24 +488,24 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 ('17826', '0', '3', '274.581', '-120.976', '29.8414', '0.207275', '0', '0'),
 ('17826', '0', '4', '284.158', '-119.662', '29.772', '5.93676', '0', '0');
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+130, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+131, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+132, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+133, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+134, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+135, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+136, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+137, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+138, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+139, 0, 0, 1, 16, 0, 0, '31261'), -- Fen Ray
-(@CGUID+140, 0, 0, 1, 16, 0, 0, '31261'); -- Fen Ray
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+130, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+131, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+132, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+133, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+134, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+135, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+136, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+137, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+138, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+139, 0, 0, 1, 0, 0, '31261'), -- Fen Ray
+(@CGUID+140, 0, 0, 1, 0, 0, '31261'); -- Fen Ray
 
-INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(17727, 0, 0, 1, 16, 0, 0, '18950'), -- Wrathfin Sentry
-(17885, 0, 0, 1, 16, 0, 0, '30831'), -- Earthbinder Rayge
-(18105, 0, 0, 1, 16, 0, 0, ''), -- Ghaz'an
-(20465, 0, 0, 1, 16, 0, 0, '18943 18950'); -- Underbog Frenzy
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(17727, 0, 0, 1, 0, 0, '18950'), -- Wrathfin Sentry
+(17885, 0, 0, 1, 0, 0, '30831'), -- Earthbinder Rayge
+(18105, 0, 0, 1, 0, 0, ''), -- Ghaz'an
+(20465, 0, 0, 1, 0, 0, '18943 18950'); -- Underbog Frenzy
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+42, @CGUID+37, 1155), -- Underbog Lurker -> Underbog Lurker
@@ -889,12 +889,12 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+34, 181275, 546, 3, 309.7425, -299.7831, 21.00561, 3.455756, 0, 0, -0.9876881, 0.1564362, 86400, 86400, 100, 1), -- Ragveil
 (@OGUID+35, 181275, 546, 3, 346.3185, -336.0105, 28.10873, 1.431168, 0, 0, 0.6560583, 0.7547102, 86400, 86400, 100, 1), -- Ragveil
 (@OGUID+36, 181275, 546, 3, 103.313, -212.9013, 32.11715, 3.874631, 0, 0, -0.9335804, 0.358368, 86400, 86400, 100, 1), -- Ragveil
-(@OGUID+37, 181275, 546, 3, 136.3483, 53.41259, 27.56251, 3.508117, 0, 0, -0.9832544, 0.182238, 86400, 86400, 100, 1), -- Ragveil
+(@OGUID+37, 181275, 546, 3, 136.3483, 53.41259, 25.668015, 3.508117, 0, 0, -0.9832544, 0.182238, 86400, 86400, 100, 1), -- Ragveil		// sniff z = 27.56251
 (@OGUID+38, 181275, 546, 3, 58.35935, -28.01662, 20.81954, 3.001947, 0, 0, 0.9975634, 0.06976615, 86400, 86400, 100, 1), -- Ragveil
 (@OGUID+39, 181275, 546, 3, 146.3396, -150.2396, 30.75006, 3.892087, 0, 0, -0.9304171, 0.3665025, 86400, 86400, 100, 1), -- Ragveil
 (@OGUID+40, 181276, 546, 3, 376.4293, -453.1408, 33.19949, 4.031712, 0, 0, -0.902585, 0.4305117, 86400, 86400, 100, 1), -- Flame Cap
 (@OGUID+41, 181276, 546, 3, 278.9159, -236.0371, 29.17045, 2.705255, 0, 0.9762955, 0.2164421, 1, 86400, 86400, 100, 1), -- Flame Cap
-(@OGUID+42, 181276, 546, 3, 136.3483, 53.41259, 27.56251, 3.508117, 0, 0, -0.9832544, 0.182238, 86400, 86400, 100, 1), -- Flame Cap
+(@OGUID+42, 181276, 546, 3, 136.3483, 53.41259, 25.668015, 3.508117, 0, 0, -0.9832544, 0.182238, 86400, 86400, 100, 1), -- Flame Cap		// sniff z = 27.56251
 (@OGUID+43, 181276, 546, 3, 58.35935, -28.01662, 20.81954, 3.001947, 0, 0, 0.9975634, 0.06976615, 86400, 86400, 100, 1), -- Flame Cap
 (@OGUID+44, 181276, 546, 3, 146.3396, -150.2396, 30.75006, 3.892087, 0, 0, -0.9304171, 0.3665025, 86400, 86400, 100, 1), -- Flame Cap
 (@OGUID+45, 181276, 546, 3, 309.7425, -299.7831, 21.00561, 3.455756, 0, 0, -0.9876881, 0.1564362, 86400, 86400, 100, 1), -- Flame Cap
@@ -1170,7 +1170,6 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
--- INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

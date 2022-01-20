@@ -18,22 +18,22 @@ SET @OGUID := 5340000; -- gameobjects
 -- ----------------------------------
 -- All creature_template_addons go here:
 -- ----------------------------------
-REPLACE INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, b2_1_flags, emote, moveflags, auras) VALUES
-(17772, 0, 0, 1, 16, 0, 0, '31745'), -- Lady Jaina Proudmoore
-(17818, 0, 0, 1, 16, 0, 0, ''), -- Towering Infernal -- Immolation added in Boss Script
-(17852, 0, 0, 1, 16, 0, 0, '31745'), -- Thrall
-(17864, 0, 0, 1, 16, 0, 0, '12787'), -- Lesser Doomguard
-(17895, 0, 0, 1, 16, 0, 0, '8278'), -- Ghoul
-(17898, 0, 0, 1, 16, 0, 0, '31607'), -- Abomination
-(17902, 0, 0, 1, 16, 0, 0, '19818'), -- Skeleton Invader
-(17906, 0, 0, 1, 16, 0, 0, '8278'), -- Gargoyle
-(17908, 0, 0, 1, 16, 0, 0, ''), -- Giant Infernal
-(17932, 0, 0, 1, 16, 0, 0, '19818'), -- Horde Grunt also serverside s.31887
-(17933, 0, 0, 1, 16, 0, 0, '31757'), -- Tauren Warrior
-(17937, 0, 0, 1, 16, 234, 0, NULL), -- Horde Peon
-(17945, 9991, 0, 1, 16, 0, 0, NULL), -- Night Elf Huntress
-(17948, 6080, 0, 1, 16, 0, 0, NULL), -- Tyrande Whisperwind
-(18036, 0, 0, 0, 0, 0, 0, NULL); -- Horde Healing Ward
+REPLACE INTO creature_template_addon (entry, mount, bytes1, b2_0_sheath, emote, moveflags, auras) VALUES
+(17772, 0, 0, 1, 0, 0, '31745'), -- Lady Jaina Proudmoore
+(17818, 0, 0, 1, 0, 0, ''), -- Towering Infernal -- Immolation added in Boss Script
+(17852, 0, 0, 1, 0, 0, '31745'), -- Thrall
+(17864, 0, 0, 1, 0, 0, '12787'), -- Lesser Doomguard
+(17895, 0, 0, 1, 0, 0, '8278'), -- Ghoul
+(17898, 0, 0, 1, 0, 0, '31607'), -- Abomination
+(17902, 0, 0, 1, 0, 0, '19818'), -- Skeleton Invader
+(17906, 0, 0, 1, 0, 0, '8278'), -- Gargoyle
+(17908, 0, 0, 1, 0, 0, ''), -- Giant Infernal
+(17932, 0, 0, 1, 0, 0, '19818'), -- Horde Grunt also serverside s.31887
+(17933, 0, 0, 1, 0, 0, '31757'), -- Tauren Warrior
+(17937, 0, 0, 1, 234, 0, NULL), -- Horde Peon
+(17945, 9991, 0, 1, 0, 0, NULL), -- Night Elf Huntress
+(17948, 6080, 0, 1, 0, 0, NULL), -- Tyrande Whisperwind
+(18036, 0, 0, 0, 0, 0, NULL); -- Horde Healing Ward
 
 -- ------------------------------------------------------------------------------------------
 -- "Room" specific content added below:
@@ -75,8 +75,8 @@ INSERT INTO `creature_movement_template` (`entry`,`point`,`position_x`,`position
 
 DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN(2338101);
 INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,`datalong2`,`datalong3`,`dataint`,`dataint2`,`dataint3`,`dataint4`,`buddy_entry`,`search_radius`,`data_flags`,`comments`,`x`,`y`,`z`,`o`) VALUES
-(2338101,110000,0,0,0,0,2000020022,0,0,0,23437,5,3,'Indormi - Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.',0,0,0,0),
-(2338101,119000,0,0,0,0,2000020023,0,0,0,0,0,0,'Tydormu - That is a dangerous train of thought.  If something was truly amiss, Soridormi would be the first to know.',0,0,0,0);
+(2338101,110000,0,0,0,0,21646,0,0,0,23437,5,3,'Indormi - Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.',0,0,0,0),
+(2338101,119000,0,0,0,0,21645,0,0,0,0,0,0,'Tydormu - That is a dangerous train of thought.  If something was truly amiss, Soridormi would be the first to know.',0,0,0,0);
 
 -- ******************************************************************************************************************************************************************** --
 -- Scourge Base .go 5097.541504 -1409.079102 1345.843018 534
@@ -394,14 +394,8 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,
 (1777201,0,32,1,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Pause Waypoints',0,0,0,0),
 (1777201,0,35,5,65,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 5',0,0,0,0),
 (1777201,1000,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
-(1777201,1000,0,0,0,0,2000020024,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
+(1777201,1000,0,0,0,0,15310,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
 (1777201,22000,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020022, 2000020023, 2000020024);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES 
-(2000020022, 'Do you think the rumors about the Infinite Dragonflight are true?  I''ve sensed it... the familiarity.', 0, 0, 0, 1, 21646, 'Indormi (Entry: 23437)'),
-(2000020023, 'That is a dangerous train of thought.  If something was truly amiss, Soridormi would be the first to know.', 0, 0, 0, 274, 21645, 'Tydormu (Entry: 23381)'),
-(2000020024, '%s begins channelling a massive teleport spell.', 0, 7, 0, 0, 15310, 'Lady Jaina Proudmoore (Entry: 17772)');
 
 -- ----------------------------------
 -- creature_linking
@@ -717,7 +711,7 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`,`delay`,`command`,`datalong`,
 (1777202,0,1,16,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - OneShotKneel',0,0,0,0),
 (1777202,2000,35,8,150,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 8',0,0,0,0),
 (1777202,3000,15,16807,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Cast Mass Teleport',0,0,0,0),
-(1777202,3000,0,0,0,0,2000020024,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
+(1777202,3000,0,0,0,0,15310,0,0,0,0,0,0,'Lady Jaina Proudmoore - %s begins channelling a massive teleport spell.',0,0,0,0),
 (1777202,24000,35,6,0,0,0,0,0,0,0,0,0,'Lady Jaina Proudmoore - Throw AI Event 6 on Self',0,0,0,0);
 
 -- ----------------------------------
@@ -774,8 +768,8 @@ INSERT INTO creature_linking (guid, master_guid, flag) VALUES
 -- ----------------------------------
 -- creature_addon
 -- ----------------------------------
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CHGUID+19, 0, 0, 0, 16, 69, 0, '31757');
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CHGUID+19, 0, 0, 0, 69, 0, '31757');
 
 -- ******************************************************************************************************************************************************************** --
 -- Night Elf Base .go 5183.781738 -3412.168701 1630.599487 534

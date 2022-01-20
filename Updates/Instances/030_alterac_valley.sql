@@ -295,69 +295,70 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 -- INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+36, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+37, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+38, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+39, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+40, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+41, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Trogg
-(@CGUID+162, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+163, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+164, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+165, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+166, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+167, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+168, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+169, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+170, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+171, 0, 0, 1, 16, 0, 0, NULL), -- Whitewhisker Digger
-(@CGUID+644, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Peon
-(@CGUID+645, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Peon
-(@CGUID+696, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Miner
-(@CGUID+697, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Miner
-(@CGUID+698, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Miner
-(@CGUID+699, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Miner
-(@CGUID+700, 0, 0, 1, 16, 0, 0, NULL), -- Coldmine Miner
-(@CGUID+955, 0, 0, 1, 16, 0, 0, NULL), -- Irondeep Peon
-(@CGUID+956, 0, 0, 1, 16, 0, 0, NULL); -- Irondeep Peon
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+36, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+37, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+38, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+39, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+40, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+41, 0, 0, 1, 0, 0, NULL), -- Irondeep Trogg
+(@CGUID+162, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+163, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+164, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+165, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+166, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+167, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+168, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+169, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+170, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+171, 0, 0, 1, 0, 0, NULL), -- Whitewhisker Digger
+(@CGUID+644, 0, 0, 1, 0, 0, NULL), -- Coldmine Peon
+(@CGUID+645, 0, 0, 1, 0, 0, NULL), -- Coldmine Peon
+(@CGUID+696, 0, 0, 1, 0, 0, NULL), -- Coldmine Miner
+(@CGUID+697, 0, 0, 1, 0, 0, NULL), -- Coldmine Miner
+(@CGUID+698, 0, 0, 1, 0, 0, NULL), -- Coldmine Miner
+(@CGUID+699, 0, 0, 1, 0, 0, NULL), -- Coldmine Miner
+(@CGUID+700, 0, 0, 1, 0, 0, NULL), -- Coldmine Miner
+(@CGUID+955, 0, 0, 1, 0, 0, NULL), -- Irondeep Peon
+(@CGUID+956, 0, 0, 1, 0, 0, NULL); -- Irondeep Peon
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(10987, 0, 0, 1, 16, 233, 0, NULL), -- Irondeep Trogg
-(10991, 0, 0, 1, 16, 0, 0, NULL), -- Wildpaw Gnoll
-(11603, 0, 0, 1, 16, 233, 0, NULL), -- Whitewhisker Digger
-(11677, 0, 0, 1, 16, 0, 0, NULL), -- Taskmaster Snivvle
-(12050, 0, 0, 1, 16, 0, 0, '5301'), -- Stormpike Defender
-(12053, 0, 0, 1, 16, 0, 0, '5301'), -- Frostwolf Guardian
-(13088, 0, 0, 1, 16, 0, 0, NULL), -- Masha Swiftcut
-(13116, 0, 0, 0, 0, 0, 0, ''), -- Alliance Spirit Guide s.22011 - npc_spirit_guide
-(13117, 0, 0, 0, 0, 0, 0, ''), -- Horde Spirit Guide s.22011 - npc_spirit_guide
-(13316, 0, 0, 1, 16, 233, 0, NULL), -- Coldmine Peon
-(13317, 0, 0, 1, 16, 233, 0, NULL), -- Coldmine Miner
-(13326, 0, 0, 1, 16, 0, 0, '5301'), -- Seasoned Defender
-(13328, 0, 0, 1, 16, 0, 0, '5301'), -- Seasoned Guardian
-(13331, 0, 0, 1, 16, 0, 0, '5301'), -- Veteran Defender
-(13332, 0, 0, 1, 16, 0, 0, '5301'), -- Veteran Guardian
-(13358, 0, 0, 2, 0, 0, 0, NULL), -- Stormpike Bowman
-(13359, 0, 0, 2, 0, 0, 0, NULL), -- Frostwolf Bowman
-(13396, 0, 0, 1, 16, 233, 0, NULL), -- Irondeep Miner
-(13397, 0, 0, 1, 16, 233, 0, NULL), -- Irondeep Peon
-(13421, 0, 0, 1, 16, 0, 0, '5301'), -- Champion Guardian - aura guessed
-(13422, 0, 0, 1, 16, 0, 0, '5301'), -- Champion Defender - aura guessed
-(13437, 0, 0, 1, 16, 0, 0, NULL), -- Wing Commander Ichman
-(13577, 2786, 0, 0, 0, 0, 0, NULL), -- Stormpike Ram Rider Commander
-(14282, 0, 0, 1, 16, 0, 0, '18950'), -- Frostwolf Bloodhound
-(14283, 0, 0, 1, 16, 0, 0, '18950'), -- Stormpike Owl
-(14284, 0, 0, 1, 16, 0, 0, '12782'), -- Stormpike Battleguard
-(14285, 0, 0, 1, 16, 0, 0, '12782'), -- Frostwolf Battleguard
-(14762, 0, 0, 1, 0, 0, 0, '45828'), -- Dun Baldar North Marshal
-(14763, 0, 0, 1, 0, 0, 0, '45829'), -- Dun Baldar South Marshal
-(14764, 0, 0, 1, 0, 0, 0, '45831'), -- Icewing Marshal
-(14765, 0, 0, 1, 0, 0, 0, '45830'), -- Stonehearth Marshal
-(14772, 0, 0, 1, 0, 0, 0, '45826'), -- East Frostwolf Warmaster
-(14773, 0, 0, 1, 0, 0, 0, '45822'), -- Iceblood Warmaster
-(14776, 0, 0, 1, 0, 0, 0, '45823'), -- Tower Point Warmaster
-(14777, 0, 0, 1, 0, 0, 0, '45824'); -- West Frostwolf Warmaster
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(10987, 0, 0, 1, 233, 0, NULL), -- Irondeep Trogg
+(10991, 0, 0, 1, 0, 0, NULL), -- Wildpaw Gnoll
+(11603, 0, 0, 1, 233, 0, NULL), -- Whitewhisker Digger
+(11677, 0, 0, 1, 0, 0, NULL), -- Taskmaster Snivvle
+(12050, 0, 0, 1, 0, 0, '5301'), -- Stormpike Defender
+(12053, 0, 0, 1, 0, 0, '5301'), -- Frostwolf Guardian
+(13088, 0, 0, 1, 0, 0, NULL), -- Masha Swiftcut
+(13116, 0, 0, 0, 0, 0, ''), -- Alliance Spirit Guide s.22011 - npc_spirit_guide
+(13117, 0, 0, 0, 0, 0, ''), -- Horde Spirit Guide s.22011 - npc_spirit_guide
+(13316, 0, 0, 1, 233, 0, NULL), -- Coldmine Peon
+(13317, 0, 0, 1, 233, 0, NULL), -- Coldmine Miner
+(13326, 0, 0, 1, 0, 0, '5301'), -- Seasoned Defender
+(13328, 0, 0, 1, 0, 0, '5301'), -- Seasoned Guardian
+(13331, 0, 0, 1, 0, 0, '5301'), -- Veteran Defender
+(13332, 0, 0, 1, 0, 0, '5301'), -- Veteran Guardian
+(13358, 0, 0, 2, 0, 0, NULL), -- Stormpike Bowman
+(13359, 0, 0, 2, 0, 0, NULL), -- Frostwolf Bowman
+(13396, 0, 0, 1, 233, 0, NULL), -- Irondeep Miner
+(13397, 0, 0, 1, 233, 0, NULL), -- Irondeep Peon
+(13421, 0, 0, 1, 0, 0, '5301'), -- Champion Guardian - aura guessed
+(13422, 0, 0, 1, 0, 0, '5301'), -- Champion Defender - aura guessed
+(13437, 0, 0, 1, 0, 0, NULL), -- Wing Commander Ichman
+(13441, 10278, 0, 1, 0, 0, NULL), -- Frostwolf Wolf Rider Commander
+(13577, 2786, 0, 0, 0, 0, NULL), -- Stormpike Ram Rider Commander
+(14282, 0, 0, 1, 0, 0, '18950'), -- Frostwolf Bloodhound
+(14283, 0, 0, 1, 0, 0, '18950'), -- Stormpike Owl
+(14284, 0, 0, 1, 0, 0, '12782'), -- Stormpike Battleguard
+(14285, 0, 0, 1, 0, 0, '12782'), -- Frostwolf Battleguard
+(14762, 0, 0, 1, 0, 0, '45828'), -- Dun Baldar North Marshal
+(14763, 0, 0, 1, 0, 0, '45829'), -- Dun Baldar South Marshal
+(14764, 0, 0, 1, 0, 0, '45831'), -- Icewing Marshal
+(14765, 0, 0, 1, 0, 0, '45830'), -- Stonehearth Marshal
+(14772, 0, 0, 1, 0, 0, '45826'), -- East Frostwolf Warmaster
+(14773, 0, 0, 1, 0, 0, '45822'), -- Iceblood Warmaster
+(14776, 0, 0, 1, 0, 0, '45823'), -- Tower Point Warmaster
+(14777, 0, 0, 1, 0, 0, '45824'); -- West Frostwolf Warmaster
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+1120, @CGUID+327, 515), -- Frostwolf Bloodhound -> Frostwolf Legionnaire
@@ -2594,10 +2595,8 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 -- (@CGUID+1162, 14777, 30, -1388.38, -226.065, 99.3698, 6.22783, 430, 430, 0, 0, 0, 0), -- West Frostwolf Warmaster
 -- (@CGUID+1164, 14943, 30, 633.803, -299.425, 30.1336, 3.46924, 490, 490, 0, 0, 0, 0), -- Guse's War Rider
 
--- TBC+
-UPDATE `creature` SET `spawnMask` = 1 WHERE `map` = 30;
-
--- WOTLK+
+-- TBC only
+UPDATE `creature` SET `spawnMask` = 3 WHERE `map` = 30;
 
 -- ===========
 -- GAMEOBJECTS
@@ -3187,10 +3186,38 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 -- (@OGUID+XXX, 180422, 30, -572.3289, -262.4763, 88.64957, -0.5759585, 0, 0, 0, 0, 0, 0, 100, 1), -- Horde Banner Aura, Large
 -- (@OGUID+XXX, 178958, 30, -572.3289, -262.4763, 88.64957, -0.5759585, 0, 0, 0, 0, 0, 0, 100, 1), -- [PH] Horde H4 Tower Banner BIG
 
--- TBC+
-UPDATE `gameobject` SET `spawnMask` = 1 WHERE `map` = 30;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
+(@OGUID+1000,181355,30,1,480.259,-488.311,66.2366,1.65806,0,0,0.737277,0.675591,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1001,181355,30,1,465.63,-496.88,66.4395,2.74016,0,0,0.979924,0.19937,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1002,181355,30,1,232.826,-338.925,45.7746,-1.58825,0,0,-0.71325,0.70091,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1003,181355,30,1,30.8056,-400.849,45.6961,2.72271,0,0,0.978148,0.207912,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1004,181355,30,1,-8.70139,-426.625,45.3945,1.83259,0,0,0.793353,0.608762,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1005,181355,30,1,-1.87674,-425.255,45.3826,1.51844,0,0,0.688354,0.725374,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1006,181355,30,1,13.0747,-421.828,45.1509,2.04204,0,0,0.85264,0.522499,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1007,181355,30,1,37.5521,-397.67,46.1294,1.64061,0,0,0.731353,0.681999,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1008,181355,30,1,-136.245,-472.778,27.9303,-1.309,0,0,-0.608761,0.793354,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1009,181355,30,1,-119.575,-457.406,29.7896,-2.04204,0,0,-0.85264,0.522499,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1010,181355,30,1,-112.549,-562.832,46.0341,1.41372,0,0,0.649447,0.760406,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1011,181355,30,1,654.017,-19.9705,49.1895,-3.03684,0,0,-0.998629,0.0523532,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1012,181355,30,1,660.278,-40.809,49.5825,-3.03684,0,0,-0.998629,0.0523532,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1013,181355,30,1,587.434,-64.6076,41.3299,-1.0472,0,0,-0.5,0.866025,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1014,181355,30,1,625.802,-268.45,39.2206,-1.16937,0,0,-0.551936,0.833886,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1015,181355,30,1,646.92,-265.396,39.2176,-1.5708,0,0,-0.707107,0.707107,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1016,181355,30,1,640.37,-230.276,40.4066,-3.03684,0,0,-0.998629,0.0523532,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1017,181355,30,1,621.226,-233.158,40.4948,0.122173,0,0,0.0610485,0.998135,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1018,181355,30,1,615.146,-191.859,41.7019,0.174532,0,0,0.0871553,0.996195,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1019,181355,30,1,634.488,-189.101,41.6967,-3.03684,0,0,-0.998629,0.0523532,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1020,181355,30,1,609.306,-156.432,42.6351,-1.50098,0,0,-0.681998,0.731354,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1021,181355,30,1,630.038,-153.427,42.6323,-1.41372,0,0,-0.649447,0.760406,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1022,181355,30,1,644.625,-121.276,53.0596,0.855211,0,0,0.414693,0.909961,7200,7200,255,1), -- Standing, Exterior, Medium - MFF
+(@OGUID+1023,181358,30,1,678.097,-23.3559,67.6287,-2.84488,0,0,-0.989016,0.147811,7200,7200,255,1), -- Hanging, Square, Large - MFF
+(@OGUID+1024,181392,30,1,227.653,-352.839,47.675,0.663223,0,0,0.325567,0.945519,7200,7200,255,1), -- Hanging, Streamer - MFF
+(@OGUID+1025,181392,30,1,-134.165,-459.231,31.7696,-0.314158,0,0,-0.156434,0.987688,7200,7200,255,1), -- Hanging, Streamer - MFF
+(@OGUID+1026,181392,30,1,579.056,-76.7292,43.0804,0.488691,0,0,0.241921,0.970296,7200,7200,255,1), -- Hanging, Streamer - MFF
+(@OGUID+1027,181392,30,1,659.132,-122.51,54.9667,2.56563,0,0,0.958819,0.284016,7200,7200,255,1); -- Hanging, Streamer - MFF
 
--- WOTLK+
+-- TBC only
+UPDATE `gameobject` SET `spawnMask` = 3 WHERE `map` = 30;
 
 -- ======
 -- EVENTS
@@ -3288,7 +3315,40 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (@OGUID+281, 2), -- Hardpacked Snowdrift (Feast of Winter Veil - Main Event)
 (@OGUID+282, 2), -- Hardpacked Snowdrift (Feast of Winter Veil - Main Event)
 (@OGUID+283, 2), -- Hardpacked Snowdrift (Feast of Winter Veil - Main Event)
-(@OGUID+284, 2); -- Hardpacked Snowdrift (Feast of Winter Veil - Main Event)
+(@OGUID+284, 2), -- Hardpacked Snowdrift (Feast of Winter Veil - Main Event)
+
+-- TBC+
+-- Midsummer
+(@OGUID+1000,1),
+(@OGUID+1001,1),
+(@OGUID+1002,1),
+(@OGUID+1003,1),
+(@OGUID+1004,1),
+(@OGUID+1005,1),
+(@OGUID+1006,1),
+(@OGUID+1007,1),
+(@OGUID+1008,1),
+(@OGUID+1009,1),
+(@OGUID+1010,1),
+(@OGUID+1011,1),
+(@OGUID+1012,1),
+(@OGUID+1013,1),
+(@OGUID+1014,1),
+(@OGUID+1015,1),
+(@OGUID+1016,1),
+(@OGUID+1017,1),
+(@OGUID+1018,1),
+(@OGUID+1019,1),
+(@OGUID+1020,1),
+(@OGUID+1021,1),
+(@OGUID+1022,1),
+(@OGUID+1023,1),
+(@OGUID+1024,1),
+(@OGUID+1025,1),
+(@OGUID+1026,1),
+(@OGUID+1027,1);
+
+-- WOTLK+
 
 -- INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 
@@ -3326,7 +3386,6 @@ INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `descripti
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
--- INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

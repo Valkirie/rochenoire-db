@@ -134,34 +134,34 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 -- INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+16, 0, 0, 1, 0, 173, 0, NULL), -- Bonechewer Hungerer
-(@CGUID+27, 0, 0, 2, 16, 0, 0, NULL), -- Bleeding Hollow Darkcaster
-(@CGUID+42, 0, 0, 1, 16, 0, 0, NULL), -- Bleeding Hollow Archer
-(@CGUID+46, 0, 0, 0, 0, 0, 0, NULL), -- Bleeding Hollow Archer
-(@CGUID+47, 0, 0, 0, 0, 0, 0, NULL), -- Bleeding Hollow Archer
-(@CGUID+91, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+92, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+93, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+94, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+95, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+96, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+97, 0, 0, 1, 16, 0, 0, '8734'), -- Bleeding Hollow Scryer
-(@CGUID+98, 0, 0, 1, 16, 0, 0, '8734'); -- Bleeding Hollow Scryer
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+16, 0, 0, 1, 173, 0, NULL), -- Bonechewer Hungerer
+(@CGUID+27, 0, 0, 2, 0, 0, NULL), -- Bleeding Hollow Darkcaster
+(@CGUID+42, 0, 0, 1, 0, 0, NULL), -- Bleeding Hollow Archer
+(@CGUID+46, 0, 0, 0, 0, 0, NULL), -- Bleeding Hollow Archer
+(@CGUID+47, 0, 0, 0, 0, 0, NULL), -- Bleeding Hollow Archer
+(@CGUID+91, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+92, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+93, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+94, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+95, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+96, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+97, 0, 0, 1, 0, 0, '8734'), -- Bleeding Hollow Scryer
+(@CGUID+98, 0, 0, 1, 0, 0, '8734'); -- Bleeding Hollow Scryer
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(17259, 0, 0, 1, 16, 0, 0, NULL), -- Bonechewer Hungerer
-(17264, 0, 0, 1, 16, 0, 0, '18950'), -- Bonechewer Ravener
-(17269, 0, 0, 1, 16, 0, 0, NULL), -- Bleeding Hollow Darkcaster
-(17270, 0, 0, 2, 16, 0, 0, NULL), -- Bleeding Hollow Archer
-(17271, 0, 0, 1, 16, 0, 0, NULL), -- Bonechewer Destroyer
-(17280, 0, 0, 1, 16, 0, 0, '18950'), -- Shattered Hand Warhound
-(17306, 0, 0, 1, 16, 0, 0, NULL), -- Watchkeeper Gargolmar
-(17307, 0, 0, 1, 16, 0, 0, NULL), -- Vazruden the Herald
-(17308, 0, 0, 1, 16, 0, 0, NULL), -- Omor the Unscarred
-(17309, 0, 0, 1, 16, 0, 0, NULL), -- Hellfire Watcher
-(17455, 0, 0, 1, 16, 0, 0, '18950'), -- Bonechewer Beastmaster
-(17517, 0, 0, 1, 16, 0, 0, NULL); -- Hellfire Sentry
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(17259, 0, 0, 1, 0, 0, NULL), -- Bonechewer Hungerer
+(17264, 0, 0, 1, 0, 0, '18950'), -- Bonechewer Ravener
+(17269, 0, 0, 1, 0, 0, NULL), -- Bleeding Hollow Darkcaster
+(17270, 0, 0, 2, 0, 0, NULL), -- Bleeding Hollow Archer
+(17271, 0, 0, 1, 0, 0, NULL), -- Bonechewer Destroyer
+(17280, 0, 0, 1, 0, 0, '18950'), -- Shattered Hand Warhound
+(17306, 0, 0, 1, 0, 0, NULL), -- Watchkeeper Gargolmar
+(17307, 0, 0, 1, 0, 0, NULL), -- Vazruden the Herald
+(17308, 0, 0, 1, 0, 0, NULL), -- Omor the Unscarred
+(17309, 0, 0, 1, 0, 0, NULL), -- Hellfire Watcher
+(17455, 0, 0, 1, 0, 0, '18950'), -- Bonechewer Beastmaster
+(17517, 0, 0, 1, 0, 0, NULL); -- Hellfire Sentry
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+7, @CGUID+6, 1155), -- Bonechewer Hungerer -> Bonechewer Hungerer
@@ -439,13 +439,8 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 
 DELETE FROM dbscripts_on_creature_movement WHERE id=1726401;
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(1726401, 0, 0, 0, 0, 0, 17269, @CGUID+29, 17, 2000020035, 0, 0, 0, 0, 0, 0, 0, 'Bonechewer Ravener (Hellfire Ramparts) - Yell At Bleeding Hollow Darkcaster'),
-(1726401, 4000, 0, 0, 0, 0, 17269, @CGUID+29, 19, 2000020036, 0, 0, 0, 0, 0, 0, 0, 'Bleeding Hollow Darkcaster (Hellfire Ramparts) - Yell At Bonechewer Ravener');
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020035,2000020036);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000020035, 'You there!  Keep a close watch on these ramparts, intruders could approach at any time!', 0, 1, 0, 25, 13695, 'Bonechewer Ravener in Hellfire Ramparts'),
-(2000020036, 'Yes sir!  I will not fail the Fel Horde!', 0, 1, 0, 66, 13989, 'Bleeding Hollow Darkcaster in Hellfire Ramparts');
+(1726401, 0, 0, 0, 0, 0, 17269, @CGUID+29, 17, 13695, 0, 0, 0, 0, 0, 0, 0, 'Bonechewer Ravener (Hellfire Ramparts) - Yell At Bleeding Hollow Darkcaster'),
+(1726401, 4000, 0, 0, 0, 0, 17269, @CGUID+29, 19, 13989, 0, 0, 0, 0, 0, 0, 0, 'Bleeding Hollow Darkcaster (Hellfire Ramparts) - Yell At Bonechewer Ravener');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

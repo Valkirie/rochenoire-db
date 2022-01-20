@@ -109,25 +109,25 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 
 -- INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(@CGUID+9, 0, 0, 0, 0, 0, 0, NULL), -- Ragefire Trogg
-(@CGUID+15, 0, 0, 0, 0, 0, 0, NULL), -- Ragefire Trogg
-(@CGUID+41, 0, 0, 0, 0, 0, 0, NULL), -- Ragefire Shaman
-(@CGUID+107, 0, 0, 0, 0, 0, 0, NULL); -- Searing Blade Enforcer
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(@CGUID+9, 0, 0, 0, 0, 0, NULL), -- Ragefire Trogg
+(@CGUID+15, 0, 0, 0, 0, 0, NULL), -- Ragefire Trogg
+(@CGUID+41, 0, 0, 0, 0, 0, NULL), -- Ragefire Shaman
+(@CGUID+107, 0, 0, 0, 0, 0, NULL); -- Searing Blade Enforcer
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(11318, 0, 0, 1, 16, 0, 0, NULL), -- Ragefire Trogg
-(11319, 0, 0, 1, 16, 0, 0, NULL), -- Ragefire Shaman
-(11320, 0, 0, 1, 16, 0, 0, NULL), -- Earthborer
-(11321, 0, 0, 1, 16, 0, 0, NULL), -- Molten Elemental
-(11322, 0, 0, 1, 16, 0, 0, NULL), -- Searing Blade Cultist
-(11323, 0, 0, 1, 16, 0, 0, NULL), -- Searing Blade Enforcer
-(11324, 0, 0, 1, 16, 0, 0, NULL), -- Searing Blade Warlock
-(11517, 0, 0, 1, 16, 0, 0, NULL), -- Oggleflint
-(11518, 0, 0, 1, 16, 0, 0, NULL), -- Jergosh the Invoker
-(11519, 0, 0, 1, 16, 0, 0, NULL), -- Bazzalan
-(11520, 0, 0, 1, 16, 0, 0, NULL), -- Taragaman the Hungerer
-(11834, 0, 7, 1, 16, 0, 0, NULL); -- Maur Grimtotem
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(11318, 0, 0, 1, 0, 0, NULL), -- Ragefire Trogg
+(11319, 0, 0, 1, 0, 0, NULL), -- Ragefire Shaman
+(11320, 0, 0, 1, 0, 0, NULL), -- Earthborer
+(11321, 0, 0, 1, 0, 0, NULL), -- Molten Elemental
+(11322, 0, 0, 1, 0, 0, NULL), -- Searing Blade Cultist
+(11323, 0, 0, 1, 0, 0, NULL), -- Searing Blade Enforcer
+(11324, 0, 0, 1, 0, 0, NULL), -- Searing Blade Warlock
+(11517, 0, 0, 1, 0, 0, NULL), -- Oggleflint
+(11518, 0, 0, 1, 0, 0, NULL), -- Jergosh the Invoker
+(11519, 0, 0, 1, 0, 0, NULL), -- Bazzalan
+(11520, 0, 0, 1, 0, 0, NULL), -- Taragaman the Hungerer
+(11834, 0, 7, 1, 0, 0, NULL); -- Maur Grimtotem
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+1, @CGUID+34, 3), -- Ragefire Trogg -> Ragefire Shaman
@@ -193,13 +193,13 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+6, 11318, 389, -160.754, -65.051, -59.4342, 0.041957, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+7, 11318, 389, -154.037, 27.9676, -38.5669, 2.3911, 7200, 7200, 0, 0, 0, 0), -- Ragefire Trogg
 (@CGUID+8, 11318, 389, -200.409, -69.7984, -63.2233, 1.13289, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
-(@CGUID+9, 11318, 389, -181.511, -32.0671, -44.4307, 3.20698, 7200, 7200, 0, 1, 0, 2), -- Ragefire Trogg
+(@CGUID+9, 11318, 389, -181.511, -32.0671, -44.4307, 3.20698, 7200, 7200, 0, 0, 0, 2), -- Ragefire Trogg
 (@CGUID+10, 11318, 389, -204.723, -1.24259, -61.6764, 3.33479, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+11, 11318, 389, -183.393, 2.79912, -56.8092, 5.4162, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+12, 11318, 389, -229.281, -59.7834, -61.3117, 4.95529, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+13, 11318, 389, -237.985, -40.3476, -56.2706, 1.3439, 7200, 7200, 0, 0, 0, 0), -- Ragefire Trogg
 (@CGUID+14, 11318, 389, -238.656, -31.5648, -56.6214, 5.07891, 7200, 7200, 0, 0, 0, 0), -- Ragefire Trogg
-(@CGUID+15, 11318, 389, -215.446, -15.9344, -61.8032, 1.9232, 7200, 7200, 0, 1, 0, 2), -- Ragefire Trogg
+(@CGUID+15, 11318, 389, -215.446, -15.9344, -61.8032, 1.9232, 7200, 7200, 0, 0, 0, 2), -- Ragefire Trogg
 (@CGUID+16, 11318, 389, -217.669, -5.11624, -61.7999, 4.29193, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+17, 11318, 389, -277.036, -47.2743, -60.9321, 0.279253, 7200, 7200, 5, 0, 0, 1), -- Ragefire Trogg
 (@CGUID+18, 11318, 389, -261.781, -5.76433, -63.9288, 0.762733, 7200, 7200, 2, 0, 0, 1), -- Ragefire Trogg
@@ -225,7 +225,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+38, 11319, 389, -266.73, -28.0281, -60.6085, 5.02655, 7200, 7200, 0, 0, 0, 0), -- Ragefire Shaman
 (@CGUID+39, 11319, 389, -253.886, -38.8841, -60.4593, 2.17095, 7200, 7200, 5, 0, 0, 1), -- Ragefire Shaman
 (@CGUID+40, 11319, 389, -270.089, -96.8868, -61.9013, 4.87834, 7200, 7200, 2, 0, 0, 1), -- Ragefire Shaman
-(@CGUID+41, 11319, 389, -287.744, -73.9324, -60.5234, 4.84725, 7200, 7200, 0, 1, 0, 2), -- Ragefire Shaman
+(@CGUID+41, 11319, 389, -287.744, -73.9324, -60.5234, 4.84725, 7200, 7200, 0, 0, 0, 2), -- Ragefire Shaman
 (@CGUID+42, 11319, 389, -280.902, -49.179, -60.9322, 3.31393, 7200, 7200, 5, 0, 0, 1), -- Ragefire Shaman
 (@CGUID+43, 11319, 389, -271.827, -64.4, -60.3566, 2.04204, 7200, 7200, 0, 0, 0, 0), -- Ragefire Shaman
 (@CGUID+44, 11320, 389, -45.0298, -27.7645, -21.2917, 1.70311, 7200, 7200, 5, 0, 0, 1), -- Earthborer
@@ -291,7 +291,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+104, 11323, 389, -199.194, 159.015, -25.1366, 5.51524, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
 (@CGUID+105, 11323, 389, -257.459, 106.184, -24.9368, 3.85718, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
 (@CGUID+106, 11323, 389, -267.366, 110.757, -24.9361, 4.76475, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
-(@CGUID+107, 11323, 389, -263.519, 150.466, -18.9955, 0.106006, 7200, 7200, 0, 1, 0, 2), -- Searing Blade Enforcer
+(@CGUID+107, 11323, 389, -263.519, 150.466, -18.9955, 0.106006, 7200, 7200, 0, 0, 0, 2), -- Searing Blade Enforcer
 (@CGUID+108, 11323, 389, -283.586, 143.856, -25.2988, 2.44346, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
 (@CGUID+109, 11323, 389, -283.762, 152.501, -25.3249, 3.52556, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
 (@CGUID+110, 11323, 389, -237.417, 192.851, -24.3585, 0.645772, 7200, 7200, 0, 0, 0, 0), -- Searing Blade Enforcer
@@ -372,7 +372,7 @@ DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 182024;
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- TBC+ only (Paladin quest - The Path of the Adept 9692)
 (182024, 0, 10, 17830, 30000, 0, 0, 0, 0, 0, 0, 0, 0, -368.557, 172.036, -21.784, 4.61, ''),
-(182024, 1000, 0, 0, 0, 0, 17830, 10, 0, 2000020007, 0, 0, 0, 0, 0, 0, 0, '');
+(182024, 1000, 0, 0, 0, 0, 17830, 10, 0, 14406, 0, 0, 0, 0, 0, 0, 0, '');
 
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -380,12 +380,6 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-
-DELETE FROM `dbscript_string` WHERE `entry` = 2000020007;
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
--- TBC+ only (Paladin quest - The Path of the Adept 9692)
-(2000020007, 'Insolent fool! You thought to steal Zelemar''s blood? You shall pay with your own!', 0, 1, 0, 0, 14406, '');
-
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 

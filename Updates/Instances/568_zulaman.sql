@@ -544,79 +544,79 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 
 UPDATE creature SET equipment_id=5592 WHERE guid=@CGUID+104; -- Amanishi Guardian (starts holding a spear for gong event RP script)
 
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
--- (@CGUID+23, 0, 0, 1, 16, 0, 0, '46750'), -- World Trigger (Not Immune PC)
-(@CGUID+66, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Scout
-(@CGUID+68, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Scout
-(@CGUID+96, 0, 3, 1, 16, 0, 0, NULL), -- Amani'shi Flame Caster
-(@CGUID+120, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Guardian
-(@CGUID+127, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Guardian
-(@CGUID+319, 0, 1, 1, 16, 0, 0, '18950'), -- Amani'shi Handler
-(@CGUID+398, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Wind Walker
-(@CGUID+399, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Wind Walker
-(@CGUID+400, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Wind Walker
-(@CGUID+401, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Wind Walker
-(@CGUID+402, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Protector
-(@CGUID+403, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Protector
-(@CGUID+404, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Protector
-(@CGUID+405, 0, 0, 1, 16, 375, 0, '18950'), -- Amani'shi Protector
-(@CGUID+479, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+480, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+481, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+482, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+483, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+484, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+485, 0, 8, 0, 0, 0, 0, '18950'), -- Amani'shi Savage
-(@CGUID+486, 0, 8, 0, 0, 0, 0, '18950'); -- Amani'shi Savage
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+-- (@CGUID+23, 0, 0, 1, 0, 0, '46750'), -- World Trigger (Not Immune PC)
+(@CGUID+66, 0, 1, 1, 0, 0, '18950'), -- Amani'shi Scout
+(@CGUID+68, 0, 1, 1, 0, 0, '18950'), -- Amani'shi Scout
+(@CGUID+96, 0, 3, 1, 0, 0, NULL), -- Amani'shi Flame Caster
+(@CGUID+120, 0, 1, 1, 0, 0, '18950'), -- Amani'shi Guardian
+(@CGUID+127, 0, 1, 1, 0, 0, '18950'), -- Amani'shi Guardian
+(@CGUID+319, 0, 1, 1, 0, 0, '18950'), -- Amani'shi Handler
+(@CGUID+398, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Wind Walker
+(@CGUID+399, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Wind Walker
+(@CGUID+400, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Wind Walker
+(@CGUID+401, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Wind Walker
+(@CGUID+402, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Protector
+(@CGUID+403, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Protector
+(@CGUID+404, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Protector
+(@CGUID+405, 0, 0, 1, 375, 0, '18950'), -- Amani'shi Protector
+(@CGUID+479, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+480, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+481, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+482, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+483, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+484, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+485, 0, 8, 0, 0, 0, '18950'), -- Amani'shi Savage
+(@CGUID+486, 0, 8, 0, 0, 0, '18950'); -- Amani'shi Savage
 
-REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(23542, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Axe Thrower
-(23574, 0, 0, 1, 16, 0, 0, NULL), -- Akil'zon
-(23576, 0, 0, 1, 16, 0, 0, NULL), -- Nalorakk
-(23597, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Guardian
-(23577, 0, 0, 1, 16, 0, 0, NULL), -- Halazzi
-(23578, 0, 0, 1, 16, 0, 0, NULL), -- Jan'alai
-(23580, 22467, 0, 1, 16, 0, 0, '23255'), -- Amani'shi Warbringer
-(23581, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Medicine Man
-(23582, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Tribesman
-(23584, 0, 0, 1, 16, 0, 0, NULL), -- Amani Bear
-(23586, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Scout
-(23587, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Reinforcement
-(23774, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Trainer
-(23790, 0, 0, 1, 0, 0, 0, NULL), -- Tanzar
-(23807, 0, 0, 1, 16, 0, 0, NULL), -- Zul'Aman - Bear God Invisman
-(23813, 0, 0, 1, 16, 0, 0, NULL), -- Zul'Aman - Dragonhawk God Invisman
-(23814, 0, 0, 1, 16, 0, 0, NULL), -- Zul'Aman - Eagle God Invisman
-(23815, 0, 0, 1, 16, 0, 0, NULL), -- Zul'Aman - Lynx God Invisman
-(23817, 0, 0, 1, 16, 0, 0, NULL), -- Dragonhawk Egg
-(23834, 0, 0, 1, 16, 0, 0, '18950'), -- Amani Dragonhawk
-(23877, 0, 0, 1, 0, 0, 0, '42466'), -- Amani Lynx Spirit
-(23878, 0, 0, 1, 0, 0, 0, '42466'), -- Amani Bear Spirit
-(23879, 0, 0, 1, 0, 0, 0, '42466'), -- Amani Dragonhawk Spirit
-(23880, 0, 0, 1, 0, 0, 0, '42466'), -- Amani Eagle Spirit
-(23889, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Savage
-(23897, 0, 0, 1, 16, 0, 0, '25900'), -- Zungam
-(23999, 0, 0, 1, 0, 0, 0, NULL), -- Harkor
-(24001, 0, 0, 1, 0, 0, 0, NULL), -- Ashli
-(24024, 0, 0, 1, 0, 0, 0, NULL), -- Kraz
-(24043, 0, 0, 0, 0, 0, 0, '18950 16380'), -- Amani Lynx
-(24047, 0, 0, 1, 16, 0, 0, NULL), -- Amani Crocolisk
-(24059, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Beast Tamer
-(24064, 0, 0, 1, 16, 0, 0, NULL), -- Amani Lynx Cub
-(24065, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Handler
-(24175, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Lookout
-(24179, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Wind Walker
-(24180, 0, 0, 1, 16, 0, 0, '18950'), -- Amani'shi Protector
-(24217, 0, 0, 1, 16, 0, 0, NULL), -- Amani Bear Mount
-(24242, 0, 0, 1, 16, 0, 0, '43580'), -- Slither
-(24312, 0, 0, 1, 16, 0, 0, NULL), -- Dragonhawk Egg
-(24325, 0, 0, 1, 16, 0, 0, NULL), -- Eagle Troll Spawn Target
-(24358, 0, 0, 1, 16, 0, 0, NULL), -- Harrison Jones
-(24363, 0, 0, 1, 16, 0, 0, NULL), -- Hex Lord Malacrass (Speech Trigger)
-(24396, 0, 0, 1, 16, 0, 0, NULL), -- Forest Frog
-(24530, 0, 0, 1, 16, 0, 0, NULL), -- Amani Elder Lynx
-(24549, 0, 0, 1, 16, 0, 0, NULL), -- Amani'shi Tempest
-(25173, 0, 0, 1, 16, 0, 0, NULL); -- Zul'Aman Door Trigger
+REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `emote`, `moveflags`, `auras`) VALUES
+(23542, 0, 0, 1, 0, 0, NULL), -- Amani'shi Axe Thrower
+(23574, 0, 0, 1, 0, 0, NULL), -- Akil'zon
+(23576, 0, 0, 1, 0, 0, NULL), -- Nalorakk
+(23597, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Guardian
+(23577, 0, 0, 1, 0, 0, NULL), -- Halazzi
+(23578, 0, 0, 1, 0, 0, NULL), -- Jan'alai
+(23580, 22467, 0, 1, 0, 0, '23255'), -- Amani'shi Warbringer
+(23581, 0, 0, 1, 0, 0, NULL), -- Amani'shi Medicine Man
+(23582, 0, 0, 1, 0, 0, NULL), -- Amani'shi Tribesman
+(23584, 0, 0, 1, 0, 0, NULL), -- Amani Bear
+(23586, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Scout
+(23587, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Reinforcement
+(23774, 0, 0, 1, 0, 0, NULL), -- Amani'shi Trainer
+(23790, 0, 0, 1, 0, 0, NULL), -- Tanzar
+(23807, 0, 0, 1, 0, 0, NULL), -- Zul'Aman - Bear God Invisman
+(23813, 0, 0, 1, 0, 0, NULL), -- Zul'Aman - Dragonhawk God Invisman
+(23814, 0, 0, 1, 0, 0, NULL), -- Zul'Aman - Eagle God Invisman
+(23815, 0, 0, 1, 0, 0, NULL), -- Zul'Aman - Lynx God Invisman
+(23817, 0, 0, 1, 0, 0, NULL), -- Dragonhawk Egg
+(23834, 0, 0, 1, 0, 0, '18950'), -- Amani Dragonhawk
+(23877, 0, 0, 1, 0, 0, '42466'), -- Amani Lynx Spirit
+(23878, 0, 0, 1, 0, 0, '42466'), -- Amani Bear Spirit
+(23879, 0, 0, 1, 0, 0, '42466'), -- Amani Dragonhawk Spirit
+(23880, 0, 0, 1, 0, 0, '42466'), -- Amani Eagle Spirit
+(23889, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Savage
+(23897, 0, 0, 1, 0, 0, '25900'), -- Zungam
+(23999, 0, 0, 1, 0, 0, NULL), -- Harkor
+(24001, 0, 0, 1, 0, 0, NULL), -- Ashli
+(24024, 0, 0, 1, 0, 0, NULL), -- Kraz
+(24043, 0, 0, 0, 0, 0, '18950 16380'), -- Amani Lynx
+(24047, 0, 0, 1, 0, 0, NULL), -- Amani Crocolisk
+(24059, 0, 0, 1, 0, 0, NULL), -- Amani'shi Beast Tamer
+(24064, 0, 0, 1, 0, 0, NULL), -- Amani Lynx Cub
+(24065, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Handler
+(24175, 0, 0, 1, 0, 0, NULL), -- Amani'shi Lookout
+(24179, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Wind Walker
+(24180, 0, 0, 1, 0, 0, '18950'), -- Amani'shi Protector
+(24217, 0, 0, 1, 0, 0, NULL), -- Amani Bear Mount
+(24242, 0, 0, 1, 0, 0, '43580'), -- Slither
+(24312, 0, 0, 1, 0, 0, NULL), -- Dragonhawk Egg
+(24325, 0, 0, 1, 0, 0, NULL), -- Eagle Troll Spawn Target
+(24358, 0, 0, 1, 0, 0, NULL), -- Harrison Jones
+(24363, 0, 0, 1, 0, 0, NULL), -- Hex Lord Malacrass (Speech Trigger)
+(24396, 0, 0, 1, 0, 0, NULL), -- Forest Frog
+(24530, 0, 0, 1, 0, 0, NULL), -- Amani Elder Lynx
+(24549, 0, 0, 1, 0, 0, NULL), -- Amani'shi Tempest
+(25173, 0, 0, 1, 0, 0, NULL); -- Zul'Aman Door Trigger
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 -- Entrance
@@ -632,15 +632,15 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 
 -- Hex Lord Malacrass
 (@CGUID+368, @CGUID+369, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+369, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+369, @CGUID+333, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
 
 (@CGUID+54, @CGUID+406, 1167), -- Amani'shi Medicine Man -> Amani'shi Tempest
 (@CGUID+409, @CGUID+406, 1167), -- Amani'shi Flame Caster -> Amani'shi Tempest
 (@CGUID+437, @CGUID+406, 1167), -- creature_spawn_entry -> Amani'shi Tempest
-(@CGUID+406, @CGUID+366, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+406, @CGUID+333, 1024), -- Amani'shi Tempest -> Hex Lord Malacrass
 
 (@CGUID+370, @CGUID+371, 1167), -- Amani'shi Berserker -> Amani'shi Berserker
-(@CGUID+371, @CGUID+366, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass (Speech Trigger)
+(@CGUID+371, @CGUID+333, 1024), -- Amani'shi Berserker -> Hex Lord Malacrass
 
 -- Nalorakk
 (@CGUID+326, @CGUID+50, 1679), -- Amani'shi Wind Walker -> Amani'shi Medicine Man
@@ -1223,7 +1223,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+330, 23834, 568, 1, -194.592, 1151.05, 0.124147, 5.97311, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+331, 23834, 568, 1, -201.899, 1110.36, 0.223543, 5.9804, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
 (@CGUID+332, 23834, 568, 1, -219.674, 1112.36, -0.475973, 4.45835, 7200, 7200, 3, 0, 0, 1), -- Amani Dragonhawk
--- @CGUID+333
+(@CGUID+333, 24239, 568, 1, 117.3631, 923.5686, 33.97257, 1.58825, 259200, 259200, 0, 0, 0, 0), -- Malacrass
 (@CGUID+334, 24312, 568, 1, -204.928, 1136.49, 0.388893, 6.00393, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+335, 24312, 568, 1, -222.574, 1124.88, -0.057337, 1.32645, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
 (@CGUID+336, 24312, 568, 1, -208.865, 1116.26, 0.377559, 1.20428, 7200, 7200, 0, 0, 0, 0), -- Dragonhawk Egg
@@ -1536,6 +1536,18 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 -- INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 -- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
+-- ============
+-- SPAWN GROUPS
+-- ============
+
+INSERT INTO `spawn_group` (`Id`, `Name`, `Type`, `MaxCount`, `WorldState`, `Flags`) VALUES
+(56801, 'Malacrass', 0, 0, 10000, 0); -- spawns after custom worldstate after all 4 bosses are dead
+
+-- INSERT INTO `spawn_group_entry` (`Id`, `Entry`, `MinCount`, `MaxCount`, `Chance`) VALUES
+
+INSERT INTO `spawn_group_spawn` (`Id`, `Guid`) VALUES
+(56801, @CGUID+333);
+
 -- =========
 -- DBSCRIPTS
 -- =========
@@ -1545,19 +1557,19 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (2377401, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Run on'),
 (2377401, 0, 1, 274, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Emote - OneShotNo'),
 
-(2405901, 0, 0, 0, 0, 0, 0, 0, 0, 2000020115, 2000020116, 2000020117, 0, 0, 0, 0, 0, 'Amani\'shi Handler - random say'),
+(2405901, 0, 0, 0, 0, 0, 0, 0, 0, 22726, 22724, 22725, 0, 0, 0, 0, 0, 'Amani\'shi Handler - random say'),
 
 (2389701, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Set Idle Movement'),
 (2389701, 1000, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.780236, 'Zungam set facing'),
 (2389701, 2000, 29, 4226, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Zungam - npcFlags added'),
-(2389701, 2000, 0, 0, 0, 0, 0, 0, 0, 2000020119, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Say Text 2');
+(2389701, 2000, 0, 0, 0, 0, 0, 0, 0, 23209, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Say Text 2');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (186430, 0, 14, 25900, 0, 0, 23897, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Remove Aura 25900'),
-(186430, 0, 0, 0, 0, 0, 23897, 10, 0, 2000020118, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Say Text 1'),
+(186430, 0, 0, 0, 0, 0, 23897, 10, 0, 23208, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Say Text 1'),
 (186430, 2000, 20, 2, 0, 0, 23897, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Zungam - Set Waypoint Movement');
 
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -1566,15 +1578,6 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_start` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-
-DELETE FROM `dbscript_string` WHERE `entry` IN (2000020115,2000020116,2000020117,2000020118,2000020119);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
-(2000020115, 'Coo Yah! There ya be!', 0, 0, 0, 0, 22726, 'Amani\'shi Handler 1'),
-(2000020116, 'Here, kitty kitty.....', 0, 0, 0, 0, 22724, 'Amani\'shi Handler 2'),
-(2000020117, 'Where ya be mon? Ya dang kitty\'s are sneaky!', 0, 0, 0, 0, 22725, 'Amani\'shi Handler 3'),
-(2000020118, 'Ya saved me, mon! I thought they be drownin\' me for sure.', 6400, 0, 0, 71, 23208, 'Zungam 1 (broadcast ID 23208)'),
-(2000020119, 'Just lemme know if there be anything I can help ya with, mon.', 0, 0, 0, 0, 23209, 'Zungam 2 (broadcast ID 23209)');
-
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
 
