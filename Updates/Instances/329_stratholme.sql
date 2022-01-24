@@ -13,7 +13,7 @@ SET @PGUID := 46800; -- pools
 -- CREATURES
 -- =========
 
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `PositionX`, `PositionY`, `PositionZ`, `orientation`, `waittime`, `ScriptId`) VALUES
 (@CGUID+269, 1, 3621.35, -3514.28, 137.12, 0, 0, 0),
 (@CGUID+269, 2, 3668.23, -3522.45, 137.885, 0, 0, 0),
 (@CGUID+269, 3, 3621.35, -3514.28, 137.12, 0, 0, 0),
@@ -576,7 +576,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+466, 10, 3433.51, -3070.11, 136.533, 100, 0, 0);
 
 DELETE FROM `creature_movement_template` WHERE `entry` IN (10808);
-INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
+INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `PositionX`, `PositionY`, `PositionZ`, `orientation`, `waittime`, `ScriptId`) VALUES
 -- Timmy the Cruel 10808
 (10808, 0, 1, 3622.562, -3187.691, 130.639, 100, 0, 0),
 (10808, 0, 2, 3637.907, -3196.123, 128.7287, 100, 0, 0),
@@ -1708,7 +1708,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+7, 1, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
 (@PGUID+8, 1, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
 (@PGUID+9, 1, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
-(@PGUID+10, 1, 'Stratholme - Hearthsinger Forresten'),
+(@PGUID+10, 1, 'Stratholme - Hearthsinger Forresten (10558)'),
 (@PGUID+11, 1, 'Stratholme - Ghostly / Spectral Citizen'),
 (@PGUID+12, 1, 'Stratholme - Ghostly / Spectral Citizen'),
 (@PGUID+13, 1, 'Stratholme - Ghostly / Spectral Citizen'),
@@ -1797,10 +1797,6 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (@CGUID+318, @PGUID+8, 50, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
 (@CGUID+312, @PGUID+9, 50, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
 (@CGUID+319, @PGUID+9, 50, 'Stratholme - Rockwing Gargoyle / Rockwing Screecher'),
-(@CGUID+453, @PGUID+10, 25, 'Stratholme - Hearthsinger Forresten'),
-(@CGUID+454, @PGUID+10, 25, 'Stratholme - Hearthsinger Forresten'),
-(@CGUID+455, @PGUID+10, 25, 'Stratholme - Hearthsinger Forresten'),
-(@CGUID+456, @PGUID+10, 25, 'Stratholme - Hearthsinger Forresten'),
 (@CGUID+73, @PGUID+11, 0, 'Stratholme - Ghostly / Spectral Citizen'),
 (@CGUID+79, @PGUID+11, 0, 'Stratholme - Ghostly / Spectral Citizen'),
 (@CGUID+74, @PGUID+12, 0, 'Stratholme - Ghostly / Spectral Citizen'),
@@ -1808,7 +1804,8 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (@CGUID+75, @PGUID+13, 0, 'Stratholme - Ghostly / Spectral Citizen'),
 (@CGUID+86, @PGUID+13, 0, 'Stratholme - Ghostly / Spectral Citizen');
 
--- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
+INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
+(10558, @PGUID+10, 0, 'Stratholme - Hearthsinger Forresten (10558)');
 
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 (@OGUID+332, @PGUID+15, 50, 'Stratholme Supply Crate'),
